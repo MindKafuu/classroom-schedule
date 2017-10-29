@@ -1,0 +1,77 @@
+body {
+    background-color: #ececec;
+    color: #ff6c00 ;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1em;
+	text-align: center;
+}
+	
+.btn {
+	display: inline-block;
+	border: 0px solid #ff6c00;
+	padding: 10px 20px;
+	background-color: #ff6c00;
+	text-decoration: none;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1em;
+	color: #ffffff ;
+	border-radius: 7px;
+	transition: 0.1s;
+}
+
+.btn:hover {
+	background-color: #79a2ff;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.btn:active {
+	background-color: #0000FF;
+}
+
+.input {
+	border:0px solid;
+	border-radius:10px;
+	height: 30px;
+	width: 350px;
+	font-size: 1em;
+	padding-left: 55px;
+}
+
+.user {
+	background: url("../images/User1.jpg"); 
+	background-repeat: no-repeat; 
+	background-position: left center;
+	background-size: 45px; 
+	background-color: #ffffff
+}
+
+.password {
+	background: url("../images/Pw1.jpg"); 
+	background-repeat: no-repeat; 
+	background-position: left center;
+	background-size: 45px;
+	background-color: #ffffff
+}
+
+.email {
+	background: url("../images/Email1.jpg"); 
+	background-repeat: no-repeat; 
+	background-position: left center;
+	background-size: 45px; 
+	background-color: #ffffff
+}
+.forget {
+	font-size: 0.7em; 
+	text-decoration: none; 
+	margin-right: -260px; 
+	color: #79a2ff
+}
+
+.forget:hover {
+	color: #0000FF;
+}
+
+.forget:action {
+	color: #0000FF;
+}

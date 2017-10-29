@@ -1,0 +1,115 @@
+.btn{
+	display: inline-block;
+	border: 0px solid #ff6c00;
+	padding: 10px 20px;
+	background-color: #ff6c00;
+	text-decoration: none;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1em;
+	color: #ffffff ;
+	border-radius: 7px;
+	transition: 0.1s;
+}
+.btn:hover{
+	background-color: #79a2ff;
+	color: #ffffff;
+}
+.btn:active{
+	background-color: #0000FF;
+}
+.btn1{
+	display: inline-block;
+	border: 0px solid #ff6c00;
+	padding: 10px 10px;
+	background-color: #ececec;
+	text-decoration: none;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1em;
+	color: #ff6c00 ;
+	border-radius: 7px;
+	transition: 0.1s;
+}
+.btn1:hover{
+	color: #0000FF;
+}
+.btn2{
+    display: inline-block;
+    border: 0px solid #ff6c00;
+    padding: 10px;
+    text-align: center;
+    width: 172px;
+    background-color: #ff6c00;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1em;
+    color: #ffffff;
+    border-radius: 0px;
+    transition: 0.1s;
+}
+.btn2:hover{
+	background-color: #79a2ff;
+	color: #ffffff;
+}
+.btn2:active{
+	background-color: #0000FF;
+}
+.topics{
+	display: inline-block;
+	border: 0px solid #ff6c00;
+	padding: 10px;
+	width: 235px;
+	background-color: #ff6c00;
+	text-decoration: none;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.2em;
+	color: #ffffff ;
+	border-bottom-right-radius: 50px;
+	transition: 0.1s;
+}
+.in{
+	border:0px solid #ff6c00;
+	border-radius:10px;
+	height: 30px;
+	width: 350px;
+	font-size: 1em;
+	padding-left: 55px;
+}
+table, tr, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.head {
+	background-color: #6CC417;
+	font-size: 15px;
+	text-align: center;
+}
+.head-time {
+	background-color: yellow;
+	font-size: 15px;
+	text-align: center;
+}
+body {
+background-color: #f0f0f0;
+color: Black ;
+font-family: 'Work Sans', sans-serif;
+font-size: 1em;
+text-align: left;
+}
+header {
+	background: #ff6c00 none repeat-x 0 0;
+	color: #FFFFFF;
+	margin-top: 0px;
+	padding: 0 5px;
+	text-align: left;
+}
+.show {
+	margin-top: -225px; 
+	margin-left: 450px
+}
+h1 {
+	color: Black ;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.5em;
+	text-align: left;
+}

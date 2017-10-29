@@ -1,0 +1,88 @@
+li
+{
+    list-style-type: none;
+    text-align: center;
+    float: left;
+    height: 40px;
+    width:150px;
+
+}
+li a
+{
+    text-decoration: none;
+    background: #f2f2f2;
+    display: block;
+    color: #ff6d00;
+    height: 40px;
+    width:398px;
+    line-height: 42px;
+}
+ul.item,
+ul.sub-item
+{
+    position: relative;
+    display: none;
+}
+
+ul.item
+{
+    right: 40px;
+}
+
+ul.sub-item
+{
+    left: 112px;
+    bottom: 42px;
+}
+ul >li:hover > ul
+{
+    display: block;
+}
+#navbar > li
+{
+    
+    margin-top: -43px;
+    margin-left: 71px;
+}
+ul.item li
+{
+    border-top: 1px solid white;
+    width: 398px;
+}
+.buttonsave{
+    display: block;
+    width: 60px;
+    height: 50px;
+    position: relative;
+    
+    border-radius: 8px;
+    
+}
+.buttonsave .content{
+    display: block;
+    position: absolute;
+    margin-top: -52px;
+    margin-left: 1000px;
+    line-height: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #FF8C00;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: Aqua Grotesque Regular;
+    
+}
+.buttonsave:active .content{
+    
+    top:3px;
+    
+}
+.buttonsave:hover .content{
+    
+    background-color: #00d832;
+    transition: .3s;
+    
+}

@@ -1,0 +1,33 @@
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 1000px;
+    height: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+
+}
+
+.head th {
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    background: rgb(10, 185, 10);
+}
+
+.head-time th {
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    background: yellow;
+}
+
+td {
+    text-align: center;
+    font-size: 15px;
+}
