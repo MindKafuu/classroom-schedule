@@ -52,7 +52,7 @@
             <br><br>
             <a href="user4-2.php" class="btn2"><b>Name list</b></a>
         </div>
-        <div  style="margin-top: -400px; margin-left: 320px" class="show">
+        <div  style="margin-top: -462px; margin-left: 320px" class="show">
         <h1>Year 1 Sec A</h1>
         <table>
             <tr class="head">

@@ -9,10 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     
     <!--shortcut-->
-    <link rel="shortcut icon" href="image/icon.png" title="Favicon"/>
+    <link rel="shortcut icon" href="images/icon.png" title="Favicon"/>
     
     <!--style-->
-    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" type="text/css" href="css/user4-1.css">
+    <link rel="stylesheet" type="text/css" href="css/user4-2.css">
 
     <!--font-->
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Work+Sans" rel="stylesheet">
@@ -21,32 +22,37 @@
   </head>
   <body onload="displaytable()">
     <header>
-        <img src="image/FIBO_logo.jpg" width="55" height="62" style="margin-top: 10px; margin-left: 10px">
+        <img src="images/FIBO_logo.jpg" width="55" height="62" style="margin-top: 10px; margin-left: 10px">
         <div style="font-size: 1.8em; margin-top: -50px; margin-left: 80px">
         <b>Classroom Schedule</b>
         </div><br>
         </header>
         <div style="margin-top: -30px; margin-left: 450px">
-            <button class="btn1"><b>Home</b></button>
-            <button class="btn1"><b>User Info</b></button>
-            <button class="btn1"><b>Class Info</b></button>
-            <button class="btn1"><b>Class Management</b></button>
-            <button class="btn1"><b>Summary</b></button>
-            <button class="btn1"><b>User Status</b></button>
-            <button class="btn1"><b>Complete Schedule</b></button>
-        </div>
-        <div style="margin-top: -84px; margin-left: 1160px">
-            <a href="index.html" class="btn"><b>logout</b></a>
-        </div>
-        <div style="margin-top: 50px;">
-            <br><b class="topics">Complete Schedule</b><br><br>
-            <a href="ALL Schedule.php" class="btn2"><b>ALL Schedule</b></a>
-            <br><br>
-            <a href="Years Schedule.php" class="btn2"><b>Years Schedule</b></a>
-            <br><br>
-            <a href="Name list.php" class="btn2"><b>Name list</b></a>
-        </div>
-        <div  style="margin-top: -200px; margin-left: 320px" class="show">
+        <a href="#" class="btn1"><b>Profile</b></a>
+        <a href="user2.php" class="btn1"><b>Inconvenient time</b></a>
+        <a href="user3.php" class="btn1"><b>Classroom</b></a>
+        <a href="user4.php" class="btn1" style=" color: #79a2ff"><b>Schedule</b></a> 
+    </div>
+    <div style="margin-top: -84px; margin-left: 1160px">
+        <a href="index.php" class="btn"><b>logout</b></a>
+    </div>
+    <div style="margin-top: 50px;">
+        <br><b class="topics">Complete Schedule</b><br><br>
+        <a href="user4.php" class="btn2"><b>ALL Schedule</b></a>
+        <br><br>
+        <a href="user4-1.php" class="btn2"><b>Years Schedule</b></a>
+        <br><br>
+        <a href="user4-b1.php" class="btn2"><b>ปี1</b></a>
+        <br><br>
+        <a href="user4-b2.php" class="btn2"><b>ปี2</b></a>
+        <br><br>
+        <a href="user4-b3.php" class="btn2"><b>ปี3</b></a>
+        <br><br>
+        <a href="user4-b4.php" class="btn2"><b>ปี4</b></a>
+        <br><br>
+        <a href="user4-2.php" class="btn2"><b>Name list</b></a>
+    </div>
+        <div  style="margin-top: -462px; margin-left: 320px" class="show">
         <h1>Year 1 Sec A</h1>
         <table>
             <tr class="head">
@@ -93,10 +99,10 @@
             
             <tr  ><td rowspan='1'; style='background-color: yellow'>Monday</td>
                     <?php
-                        $sql = "SELECT * FROM table_subject_description";
+                        $sql = "SELECT * FROM table_subject_description_output";
                         $smyData = mysqli_query($con, $sql);
                         while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_week'];
+                            $hour = (int)$row['subject_hour_per_day'];
                             $time = (int)$row['start_time'];
                             
                             if($row['Day'] == "0"){                          
@@ -119,10 +125,10 @@
                 <tr>
                     <td rowspan='1'; style='background-color: pink' >Tuesday</td>
                     <?php
-                        $sql = "SELECT * FROM table_subject_description";
+                        $sql = "SELECT * FROM table_subject_description_output";
                         $smyData = mysqli_query($con, $sql);
                         while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_week'];
+                            $hour = (int)$row['subject_hour_per_day'];
                             $time = (int)$row['start_time'];
                             
                             if($row['Day'] == "ๅ"){                          
@@ -146,10 +152,10 @@
                 <tr>
                     <td rowspan='1'; style='background-color: green' >Wedenday</td>
                     <?php
-                        $sql = "SELECT * FROM table_subject_description";
+                        $sql = "SELECT * FROM table_subject_description_output";
                         $smyData = mysqli_query($con, $sql);
                         while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_week'];
+                            $hour = (int)$row['subject_hour_per_day'];
                             $time = (int)$row['start_time'];
                             
                             if($row['Day'] == "2"){                          
@@ -173,10 +179,10 @@
                                 
                     <td rowspan='1'; style='background-color: orange' >Thursday</td>
                     <?php
-                        $sql = "SELECT * FROM table_subject_description";
+                        $sql = "SELECT * FROM table_subject_description_output";
                         $smyData = mysqli_query($con, $sql);
                         while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_week'];
+                            $hour = (int)$row['subject_hour_per_day'];
                             $time = (int)$row['start_time'];
                             
                             if($row['Day'] == "3"){                          
@@ -200,10 +206,10 @@
                                 
                 <td rowspan='1'; style='background-color: blue' > Friday</td>
                 <?php
-                        $sql = "SELECT * FROM table_subject_description";
+                        $sql = "SELECT * FROM table_subject_description_output";
                         $smyData = mysqli_query($con, $sql);
                         while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_week'];
+                            $hour = (int)$row['subject_hour_per_day'];
                             $time = (int)$row['start_time'];
                             
                             if($row['Day'] == "4"){                          
@@ -226,10 +232,10 @@
             <tr>
                 <td rowspan='1'; style='background-color: blue' >Satruday</td>
                 <?php
-                        $sql = "SELECT * FROM table_subject_description";
+                        $sql = "SELECT * FROM table_subject_description_output";
                         $smyData = mysqli_query($con, $sql);
                         while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_week'];
+                            $hour = (int)$row['subject_hour_per_day'];
                             $time = (int)$row['start_time'];
                             
                             if($row['Day'] == "5"){                          

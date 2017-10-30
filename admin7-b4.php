@@ -58,7 +58,7 @@
         </div>
 
         <!--display table--> 
-        <div  style="margin-top: -400px; margin-left: 320px" class="show">
+        <div  style="margin-top: -462px; margin-left: 320px" class="show">
         <h1>Year 4 Sec A</h1>
         <table>
             <tr class="head">

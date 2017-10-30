@@ -22,7 +22,7 @@
   </head>
   <body >
     <header>
-        <img src="image/FIBO_logo.jpg" width="55" height="62" style="margin-top: 10px; margin-left: 10px">
+        <img src="images/FIBO_logo.jpg" width="55" height="62" style="margin-top: 10px; margin-left: 10px">
         <div style="font-size: 1.8em; margin-top: -50px; margin-left: 80px">
         <b>Classroom Schedule</b>
         </div><br>
@@ -57,7 +57,7 @@
         </div>
 
         <!--display table--> 
-        <div  style="margin-top: -400px; margin-left: 320px" class="show">
+        <div  style="margin-top: -462px; margin-left: 320px" class="show">
         <h1>Year 3 Sec A</h1>
         <table>
             <tr class="head">

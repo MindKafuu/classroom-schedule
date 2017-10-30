@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="images/icon.png" title="Favicon"/>
 
     <!--style-->
+    <link rel="stylesheet" type="text/css" href="css/admin3-1.css">
     <link rel="stylesheet" type="text/css" href="css/admin4-1.css">
     <link rel="stylesheet" type="text/css" href="css/admin4-2.css">
 
@@ -71,8 +72,7 @@
         <div style="margin-top: -150px; margin-left: 400px">
           
           <b>Classroom</b>
-          <input class="inkuy" name="username" type="text" id="username"
-          class="tao51" style ="width:350px; height:23px; margin-left:25px" ><br><br>
+          <input class="inkuy" name="username" type="text" id="username" style ="width:350px; height:23px; margin-left:26px" ><br><br>
           
 
           <b>Capacity </b>
@@ -82,7 +82,7 @@
                 background-repeat: no-repeat; 
                 background-size: 25px;
                 background-position: right center;
-                background-color:#f2f2f2">Menu</a>
+                background-color:#ffffff">Menu</a>
                 <ul class="item">
                     <li id="demo1" onclick="myFunction1()"><a href="#">40</a></li>
                     <li id="demo2" onclick="myFunction2()"><a href="#">80 </a></li>

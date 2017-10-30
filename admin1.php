@@ -1,3 +1,6 @@
+<?php
+      require 'dbconfig/config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,11 +56,38 @@
         <div style="margin-top: 50px;">
             <br><b class="topics">User status</b><br><br>
         </div>
-        <div style="margin-top:0px; margin-left:450px" class="statuskru">
-            <p style="margin-top: 0px; margin-left: 15px; font-family: 'Work Sans', sans-serif"> <b>Subject</b> </p>
-            <p style="margin-left: 420px;margin-top: 0px "><img src="images/tick.png" alt=""></p>
-            
-        </div>
+            <?php
+                $allsubject = "SELECT DISTINCT subject_code AS Subjects FROM table_teacher_subject";
+                $sql = "SELECT * FROM table_teacher_subject";
+                $smyData = mysqli_query($con, $sql);
+                $smyData2 = mysqli_query($con, $allsubject);
+                $save = "";
+                while($row = mysqli_fetch_array($smyData2)){
+                    $check = $row['Subjects'];
+                    echo "<div style='margin-top:0px; margin-left:450px'class='statuskru'>";
+                    echo "<p class='text-head'> <b>".$row["Subjects"]."</b></p><br>";
+                    if($save != "") {
+                        echo "<p class='text'>".$save."</p><br>";
+                    }
+                    while($row = mysqli_fetch_array($smyData)) {
+                        
+                        if($check == $row['subject_code'])
+                        {
+                            echo "<p class='text'>".$row['teacher_name']."</p><br>";
+                        }
+                        else if($check != $row['subject_code']) {
+                            
+                            $save = $row['teacher_name'];
+                            break;
+                        }
+                    }
+                    echo "<img src='images/tick.png'>";
+                    echo "</div>";
+                    echo "<br>";
+                    echo "<br>";
+                }
+                    echo "<br>";
+            ?>            
         <div style="margin-top:-575px;margin-left:890px">
             <i class="fa fa-close" style="font-size:48px;color:red"></i>
             <br><br><br><br><br><br><br><br><br><br>

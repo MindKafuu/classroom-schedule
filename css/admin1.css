@@ -13,6 +13,7 @@
 .btn:hover{
 	background-color: #79a2ff;
 	color: #ffffff;
+	cursor: pointer;
 }
 .btn:active{
 	background-color: #0000FF;
@@ -81,7 +82,7 @@
 }
 .statuskru{
 	width:420px;
-	height:200px;
+	height:auto;
 	border:0px; 
 	display:inline-block;
 	background:#ffffff;
@@ -89,8 +90,7 @@
 	color:#ff6c00;
 	text-align: left;
     border-radius:6px;
-    line-height: 42px;
-
+    line-height: 1em;;
 	font-family: 'Work Sans', sans-serif; 
 	box-sizing: border-box 0px;
 }
@@ -111,4 +111,18 @@
 }
 .howto:active{
     background-color: #0000FF;
+}
+.text {
+	line-height: 0;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+.text-head {
+	line-height: 0;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.statuskru img{
+	margin-left: 420px;
+	margin-top: -90px
 }
