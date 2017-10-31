@@ -332,7 +332,6 @@
             if(isset($_POST['time8'])){$time8 = 5; $_SESSION['time8'] = $time8;}
             if(isset($_POST['time9'])){$time9 = 5; $_SESSION['time9'] = $time9;}
             if(isset($_POST['time10'])){$time10 = 5; $_SESSION['time10'] = $time10;}
-
             $day1 = 0;
             $day2 = 0;
             $day3 = 0;
@@ -345,7 +344,6 @@
             if(isset($_POST['day4'])){$day4 = 10; $_SESSION['day4'] = $day4;}
             if(isset($_POST['day5'])){$day5 = 10; $_SESSION['day5'] = $day5;}
             if(isset($_POST['day6'])){$day6 = 10; $_SESSION['day6'] = $day6;}
-
             $day1_1 = 0;
             $day1_2 = 0;
             $day1_3 = 0;
@@ -366,7 +364,6 @@
             if(isset($_POST['day1_8'])){$day1_8 = 1; $_SESSION['day1_8'] = $day1_8;}
             if(isset($_POST['day1_9'])){$day1_9 = 1; $_SESSION['day1_9'] = $day1_9;}
             if(isset($_POST['day1_10'])){$day1_10 = 1; $_SESSION['day1_10'] = $day1_10;}
-
             $day2_1 = 0;
             $day2_2 = 0;
             $day2_3 = 0;
@@ -387,7 +384,6 @@
             if(isset($_POST['day2_8'])){$day2_8 = 1; $_SESSION['day2_8'] = $day2_8;}
             if(isset($_POST['day2_9'])){$day2_9 = 1; $_SESSION['day2_9'] = $day2_9;}
             if(isset($_POST['day2_10'])){$day2_10 = 1; $_SESSION['day2_10'] = $day2_10;}
-
             $day3_1 = 0;
             $day3_2 = 0;
             $day3_3 = 0;
@@ -408,7 +404,6 @@
             if(isset($_POST['day3_8'])){$day3_8 = 1; $_SESSION['day3_8'] = $day3_8;}
             if(isset($_POST['day3_9'])){$day3_9 = 1; $_SESSION['day3_9'] = $day3_9;}
             if(isset($_POST['day3_10'])){$day3_10 = 1; $_SESSION['day3_10'] = $day3_10;}
-
             $day4_1 = 0;
             $day4_2 = 0;
             $day4_3 = 0;
@@ -429,7 +424,6 @@
             if(isset($_POST['day4_8'])){$day4_8 = 1; $_SESSION['day4_8'] = $day4_8;}
             if(isset($_POST['day4_9'])){$day4_9 = 1; $_SESSION['day4_9'] = $day4_9;}
             if(isset($_POST['day4_10'])){$day4_10 = 1; $_SESSION['day4_10'] = $day4_10;}
-
             $day5_1 = 0;
             $day5_2 = 0;
             $day5_3 = 0;
@@ -450,7 +444,6 @@
             if(isset($_POST['day5_8'])){$day5_8 = 1; $_SESSION['day5_8'] = $day5_8;}
             if(isset($_POST['day5_9'])){$day5_9 = 1; $_SESSION['day5_9'] = $day5_9;}
             if(isset($_POST['day5_10'])){$day5_10 = 1; $_SESSION['day5_10'] = $day5_10;}
-
             $day6_1 = 0;
             $day6_2 = 0;
             $day6_3 = 0;
@@ -472,10 +465,36 @@
             if(isset($_POST['day6_9'])){$day6_9 = 1; $_SESSION['day6_9'] = $day6_9;}
             if(isset($_POST['day6_10'])){$day6_10 = 1; $_SESSION['day6_10'] = $day6_10;}
 
+            if($_SESSION['time1'] != 0 || $_SESSION['time2'] != 0 || $_SESSION['time3'] != 0 || $_SESSION['time4'] != 0 || $_SESSION['time5'] != 0 || $_SESSION['time6'] != 0 || $_SESSION['time7'] != 0 || $_SESSION['time8'] != 0 || $_SESSION['time9'] != 0 || $_SESSION['time10'] != 0 || $_SESSION['day1'] != 0 || $_SESSION['day2'] != 0 || $_SESSION['day3'] != 0 || $_SESSION['day4'] != 0 || $_SESSION['day5'] != 0 || $_SESSION['day6'] != 0 || $_SESSION['day1_1'] != 0 || $_SESSION['day1_2'] != 0 || $_SESSION['day1_3'] != 0 || $_SESSION['day1_4'] != 0 || $_SESSION['day1_5'] != 0 || $_SESSION['day1_6'] != 0 || $_SESSION['day1_7'] != 0 || $_SESSION['day1_8'] != 0 || $_SESSION['day1_9'] != 0 || $_SESSION['day1_10'] != 0 || $_SESSION['day2_1'] != 0 || $_SESSION['day2_2'] != 0 || $_SESSION['day2_3'] != 0 || $_SESSION['day2_4'] != 0 || $_SESSION['day2_5'] != 0 || $_SESSION['day2_6'] != 0 || $_SESSION['day2_7'] != 0 || $_SESSION['day2_8'] != 0 || $_SESSION['day2_9'] != 0 || $_SESSION['day2_10'] != 0 || $_SESSION['day3_1'] != 0 || $_SESSION['day3_2'] != 0 || $_SESSION['day3_3'] != 0 || $_SESSION['day3_4'] != 0 || $_SESSION['day3_5'] != 0 || $_SESSION['day3_7'] != 0 || $_SESSION['day3_8'] != 0 || $_SESSION['day3_9'] != 0 || $_SESSION['day3_10'] != 0 || $_SESSION['day4_1'] != 0 || $_SESSION['day4_2'] != 0 || $_SESSION['day4_3'] != 0 || $_SESSION['day4_4'] != 0 || $_SESSION['day4_5'] != 0 || $_SESSION['day4_6'] != 0 || $_SESSION['day4_7'] != 0 || $_SESSION['day4_8'] != 0 || $_SESSION['day4_9'] != 0 || $_SESSION['day4_10'] != 0 || $_SESSION['day5_1'] != 0 || $_SESSION['day5_2'] != 0 || $_SESSION['day5_3'] != 0 || $_SESSION['day5_4'] != 0 || $_SESSION['day5_5'] != 0 || $_SESSION['day5_6'] != 0 || $_SESSION['day5_7'] != 0 || $_SESSION['day5_8'] != 0 || $_SESSION['day5_9'] != 0 || $_SESSION['day6_1'] != 0 || $_SESSION['day6_2'] != 0 || $_SESSION['day6_3'] != 0 || $_SESSION['day6_4'] != 0 || $_SESSION['day6_5'] != 0 || $_SESSION['day6_6'] != 0 || $_SESSION['day6_7'] != 0 || $_SESSION['day6_8'] != 0 || $_SESSION['day6_9'] != 0 || $_SESSION['day6_10'] != 0) {
             $total = $_SESSION['time1'] + $_SESSION['time2'] + $_SESSION['time3'] + $_SESSION['time4'] + $_SESSION['time5'] + $_SESSION['time6'] + $_SESSION['time7'] + $_SESSION['time8'] + $_SESSION['time9'] + $_SESSION['time10'] + $_SESSION['day1'] + $_SESSION['day2'] + $_SESSION['day3'] + $_SESSION['day4'] + $_SESSION['day5'] + $_SESSION['day6'] + $_SESSION['day1_1'] + $_SESSION['day1_2'] + $_SESSION['day1_3'] + $_SESSION['day1_4'] + $_SESSION['day1_5'] + $_SESSION['day1_6'] + $_SESSION['day1_7'] + $_SESSION['day1_8'] + $_SESSION['day1_9'] + $_SESSION['day1_10'] + $_SESSION['day2_1'] + $_SESSION['day2_2'] + $_SESSION['day2_3'] + $_SESSION['day2_4'] + $_SESSION['day2_5'] + $_SESSION['day2_6'] + $_SESSION['day2_7'] + $_SESSION['day2_8'] + $_SESSION['day2_9'] + $_SESSION['day2_10'] + $_SESSION['day3_1'] + $_SESSION['day3_2'] + $_SESSION['day3_3'] + $_SESSION['day3_4'] + $_SESSION['day3_5'] + $_SESSION['day3_7'] + $_SESSION['day3_8'] + $_SESSION['day3_9'] + $_SESSION['day3_10'] + $_SESSION['day4_1'] + $_SESSION['day4_2'] + $_SESSION['day4_3'] + $_SESSION['day4_4'] + $_SESSION['day4_5'] + $_SESSION['day4_6'] + $_SESSION['day4_7'] + $_SESSION['day4_8'] + $_SESSION['day4_9'] + $_SESSION['day4_10'] + $_SESSION['day5_1'] + $_SESSION['day5_2'] + $_SESSION['day5_3'] + $_SESSION['day5_4'] + $_SESSION['day5_5'] + $_SESSION['day5_6'] + $_SESSION['day5_7'] + $_SESSION['day5_8'] + $_SESSION['day5_9'] + $_SESSION['day6_1'] + $_SESSION['day6_2'] + $_SESSION['day6_3'] + $_SESSION['day6_4'] + $_SESSION['day6_5'] + $_SESSION['day6_6'] + $_SESSION['day6_7'] + $_SESSION['day6_8'] + $_SESSION['day6_9'] + $_SESSION['day6_10'];
             echo "<p style = 'margin-left: 600px; margin-top: -50px; font-size: 30px'>total : ".$total."</br></br></br></p>";
-
+            }
         ?>
         
   </body>
 </html>
+<?php
+
+// Turn off all error reporting
+error_reporting(0);
+
+// Report simple running errors
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+// Reporting E_NOTICE can be good too (to report uninitialized
+// variables or catch variable name misspellings ...)
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+
+// Report all errors except E_NOTICE
+error_reporting(E_ALL & ~E_NOTICE);
+
+// Report all PHP errors (see changelog)
+error_reporting(E_ALL);
+
+// Report all PHP errors
+error_reporting(-1);
+
+// Same as error_reporting(E_ALL);
+ini_set('error_reporting', E_ALL);
+
+?>

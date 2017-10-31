@@ -49,13 +49,18 @@
           $query_run = mysqli_query($con, $query);
           if(mysqli_num_rows($query_run) > 0)
           {
-            while($row = mysqli_fetch_array($query_run)) {
-              if($row['teacher_status'] == "T") {
-                header('location:user2.php');
+            $sql = "SELECT * FROM table_account";
+            $smyData = mysqli_query($con, $sql);
+            while($row = mysqli_fetch_array($smyData)) {
+              if($row['teacher_email'] == $username){
+                if($row['teacher_status'] == "T") {
+                  header('location:user2.php');
+                }
+                else if($row['teacher_status']  == "A") {
+                  header('location:admin1.php');
+                }
               }
-              if($row['teacher_status'] == "A") {
-                header('location:admin1.php');
-              }
+              
             }
           }
           else
