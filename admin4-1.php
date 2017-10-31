@@ -1,3 +1,8 @@
+<?php
+  require 'dbconfig/config.php';
+  /*  หน้า input Class Management ห้องเรียน ปัจจุบันรับค่าจาก textbox ได้
+      ห้องปกติ ความจุ 40 หรือ 80 ได้ */
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,9 +29,6 @@
     function myFunction2() {
             document.getElementById("green").innerHTML ="80";
         }
-        
-        
-
     </script>
   </head>
   
@@ -45,6 +47,7 @@
        text-align: left;}
   </style>
   <body >
+    <form action="admin4.php" method="post">
     <header>
         <img src="images/FIBO_logo.jpg" width="55" height="62" style="margin-top: 10px; margin-left: 10px">
         <div style="font-size: 1.8em; margin-top: -50px; margin-left: 80px">
@@ -60,24 +63,29 @@
             <a href="admin6.php" class="btn1"><b>User status</b></a>
             <a href="admin7.php" class="btn1"><b>Complete</b></a>
         </div>
-        <div style="margin-top: -84px; margin-left: 1160px">
-            <a href="index.php" class="btn"><b>logout</b></a>
+        <div style="margin-top: -84px; margin-left: 1200px">
+            <a href="index.php" class="btn"><b>Log out</b></a>
         </div>
         <div style="margin-top: 50px;">
-            <br><b class="topics">Calss Management</b><br><br>
+            <br><b class="topics">Class Management</b><br><br>
             <a href="admin4.php" class="btn2"><b>Computer room</b></a><br><br> <!--แก้ link-->
-            <a href="admin4-1.php" class="btn2"><b>Classroom</b></a><br><br>    <!--แก้ link-->
-            <a href="admin4-2.php" class="btn2"><b>Studio</b></a><br><br>    <!--แก้ link-->
+            <a href="admin4-2.php" class="btn2"><b>Studio room</b></a><br><br>    <!--แก้ link-->
+            <a href="admin4-1.php" class="btn2"style="background-color:#79a2ff"><b>Classroom</b></a><br><br>    <!--แก้ link-->
         </div>
         <div style="margin-top: -150px; margin-left: 400px">
           
           <b>Classroom</b>
-          <input class="inkuy" name="username" type="text" id="username" style ="width:350px; height:23px; margin-left:26px" ><br><br>
-          
-
+            <br><br><br><br>
           <b>Capacity </b>
-          
-          <ul id="navbar" >
+        </div>
+        
+        <div style="margin-top:-95px; margin-left:500px">
+        <input class="inputroom" name="room_code" type="text" id="username"
+          class="tao51" style ="width:350px; height:23px; margin-left:25px" >
+        </div>
+        
+        <div style="margin-top:85px; margin-left:450px">
+        <ul id="navbar" >
             <li><a id="green"  href="#"style ="background: url(images/arrow.png); 
                 background-repeat: no-repeat; 
                 background-size: 25px;
@@ -87,13 +95,40 @@
                     <li id="demo1" onclick="myFunction1()"><a href="#">40</a></li>
                     <li id="demo2" onclick="myFunction2()"><a href="#">80 </a></li>
                     </li>
+                    
                 </ul>
             </li>
-          
-          
         </div>
-        <a href="#" style=" font-size: 40px ;"class = "buttonsave">
-            <span class = "content"><b>save</b></span>
-        </a>
+        <button name="save_data" class = "buttonsave">
+        <span class = "content"><b>save</b></span>
+        </button>
+    </form>
   </body>
 </html>
+<?php
+  /*  font-end หน้านี้
+     room code, size room ของห้องปกติ เก็บไว้ที่ตาราง table_room
+
+    ***room_size  เก็บ drop down ยังไม่ได้ทำ***
+    ***การ Refresh หน้า จะส่งข้อมูลเดิมซ้ำ ต้องเปลี่ยนหน้า ถึงจะ clear ข้อมูล*** */
+
+    if(isset($_POST['save_data'])){
+        /*    เก็บ ห้องรหัสห้องคอม กับความจุ    */
+        $sql = "SELECT * FROM table_room";
+        $smyData = mysqli_query($con, $sql);
+        while($row = mysqli_fetch_array($smyData)) {
+            $count = $row['No'] + 1 ;
+            $room_code = $_POST['room_code'];
+            $room_type  = 'classroom';
+            $room_size  = '40';
+            $query = "INSERT INTO table_room(No,room_code,room_type,room_size) VALUES ('$count','$room_code','$room_type','$room_size')";
+            $query_run = mysqli_query($con,$query);
+            if($query_run){
+                header('location:admin4-1.php');
+                exit;
+                break;
+            }
+        }
+    }
+
+?>

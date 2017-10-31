@@ -1,3 +1,7 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 .btn{
 	display: inline-block;
 	border: 0px solid #ff6c00;
@@ -13,10 +17,9 @@
 .btn:hover{
 	background-color: #79a2ff;
 	color: #ffffff;
-	cursor: pointer;
 }
 .btn:active{
-	background-color: #0000FF;
+	background-color: #79a2ff;
 }
 .btn1{
 	display: inline-block;
@@ -50,7 +53,7 @@
 	color: #ffffff;
 }
 .btn2:active{
-	background-color: #0000FF;
+	background-color: #79a2ff;
 }
 .topics{
 	display: inline-block;
@@ -90,14 +93,14 @@
 	color:#ff6c00;
 	text-align: left;
     border-radius:6px;
-    line-height: 1em;;
+    line-height: 42px;
 	font-family: 'Work Sans', sans-serif; 
 	box-sizing: border-box 0px;
 }
 .howto{
 	display: inline-block;
 	border: 0px solid #ff6c00;
-	padding: 10px 20px;
+	padding: 15px 20px;
 	background-color: #ff6c00;
 	font-family: 'Work Sans', sans-serif;
 	font-size: 1em;
@@ -110,7 +113,7 @@
 	color: #ffffff;
 }
 .howto:active{
-    background-color: #0000FF;
+    background-color: #79a2ff;
 }
 .text {
 	line-height: 0;

@@ -15,7 +15,7 @@
 	color: #ffffff;
 }
 .btn:active{
-	background-color: #0000FF;
+	background-color: #79a2ff;
 }
 .btn1{
 	display: inline-block;
@@ -30,34 +30,31 @@
 	transition: 0.1s;
 }
 .btn1:hover{
-	color: #0000FF;
+	color: #87a7fc;
 }
 .btn2{
-    display: inline-block;
-    border: 0px solid #ff6c00;
-    padding: 10px;
-    text-align: center;
-    width: 172px;
-    background-color: #ff6c00;
-    text-decoration: none;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1em;
-    color: #ffffff;
-    border-radius: 0px;
-    transition: 0.1s;
+	display: inline-block;
+	border: 0px solid #ff6c00;
+	padding: 10px 90px;
+	background-color: #ff6c00;
+	text-decoration: none;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1em;
+	color: #ffffff ;
+	border-radius: 0px;
+	transition: 0.1s;
 }
 .btn2:hover{
 	background-color: #79a2ff;
 	color: #ffffff;
 }
 .btn2:active{
-	background-color: #0000FF;
+	background-color: #79a2ff;
 }
 .topics{
 	display: inline-block;
 	border: 0px solid #ff6c00;
-	padding: 10px;
-	width: 235px;
+	padding: 10px 120px;
 	background-color: #ff6c00;
 	text-decoration: none;
 	font-family: 'Work Sans', sans-serif;
@@ -74,41 +71,16 @@
 	font-size: 1em;
 	padding-left: 55px;
 }
-
-.buttonmenu{
-	border:0px solid#ff6c00;
-	height:15px;
-	width:30px;
-	font-size:1em;
-	padding-right:5px;
-}
-.statuskru{
-	width:420px;
-	height:200px;
-	border:0px; 
-	display:inline-block;
-	background:#d6d6c2;
-	font-size:1em;
-	color:#ff6c00;
-	text-align: left;
-	border-radius:6px;
-	font-family: 'Work Sans', sans-serif; 
-	box-sizing: border-box 0px;
-}
-.howto{
-	display: inline-block;
-	border: 0px solid #ff6c00;
-	padding: 10px 20px;
-	background-color: #ff6c00;
-	font-family: 'Work Sans', sans-serif;
+.in1{
+	border:0px solid #ff6c00;
+	border-radius:10px;
+	height: 30px;
+	width: 350px;
 	font-size: 1em;
-	color: #ffffff ;
-	border-radius:50%;
-	transition: 0.1s;
+	padding-left: 55px;
 }
-.howto:hover{
-	background-color: #79a2ff;
-	color: #ffffff;
+.in1:hover{
+	height: 30px;
+	width: 380px;
+	transition: .5s;
 }
-.howto:active{
-	background-color: #0000FF;

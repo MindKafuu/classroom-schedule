@@ -12,9 +12,9 @@
     <link rel="shortcut icon" href="images/icon.png" title="Favicon"/>
     
     <!--style-->
-    <link rel="stylesheet" type="text/css" href="css/user4-1.css">
-    <link rel="stylesheet" type="text/css" href="css/user4-2.css">
-
+    <link rel="stylesheet" type="text/css" href="css/admin7-1.css">
+    <link rel="stylesheet" type="text/css" href="css/admin7-2.css">
+    
     <!--font-->
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Work+Sans" rel="stylesheet">
 
@@ -31,29 +31,71 @@
         <a href="#" class="btn1"><b>Profile</b></a>
         <a href="user2.php" class="btn1"><b>Inconvenient time</b></a>
         <a href="user3.php" class="btn1"><b>Classroom</b></a>
-        <a href="user4.php" class="btn1" style=" color: #79a2ff"><b>Schedule</b></a> 
-    </div>
-    <div style="margin-top: -84px; margin-left: 1160px">
-        <a href="index.php" class="btn"><b>logout</b></a>
-    </div>
-    <div style="margin-top: 50px;">
+        <a href="user4.php" class="btn1" style=" color: #79a2ff"><b>Schedule</b></a>
+        </div>
+        <div style="margin-top: -84px; margin-left: 1200px">
+            <a href="index.php" class="btn"><b>Log out</b></a>
+        </div>
+        <div style=" margin-top:50px">
         <br><b class="topics">Complete Schedule</b><br><br>
-        <a href="user4.php" class="btn2"><b>ALL Schedule</b></a>
-        <br><br>
-        <a href="user4-1.php" class="btn2"><b>Years Schedule</b></a>
-        <br><br>
-        <a href="user4-b1.php" class="btn2"><b>ปี1</b></a>
-        <br><br>
-        <a href="user4-b2.php" class="btn2"><b>ปี2</b></a>
-        <br><br>
-        <a href="user4-b3.php" class="btn2"><b>ปี3</b></a>
-        <br><br>
-        <a href="user4-b4.php" class="btn2"><b>ปี4</b></a>
-        <br><br>
-        <a href="user4-2.php" class="btn2"><b>Name list</b></a>
-    </div>
-        <div  style="margin-top: -462px; margin-left: 320px" class="show">
-        <h1>Year 1 Sec A</h1>
+        <ul id="navbar">
+                <li><a href="user4.php"style ="
+                    background-color:#ff6d00;">ALL Schedule</a>
+                    
+                <li><a href="user4-1.php" style ="background: url(images/arrow.png); 
+                    background-repeat: no-repeat; 
+                    background-size: 25px;
+                    background-position: right center;
+                    background-color:#ff6d00">Years Schedule</a>
+                    <ul class="item">
+                            <li><a href="#" style ="background: url(images/rightarrow.png); 
+                                background-repeat: no-repeat; 
+                                background-size: 15px;
+                                background-position: right center;
+                                background-color:#ff6d00">Bachelor </a>
+                                <ul class="sub-item" style="margin-left:1px;margin-top:1px">
+                                    <li><a href="user4-b1.php">1</a></li>
+                                    <li><a href="user4-b2.php">2</a></li>
+                                    <li><a href="user4-b3.php">3</a></li>
+                                    <li><a href="user4-b4.php">4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" style ="background: url(images/rightarrow.png); 
+                                background-repeat: no-repeat; 
+                                background-size: 15px;
+                                background-position: right center;
+                                background-color:#ff6d00">Master</a>
+                                <ul class="sub-item" style="margin-left:1px;margin-top:1px">
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li><a href="#" style ="background: url(images/rightarrow.png); 
+                                background-repeat: no-repeat; 
+                                background-size: 15px;
+                                background-position: right center;
+                                background-color:#ff6d00">phD</a>
+                                <ul class="sub-item" style="margin-left:1px;margin-top:1px">
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </li>
+                <li><a href="user4-2.php"style ="
+                    background-repeat: no-repeat; 
+                    background-size: 25px;
+                    background-position: right center;
+                    background-color:#ff6d00;
+                    margin-top : -0.5px">Name list</a>
+                    
+                </li>
+            </ul>
+</div></br></br>
+        <div  style="margin-top: -300px; margin-left: 320px" class="show">
+        <h1>First Year Sec A</h1>
         <table>
             <tr class="head">
                 <th rowspan="2">

@@ -1,3 +1,7 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 .btn{
 	display: inline-block;
 	border: 0px solid #ff6c00;
@@ -30,12 +34,12 @@
 	transition: 0.1s;
 }
 .btn1:hover{
-	color: #0000FF;
+	color: #79a2ff;
 }
 .btn2{
 	display: inline-block;
 	border: 0px solid #ff6c00;
-	padding: 10px 90px;
+	padding: 10px;
 	background-color: #ff6c00;
 	text-decoration: none;
 	font-family: 'Work Sans', sans-serif;
@@ -43,13 +47,15 @@
 	color: #ffffff ;
 	border-radius: 0px;
 	transition: 0.1s;
+	width:220px;
+	text-align:center;
 }
 .btn2:hover{
 	background-color: #79a2ff;
 	color: #ffffff;
 }
 .btn2:active{
-	background-color: #0000FF;
+	background-color: #79a2ff;
 }
 .topics{
 	display: inline-block;
@@ -72,8 +78,8 @@
 	padding-left: 55px;
 }
 
-.inkuy{
-	border:0px solid #ff6c00;
+.inputroom{
+	border:1px solid #ff6c00;
 	border-radius:10px;
 	height: 30px;
 	width: 350px;

@@ -8,11 +8,10 @@ li
     
 
 }
-
 li a
 {
     text-decoration: none;
-    font-family: 'Work Sans', sans-serif;
+    font-family: Aqua Grotesque Regular;
     background: #ffffff;
     display: block;
     color: #ff6d00;
@@ -60,23 +59,6 @@ ul >li:hover > ul
     margin-left: 50px;    
     
 }
-#navbar3 > li
-{
-    margin-left: 50px;    
-    
-}
-#navbar4 > li
-{
-    margin-left: 50px;    
-    
-}
-#navbar5 > li
-{
-    margin-left: 50px;    
-    
-}
-
-
 ul.item li
 {
     border-top: 1px solid rgb(241, 241, 241);

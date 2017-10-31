@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <!--meta-->
+    <!--meta-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
@@ -56,7 +56,7 @@
         <div style="margin-top: 50px;">
             <br><b class="topics">User status</b><br><br>
         </div>
-            <?php
+        <?php
                 $allsubject = "SELECT DISTINCT subject_code AS Subjects FROM table_teacher_subject";
                 $sql = "SELECT * FROM table_teacher_subject";
                 $smyData = mysqli_query($con, $sql);

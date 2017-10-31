@@ -1,3 +1,7 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 ul {
     margin-left: 5px;
 }
@@ -29,7 +33,7 @@ ul.sub-item
 
 ul.item
 {
-    right: 40px;
+    right: 5px;
 }
 
 ul.sub-item
@@ -56,15 +60,17 @@ ul.item li
     display: block;
     width: 60px;
     height: 50px;
-    position: absolute;
+    position: relative;
     border-radius: 8px;
-    
+    margin-left: 1000px;
+    margin-top: -90px;
+    cursor: pointer;
 }
 .buttonsave .content{
     display: block;
     position: absolute;
-    margin-top: -52px;
-    margin-left: 1000px;
+    margin-top: -29px;
+    margin-left: -3px;
     line-height: 55px;
     padding-left: 10px;
     padding-right: 10px;
@@ -73,14 +79,13 @@ ul.item li
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     border-radius: 5px;
-    font-size: 18px;
-    font-family: Aqua Grotesque Regular;
-    
+    font-size: 18px;				
 }
 .buttonsave:active .content{
-    background-color: #0000FF;
+    bottom:-5px;
+    box-shadow: 0 0px 0#06c;
 }
 .buttonsave:hover .content{
-	background-color: #79a2ff;
-    
+    background-color: #79a2ff;
+    transition: .3s;
 }
