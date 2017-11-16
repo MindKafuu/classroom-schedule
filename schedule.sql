@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2017 at 03:18 AM
+-- Generation Time: Oct 29, 2017 at 08:08 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -141,33 +141,22 @@ CREATE TABLE `table_subject_description_output` (
 --
 
 INSERT INTO `table_subject_description_output` (`No`, `subject_level`, `subject_code`, `subject_name`, `subject_hour_per_week`, `subject_hour_per_day`, `subject_sec`, `Day`, `start_time`) VALUES
-(1, '1', 'FRA141', 'Computer Programming', '4', '2', 'A', '1', '2'),
-(2, '1', 'FRA141', 'Computer Programming', '4', '2', 'A', '3', '0'),
-(3, '1', 'FRA141', 'Computer Programming ', '4', '2', 'B', '1', '0'),
-(4, '1', 'FRA141', 'Computer Programming ', '4', '2', 'B', '3', '2'),
-(5, '1', 'FRA161', 'Robotic exploration', '4', '1', 'A', '2', '5'),
-(6, '1', 'FRA161', 'Robotic exploration', '4', '1', 'B', '2', '5'),
-(7, '2', 'FRA221', 'Digital Electronics', '3', '3', 'A', '4', '4'),
-(8, '2', 'FRA221', 'Digital Electronics', '3', '3', 'B', '4', '0'),
-(9, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'A', '4', '0'),
-(10, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'B', '4', '4'),
-(11, '2', 'FRA231', 'Static and dynamics', '3', '3', 'AB', '3', '5'),
-(13, '2', 'FRA241', 'Software development', '3', '3', 'AB', '1', '5'),
-(15, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'A', '2', '1'),
-(16, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'B', '0', '1'),
-(17, '1', 'FRA161', 'Robotic exploration', '4', '3', 'AB', '1', '5'),
-(18, '', '', '', '', '', '', '', ''),
-(19, '3', 'FRA321', 'Image Processing And Analysis', '3', '3', 'A', '4', '1'),
-(20, '3', 'FRA321', 'Image Processing And Analysis', '3', '3', 'B', '4', '5'),
-(21, '3', 'FRA331', 'Basic Control Theory', '3', '3', 'A', '3', '5'),
-(22, '3', 'FRA331', 'Basic Control Theory', '3', '3', 'B', '4', '1'),
-(23, '3', 'FRA332', 'Robot Structure Design ', '3', '3', 'A', '1', '5'),
-(24, '3', 'FRA332', 'Robot Structure Design ', '3', '3', 'B', '2', '1'),
-(25, '3', 'FRA341', 'Embeded System Design', '3', '3', 'A', '1', '1'),
-(26, '3', 'FRA341', 'Embeded System Design', '3', '3', 'B', '1', '5'),
-(27, '3', 'FRA361', 'Robotic and Automation Engineering III', '3', '3', 'AB', '0', '5'),
-(28, '4', 'FRA451', 'Manufacturing And Automation', '3', '3', '', '2', '5'),
-(29, '4', 'FRA451', 'Manufacturing And Automation', '3', '3', '', '0', '1');
+(1, '1', 'FRA141', 'Computer Programming', '4', '2', 'A', '', ''),
+(2, '1', 'FRA141', 'Computer Programming', '4', '2', 'A', '', ''),
+(3, '1', 'FRA141', 'Computer Programming ', '4', '2', 'B', '', ''),
+(4, '1', 'FRA141', 'Computer Programming ', '4', '2', 'B', '', ''),
+(5, '1', 'FRA161', 'Robotic exploration', '3', '3', 'A', '', ''),
+(6, '1', 'FRA161', 'Robotic exploration', '3', '3', 'B', '', ''),
+(7, '2', 'FRA221', 'Digital Electronics', '3', '3', 'A', '', ''),
+(8, '2', 'FRA221', 'Digital Electronics', '3', '3', 'B', '', ''),
+(9, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'A', '', ''),
+(10, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'B', '', ''),
+(11, '2', 'FRA231', 'Static and dynamics', '3', '3', 'A', '', ''),
+(12, '2', 'FRA231', 'Static and dynamics', '3', '3', 'B', '', ''),
+(13, '2', 'FRA241', 'Software development', '3', '3', 'A', '', ''),
+(14, '2', 'FRA241', 'Software development', '3', '3', 'B', '', ''),
+(15, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'A', '', ''),
+(16, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'B', '', '');
 
 -- --------------------------------------------------------
 
@@ -238,9 +227,7 @@ INSERT INTO `table_teacher_subject` (`No`, `teacher_name`, `subject_code`) VALUE
 (16, 'Dr.Suriya Natsupakpong', 'FRA241'),
 (17, 'Dr.Pitiwut Teerakittikul', 'FRA261'),
 (18, 'Asst. Prof. Dr.Thavida Maneewarn', 'FRA261'),
-(19, 'Dr.Supachai Vongbunyong', 'FRA261'),
-(20, 'Asimo', 'FRA 999'),
-(21, 'Asimo', 'FRA 999');
+(19, 'Dr.Supachai Vongbunyong', 'FRA261');
 
 --
 -- Indexes for dumped tables
@@ -295,7 +282,7 @@ ALTER TABLE `table_subject_description_input`
 -- AUTO_INCREMENT for table `table_subject_description_output`
 --
 ALTER TABLE `table_subject_description_output`
-  MODIFY `No` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;COMMIT;
+  MODIFY `No` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
