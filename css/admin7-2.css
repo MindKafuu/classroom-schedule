@@ -19,9 +19,16 @@ table, th, td {
 
 .head th {
     text-align: center;
-    color: black;
     font-size: 15px;
-    background: rgb(10, 185, 10);
+    color: black;
+    background: #E066FF;
+}
+
+.head-data th {
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    background: #E066FF;
 }
 
 .head-time th {
@@ -35,3 +42,26 @@ td {
     text-align: center;
     font-size: 15px;
 }
+
+.data td {
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    background: wheat;
+}
+
+.data-button{
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    background: wheat;
+    border: 0; 
+}
+
+.data-button:hover{
+    color: #1E90FF;
+    cursor: pointer;
+}
+
+

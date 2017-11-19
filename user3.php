@@ -52,6 +52,25 @@
                 document.getElementById("A1").style.visibility="visible";
 
     }
+    		function num1(){
+                    document.getElementById("num1").innerHTML="1";
+    }
+    		function num2(){
+                    document.getElementById("num1").innerHTML="2";
+    }
+    		function num3(){
+                    document.getElementById("num1").innerHTML="3";
+    }
+    		function num11(){
+                    document.getElementById("num11").innerHTML="1";
+    }
+    		function num21(){
+                    document.getElementById("num11").innerHTML="2";
+    }
+    		function num31(){
+                    document.getElementById("num11").innerHTML="3";
+    }
+
             function headtextA1(){
                     document.getElementById("A").innerHTML="computer";
     }
@@ -120,28 +139,28 @@
                 <input class = "whitetab"></br></br>
         </div>
         <ul id="navbar" style="margin-left: 221px;">
-        <li><a href="#" style ="background: url(images/arrow.png)
+        <li><a id="num1" href="#" style ="background: url(images/arrow.png)
             background-repeat: no-repeat; 
             background-size: 25px;
             background-position: right center;
             background-color:#ffffff">none</a>
-            <ul class="item">
-                    <li><a href="#">1 </a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a>
+            <ul  class="item">
+                    <li><a onclick="num1()" href="#">1 </a></li>
+                    <li><a onclick="num2()" href="#">2</a></li>
+                    <li><a onclick="num3()" href="#">3</a>
                         
                     </li>
                 </ul>
         </li>
-        <li><a href="#" style ="background: url(images/arrow.png)
+        <li><a id="num11" href="#" style ="background: url(images/arrow.png)
             background-repeat: no-repeat; 
             background-size: 25px;
             background-position: right center;
             background-color:#ffffff">none</a>
-            <ul class="item">
-                    <li><a href="#">1 </a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a>
+            <ul  class="item">
+                    <li><a onclick="num11()" href="#">1 </a></li>
+                    <li><a onclick="num21()" href="#">2</a></li>
+                    <li><a onclick="num31()" href="#">3</a>
                         
                     </li>
                 </ul>

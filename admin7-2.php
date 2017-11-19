@@ -100,25 +100,38 @@
         <div  style="margin-top: -300px; margin-left: 320px" class="show">
         <h1>TEACHER</h1>
         <table>
-            <tr class="head">
-                <th rowspan="1">
+            <tr class="head-data">
+                <th>
                     Number
                 </th>
-                <th colspan="1">
+                <th>
                     Name List
                 </th>
 
             </tr>
             
-            <tr>
-                <td style="background-color: yellow">
-                    1
-                </td>
-                <td style="background-color: green">
-                    <a href="admin7-3.php"><b>ดร.ชวิศร สัมฤทธิ์</b></a>
-                </td>
-                <?php
-                   ?>
+            <?php
+            $x = 0;
+                $sql = "SELECT * FROM table_account";
+                $smyData = mysqli_query($con, $sql);
+                while($row = mysqli_fetch_array($smyData)) {
+                    $x++;
+                    $teacher = "teacher$x";
+                    echo "<tr class='data'>";
+                    echo "<td>";
+                    echo $x;
+                    echo "</td>";
+                    echo "<td>";
+                    echo "<button name='$teacher' class='data-button'>".$row['teacher_name']."</button>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+
+                if(isset($_POST['teacher1'])) {
+                    echo "mind";
+                    header('location:admin7-3.php');
+                }
+            ?>
             </table>
         </div>
 
