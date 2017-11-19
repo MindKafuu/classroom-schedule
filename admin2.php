@@ -30,9 +30,11 @@
   <script>
 		  function hideadd(){
                 document.getElementById("green").style.visibility="hidden";
+                document.getElementById("green1").style.visibility="hidden";
     }
     	function showadd(){
                 document.getElementById("green").style.visibility="visible";
+                document.getElementById("green1").style.visibility="visible";
     }
     </script>
   <style>
@@ -71,6 +73,29 @@
         <div style="margin-top: 50px;">
             <br><b class="topics">User Info</b><br><br>
         </div>
+
+        <button onclick="hideadd()" id="green1" style=" margin-left: 1200px ; margin-top: 0px " class = "buttonsave">
+                <span class = "content"><b>save</b></span>
+        </button>
+        <center>
+        <div id="green" style='margin-top:0px; margin-left:100px;border-radius: 6px; background-color:white; height: 130px ; width: 550px'>
+                
+                <b style =" margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Name</b>
+                <input style ="width:350px; height:23px; margin-left:55px" name="name" type="text" placeholder="Name">
+                <br>
+
+                <img src='images/user.png' ALIGN = "MIDDLE" width="60" height="70" >
+
+                <b style ="font-family: 'Work Sans', sans-serif; font-size: 16px" >Username</b>
+                <input style ="width:350px; height:23px; margin-left:25px" name="username" type="text" placeholder="E-mail">
+                <br>
+                <b style ="margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Password</b>
+                <input style ="width:350px; height:23px; margin-left:25px" name="password" type="text" placeholder="Password">
+
+
+        </div>
+        </center>
+        <br><br>
         
         <?php
                 $sql = "SELECT * FROM table_account";
@@ -112,29 +137,15 @@
                 //     echo "<br>";
                 // }
             ?>
-            <div id="green" style= "margin-top:0px; margin-left:450px ; background-color: #4CAF50 ;height: 140px; width: 650px " >
-        		
-        		<b style ="margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Name</b>
-        		<input style ="width:350px; height:23px; margin-left:55px" name="name" type="text" placeholder="Name">
-        		<br>
+            
 
-        		<img src='images/user.png' ALIGN = "MIDDLE" width="60" height="70" >
-
-        		<b style ="font-family: 'Work Sans', sans-serif; font-size: 16px" >Username</b>
-        		<input style ="width:350px; height:23px; margin-left:25px" name="username" type="text" placeholder="E-mail">
-        		<br>
-        		<b style ="margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Password</b>
-        		<input style ="width:350px; height:23px; margin-left:25px" name="password" type="text" placeholder="Password">
+        
         </div>
-
-        <div style="margin-left: -180px;margin-top: 28px">
-        		<a href="#" style=" margin-left: 1300px ; margin-top: -100px " class = "button4" onclick="showadd()" >
+        <div >
+                <a href="#" style=" margin-left: 1200px ; margin-top: -50px " class = "button4" onclick="showadd()" >
                 <span class = "content"><b>+</b></span></a>
 <!-- ปุ่มsave-->
-                <button onclick="hideadd()" style=" margin-left: 1300px ; margin-top: 10px " class = "buttonsave">
-                <span class = "content"><b>save</b></span>
-        		</button>
-        </div>
+                
         <div style="margin-left:30px;margin-top:350px">
                 <button class="howto">?</button>     
         </div>            
@@ -144,7 +155,9 @@
             <i class="fa fa-close" style="font-size:48px;color:red"></i>
             <br><br><br><br><br><br><br><br><br><br>
             <i class="fa fa-check-square" style="font-size:48px;color:green"></i>
+
         </div>
+        
         
   </body>
 </html>
