@@ -216,10 +216,10 @@
 				line-height: 55px;
 				padding-left: 10px;
 				padding-right: 10px;
-				background-color: #FF8C00;
+				width: auto;
+				background-color: #ff6c00;
 				text-align: center;
 				color: rgb(255, 255, 255);
-				text-transform: uppercase;
 				border-radius: 5px;
 				font-size: 18px;				
 			}
