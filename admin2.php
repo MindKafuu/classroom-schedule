@@ -73,24 +73,25 @@
         <div style="margin-top: 50px;">
             <br><b class="topics">User Info</b><br><br>
         </div>
-
+<!-- ปุ่มsave-->
         <button onclick="hideadd()" id="green1" style=" margin-left: 1200px ; margin-top: 0px " class = "buttonsave">
                 <span class = "content"><b>save</b></span>
         </button>
+<!-- link data base -->
         <center>
         <div id="green" style='margin-top:0px; margin-left:100px;border-radius: 6px; background-color:white; height: 130px ; width: 550px'>
                 
                 <b style =" margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Name</b>
-                <input style ="width:350px; height:23px; margin-left:55px" name="name" type="text" placeholder="Name">
+                <input style ="width:350px; height:23px; margin-left:55px" name="name" type="text" placeholder="Name"><!-- link data base -->
                 <br>
 
                 <img src='images/user.png' ALIGN = "MIDDLE" width="60" height="70" >
 
                 <b style ="font-family: 'Work Sans', sans-serif; font-size: 16px" >Username</b>
-                <input style ="width:350px; height:23px; margin-left:25px" name="username" type="text" placeholder="E-mail">
+                <input style ="width:350px; height:23px; margin-left:25px" name="username" type="text" placeholder="E-mail"><!-- link data base -->
                 <br>
                 <b style ="margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Password</b>
-                <input style ="width:350px; height:23px; margin-left:25px" name="password" type="text" placeholder="Password">
+                <input style ="width:350px; height:23px; margin-left:25px" name="password" type="text" placeholder="Password"><!-- link data base -->
 
 
         </div>
@@ -144,7 +145,7 @@
         <div >
                 <a href="#" style=" margin-left: 1200px ; margin-top: -50px " class = "button4" onclick="showadd()" >
                 <span class = "content"><b>+</b></span></a>
-<!-- ปุ่มsave-->
+
                 
         <div style="margin-left:30px;margin-top:350px">
                 <button class="howto">?</button>     
