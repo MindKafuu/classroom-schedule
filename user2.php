@@ -14,6 +14,7 @@
     <!--style-->
     <link rel="stylesheet" type="text/css" href="css/user1.css">
     <link rel="stylesheet" type="text/css" href="css/user2.css">
+    <link rel="stylesheet" type="text/css" href="css/user2-1.css">
 
     <!--font-->
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Work+Sans" rel="stylesheet">
@@ -189,32 +190,39 @@
                     if(isset($_POST['day1_'.$x])) {
                         ${'day1_'.$x} = 1; 
                         $_SESSION['day1_'.$x] = ${'day1_'.$x};
+                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day1_'.$x];
                     }
                     if(isset($_POST['day2_'.$x])) {
                         ${'day2_'.$x} = 1; 
                         $_SESSION['day2_'.$x] = ${'day2_'.$x};
+                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day2_'.$x];
                     }
                     if(isset($_POST['day3_'.$x])) {
                         ${'day3_'.$x} = 1; 
                         $_SESSION['day3_'.$x] = ${'day3_'.$x};
+                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day3_'.$x];
                     }
                     if(isset($_POST['day4_'.$x])) {
                         ${'day4_'.$x} = 1; 
                         $_SESSION['day4_'.$x] = ${'day4_'.$x};
+                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day4_'.$x];
                     }
                     if(isset($_POST['day5_'.$x])) {
                         ${'day5_'.$x} = 1; 
                         $_SESSION['day5_'.$x] = ${'day5_'.$x};
+                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day5_'.$x];
                     }
                     if(isset($_POST['day6_'.$x])) {
                         ${'day6_'.$x} = 1; 
                         $_SESSION['day6_'.$x] = ${'day6_'.$x};
+                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day6_'.$x];
                     }
                     if($x<=6) {
                         ${'day'.$x} = 0;
                         if(isset($_POST['day'.$x])) {
                             ${'day'.$x} = 10; 
-                            $_SESSION['day'.$x] = ${'$day'.$x};
+                            $_SESSION['day'.$x] = ${'day'.$x};
+                            $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day'.$x];
                         }
                     }
                 }

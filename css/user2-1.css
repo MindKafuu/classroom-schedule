@@ -1,0 +1,31 @@
+.button{
+    display: block;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    border: 2px solid #000000;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+.button .content{
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    background-color: #424242;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #191919;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.button .content:hover {
+    background-color: #5b5b5b;
+}
+.button .content:visited {
+    background-color: wheat;
+}
