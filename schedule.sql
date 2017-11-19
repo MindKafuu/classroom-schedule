@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2017 at 12:57 PM
+-- Generation Time: Nov 19, 2017 at 09:18 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -58,7 +58,8 @@ INSERT INTO `table_account` (`No`, `teacher_name`, `teacher_email`, `teacher_pas
 (15, 'Mr.Narongsak', 'Narongsak@fibo.kmutt.ac.th', '1234', 'T'),
 (16, 'Mr.Thanacha Choopojcharoen', 'Thanacha@fibo.kmutt.ac.th', '1234', 'T'),
 (17, 'Mr.Worawit Panpanytep', 'Worawit@fibo.kmutt.ac.th', '1234', 'T'),
-(18, 'Ms.Mirawee Kumpakure', 'Mirawee@fibo.kmutt.ac.th', '1234', 'A');
+(18, 'Ms.Mirawee Kumpakure', 'Mirawee@fibo.kmutt.ac.th', '1234', 'A'),
+(20, 'ไนท์ไงจะใครลั', 'เสือกก', '5555555555555', 'T');
 
 -- --------------------------------------------------------
 
@@ -167,10 +168,7 @@ INSERT INTO `table_subject_description_input_admin` (`No`, `subject_level`, `sub
 (1, 'B1', 'FRAt133235', 'test1', '3', NULL),
 (2, 'B1', 'FRAt13', 'test2', 'test2', NULL),
 (3, 'B1', 'FRAt166', 'test3', 'test3', NULL),
-(4, 'B1', '5555', '5555', '5555', NULL),
-(5, 'B1', 'as', 'sda', 'dsasdas', NULL),
-(6, 'B1', 'dscasd', 'sdcsad', 'cdssd', NULL),
-(7, 'B1', 'sdcas', 'dscs', 'cdasc', NULL);
+(4, 'B1', '5555', '5555', '5555', NULL);
 
 -- --------------------------------------------------------
 
@@ -296,7 +294,12 @@ INSERT INTO `table_teacher_subject` (`No`, `teacher_name`, `subject_code`) VALUE
 (21, 'test2', 'FRAt13'),
 (22, 'test3', 'FRAt166'),
 (23, '555', '5555'),
-(26, 'sdc', 'sdcas');
+(28, 'dvas', 'e3r'),
+(29, 'fvre', 'f'),
+(30, '4', 'e'),
+(31, 't', 'dd'),
+(32, 'f', 'y'),
+(33, '00', '00');
 
 --
 -- Indexes for dumped tables

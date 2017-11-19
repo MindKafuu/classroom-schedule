@@ -10,7 +10,7 @@
 
     <!--shortcut-->
     <link rel="shortcut icon" href="images/icon.png" title="Favicon"/>
-    
+
     <!--style-->
     <link rel="stylesheet" type="text/css" href="css/admin1.css">
     <link rel="stylesheet" type="text/css" href="css/admin3-1.css">
@@ -60,6 +60,7 @@
         <b>Classroom Schedule</b>
         </div><br>
         </header>
+        <form action="admin2.php" method="post">
         <div style="margin-top: -30px; margin-left: 500px">
             <a href="admin1.php" class="btn1"><b>Home</b></a>
             <a href="admin2.php" class="btn1" style=" color: #79a2ff"><b>User Info</b></a>
@@ -76,13 +77,13 @@
             <br><b class="topics">User Info</b><br><br>
         </div>
 <!-- ปุ่มsave-->
-        <q><button id ="hide"  style=" margin-left: 1200px ; margin-top: 0px " class = "buttonsave">
+        <q><button id ="hide" name="save_account" style=" margin-left: 1200px ; margin-top: 0px " class = "buttonsave">
                 <span class = "content"><b>save</b></span>
         </button>
 <!-- link data base -->
         <center>
         <div  style='margin-top:0px; margin-left:100px;border-radius: 6px; background-color:white; height: 135px ; width: 550px'>
-                
+
                 <b style =" margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Name</b>
                 <input style ="width:350px; height:23px; margin-top:5px; margin-left:55px" name="name" type="text" placeholder="Name"><!-- link data base -->
                 <br>
@@ -100,7 +101,7 @@
         </center>
         <br>
         </q>
-        
+
         <?php
                 $sql = "SELECT * FROM table_account";
                 $smyData = mysqli_query($con, $sql);
@@ -124,13 +125,13 @@
                 //         echo "<p class='text'>".$save."</p><br>";
                 //     }
                 //     while($row = mysqli_fetch_array($smyData)) {
-                        
+
                 //         if($check == $row['subject_code'])
                 //         {
                 //             echo "<p class='text'>".$row['teacher_name']."</p><br>";
                 //         }
                 //         else if($check != $row['subject_code']) {
-                            
+
                 //             $save = $row['teacher_name'];
                 //             break;
                 //         }
@@ -141,18 +142,17 @@
                 //     echo "<br>";
                 // }
             ?>
-            
 
-        
+
         </div>
         <div >
                 <a href="#" id="show"  style=" margin-left: 1200px ; margin-top: -50px " class = "button4"  >
                 <span class = "content"><b>+</b></span></a>
 
-                
+
         <div style="margin-left:30px;margin-top:350px">
-                <button class="howto">?</button>     
-        </div>            
+                <button class="howto">?</button>
+        </div>
         <div style="margin-top:-575px;margin-left:890px">
             <i class="fa fa-close" style="font-size:48px;color:red"></i>
             <br><br><br><br><br><br><br><br><br><br>
@@ -161,7 +161,30 @@
             <i class="fa fa-check-square" style="font-size:48px;color:green"></i>
 
         </div>
-        
-        
+      </form>
   </body>
 </html>
+
+<?php
+    if(isset($_POST['save_account'])){
+          $sql ="SELECT * FROM table_account";
+          $smyData = mysqli_query($con,$sql);
+        while($row = $smyData->fetch_assoc()) {
+          $count = $row['No'] + 1 ;
+          }
+            $teacher_name      = $_POST['name'];
+            $teacher_email     = $_POST['username'];
+            $teacher_password  = $_POST['password'];
+            $teacher_status = 'T';
+
+        $query = "INSERT INTO table_account(No,teacher_name,teacher_email,teacher_password,teacher_status)
+                  VALUES ('$count','$teacher_name','$teacher_email','$teacher_password','$teacher_status')";
+        $query_run = mysqli_query($con,$query);
+        echo '<script type="text/javascript"> alert("Input Account successful!") </script>';
+
+
+  }
+
+
+
+?>

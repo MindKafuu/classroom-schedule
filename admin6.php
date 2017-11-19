@@ -43,7 +43,7 @@
         </header>
         <div style="margin-top: -30px; margin-left: 500px">
             <a href="admin1.php" class="btn1"><b>Home</b></a>
-            <a href="#" class="btn1"><b>User Info</b></a>
+            <a href="admin2.php" class="btn1"><b>User Info</b></a>
             <a href="admin3.php" class="btn1"><b>Class Info</b></a>
             <a href="admin4.php" class="btn1"><b>Class Management</b></a>
             <a href="#" class="btn1"><b>Summary</b></a>
@@ -70,13 +70,13 @@
                 echo "<p class='text'>".$save."</p><br>";
             }
             while($row = mysqli_fetch_array($smyData)) {
-                
+
                 if($check == $row['subject_code'])
                 {
                     echo "<p class='text'>".$row['teacher_name']."</p><br>";
                 }
                 else if($check != $row['subject_code']) {
-                    
+
                     $save = $row['teacher_name'];
                     break;
                 }
@@ -87,12 +87,12 @@
             echo "<br>";
         }
             echo "<br>";
-    ?>            
+    ?>
         <div style="margin-top:-30px;margin-left:1100px">
             <a href="admin7.php" class="btn"><b>Draft</b></a>
         </div>
         <div style="margin-top:-30px;margin-left:30px">
-            <button class="howto">?</button>     
+            <button class="howto">?</button>
         </div>
 
       </body>
