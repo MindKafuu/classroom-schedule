@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2017 at 08:08 AM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: Nov 19, 2017 at 02:01 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -141,22 +141,18 @@ CREATE TABLE `table_subject_description_output` (
 --
 
 INSERT INTO `table_subject_description_output` (`No`, `subject_level`, `subject_code`, `subject_name`, `subject_hour_per_week`, `subject_hour_per_day`, `subject_sec`, `Day`, `start_time`) VALUES
-(1, '1', 'FRA141', 'Computer Programming', '4', '2', 'A', '', ''),
-(2, '1', 'FRA141', 'Computer Programming', '4', '2', 'A', '', ''),
-(3, '1', 'FRA141', 'Computer Programming ', '4', '2', 'B', '', ''),
-(4, '1', 'FRA141', 'Computer Programming ', '4', '2', 'B', '', ''),
-(5, '1', 'FRA161', 'Robotic exploration', '3', '3', 'A', '', ''),
-(6, '1', 'FRA161', 'Robotic exploration', '3', '3', 'B', '', ''),
-(7, '2', 'FRA221', 'Digital Electronics', '3', '3', 'A', '', ''),
-(8, '2', 'FRA221', 'Digital Electronics', '3', '3', 'B', '', ''),
-(9, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'A', '', ''),
-(10, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'B', '', ''),
-(11, '2', 'FRA231', 'Static and dynamics', '3', '3', 'A', '', ''),
-(12, '2', 'FRA231', 'Static and dynamics', '3', '3', 'B', '', ''),
-(13, '2', 'FRA241', 'Software development', '3', '3', 'A', '', ''),
-(14, '2', 'FRA241', 'Software development', '3', '3', 'B', '', ''),
-(15, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'A', '', ''),
-(16, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'B', '', '');
+(1, '1', 'PHY191', 'General Physics Laboratory I', '2', '2', 'A', '0', '2'),
+(2, '1', 'PHY103', 'General Physics for Engineering Students I', '3', '2', 'A', '1', '0'),
+(3, '1', 'FRA141', 'Computer Projramming for Robotics and Automation Engineering I', '4', '2', 'A', '1', '2'),
+(4, '1', 'FRA161', 'Robotics Exploration', '4', '3', 'A', '1', '5'),
+(5, '1', 'MTH101', 'Mathematics I', '4', '2', 'A', '2', '2'),
+(6, '1', 'FRA161', 'Robotics Exploration', '4', '1', 'A', '2', '5'),
+(7, '1', 'GEN101', 'Physical Education', '2', '2', 'A', '2', '7'),
+(8, '1', 'FRA141', 'Computer Projramming for Robotics and Automation Engineering I', '4', '2', 'A', '3', '0'),
+(9, '1', 'LNG101-LNG102', 'General English / English Skills and Strategies', '3', '3', 'A', '4', '1'),
+(10, '1', 'MTH101', 'Mathematics I', '4', '2', 'A', '4', '5'),
+(11, '1', 'PHY103', 'General Physics for Engineering Students I', '3', '1', 'A', '4', '7'),
+(12, '1', '99', '99', '99', '99', 'A', '5', '99');
 
 -- --------------------------------------------------------
 
@@ -278,11 +274,13 @@ ALTER TABLE `table_teacher_subject`
 --
 ALTER TABLE `table_subject_description_input`
   MODIFY `No` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `table_subject_description_output`
 --
 ALTER TABLE `table_subject_description_output`
-  MODIFY `No` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;COMMIT;
+  MODIFY `No` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
