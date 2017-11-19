@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2017 at 02:01 AM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- Generation Time: Nov 19, 2017 at 12:57 PM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -63,6 +63,31 @@ INSERT INTO `table_account` (`No`, `teacher_name`, `teacher_email`, `teacher_pas
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `table_fundamental_subjects`
+--
+
+CREATE TABLE `table_fundamental_subjects` (
+  `No` int(3) NOT NULL,
+  `subject_level` varchar(100) NOT NULL,
+  `subject_code` varchar(100) NOT NULL,
+  `subject_name` varchar(100) NOT NULL,
+  `subject_hour_per_week` varchar(100) NOT NULL,
+  `subject_sec` varchar(100) NOT NULL,
+  `day` varchar(100) NOT NULL,
+  `start_time` varchar(100) NOT NULL,
+  `end_time` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `table_fundamental_subjects`
+--
+
+INSERT INTO `table_fundamental_subjects` (`No`, `subject_level`, `subject_code`, `subject_name`, `subject_hour_per_week`, `subject_sec`, `day`, `start_time`, `end_time`) VALUES
+(0, 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `table_room`
 --
 
@@ -84,7 +109,8 @@ INSERT INTO `table_room` (`No`, `room_code`, `room_type`, `room_size`) VALUES
 (4, 'FB306', 'computer', '40'),
 (5, 'FB401', 'classroom', '40'),
 (6, 'FB402', 'classroom', '40'),
-(7, 'FB403', 'studio', '80');
+(7, 'FB403', 'studioroom', '80'),
+(8, 'FB308', 'classroom', '40');
 
 -- --------------------------------------------------------
 
@@ -121,6 +147,34 @@ INSERT INTO `table_subject_description_input` (`No`, `subject_level`, `subject_c
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `table_subject_description_input_admin`
+--
+
+CREATE TABLE `table_subject_description_input_admin` (
+  `No` int(3) NOT NULL,
+  `subject_level` varchar(100) NOT NULL,
+  `subject_code` varchar(100) NOT NULL,
+  `subject_name` varchar(100) NOT NULL,
+  `subject_hour_per_week` varchar(100) NOT NULL DEFAULT '3',
+  `subject_sec_teacher_want` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `table_subject_description_input_admin`
+--
+
+INSERT INTO `table_subject_description_input_admin` (`No`, `subject_level`, `subject_code`, `subject_name`, `subject_hour_per_week`, `subject_sec_teacher_want`) VALUES
+(1, 'B1', 'FRAt133235', 'test1', '3', NULL),
+(2, 'B1', 'FRAt13', 'test2', 'test2', NULL),
+(3, 'B1', 'FRAt166', 'test3', 'test3', NULL),
+(4, 'B1', '5555', '5555', '5555', NULL),
+(5, 'B1', 'as', 'sda', 'dsasdas', NULL),
+(6, 'B1', 'dscasd', 'sdcsad', 'cdssd', NULL),
+(7, 'B1', 'sdcas', 'dscs', 'cdasc', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `table_subject_description_output`
 --
 
@@ -141,18 +195,32 @@ CREATE TABLE `table_subject_description_output` (
 --
 
 INSERT INTO `table_subject_description_output` (`No`, `subject_level`, `subject_code`, `subject_name`, `subject_hour_per_week`, `subject_hour_per_day`, `subject_sec`, `Day`, `start_time`) VALUES
-(1, '1', 'PHY191', 'General Physics Laboratory I', '2', '2', 'A', '0', '2'),
-(2, '1', 'PHY103', 'General Physics for Engineering Students I', '3', '2', 'A', '1', '0'),
-(3, '1', 'FRA141', 'Computer Projramming for Robotics and Automation Engineering I', '4', '2', 'A', '1', '2'),
-(4, '1', 'FRA161', 'Robotics Exploration', '4', '3', 'A', '1', '5'),
-(5, '1', 'MTH101', 'Mathematics I', '4', '2', 'A', '2', '2'),
-(6, '1', 'FRA161', 'Robotics Exploration', '4', '1', 'A', '2', '5'),
-(7, '1', 'GEN101', 'Physical Education', '2', '2', 'A', '2', '7'),
-(8, '1', 'FRA141', 'Computer Projramming for Robotics and Automation Engineering I', '4', '2', 'A', '3', '0'),
-(9, '1', 'LNG101-LNG102', 'General English / English Skills and Strategies', '3', '3', 'A', '4', '1'),
-(10, '1', 'MTH101', 'Mathematics I', '4', '2', 'A', '4', '5'),
-(11, '1', 'PHY103', 'General Physics for Engineering Students I', '3', '1', 'A', '4', '7'),
-(12, '1', '99', '99', '99', '99', 'A', '5', '99');
+(1, '1', 'FRA141', 'Computer Programming', '4', '2', 'A', '1', '2'),
+(2, '1', 'FRA141', 'Computer Programming', '4', '2', 'A', '3', '0'),
+(3, '1', 'FRA141', 'Computer Programming ', '4', '2', 'B', '1', '0'),
+(4, '1', 'FRA141', 'Computer Programming ', '4', '2', 'B', '3', '2'),
+(5, '1', 'FRA161', 'Robotic exploration', '4', '1', 'A', '2', '5'),
+(6, '1', 'FRA161', 'Robotic exploration', '4', '1', 'B', '2', '5'),
+(7, '2', 'FRA221', 'Digital Electronics', '3', '3', 'A', '4', '4'),
+(8, '2', 'FRA221', 'Digital Electronics', '3', '3', 'B', '4', '0'),
+(9, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'A', '4', '0'),
+(10, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'B', '4', '4'),
+(11, '2', 'FRA231', 'Static and dynamics', '3', '3', 'AB', '3', '5'),
+(13, '2', 'FRA241', 'Software development', '3', '3', 'AB', '1', '5'),
+(15, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'A', '2', '1'),
+(16, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'B', '0', '1'),
+(17, '1', 'FRA161', 'Robotic exploration', '4', '3', 'AB', '1', '5'),
+(19, '3', 'FRA321', 'Image Processing And Analysis', '3', '3', 'A', '4', '1'),
+(20, '3', 'FRA321', 'Image Processing And Analysis', '3', '3', 'B', '4', '5'),
+(21, '3', 'FRA331', 'Basic Control Theory', '3', '3', 'A', '3', '5'),
+(22, '3', 'FRA331', 'Basic Control Theory', '3', '3', 'B', '4', '1'),
+(23, '3', 'FRA332', 'Robot Structure Design ', '3', '3', 'A', '1', '5'),
+(24, '3', 'FRA332', 'Robot Structure Design ', '3', '3', 'B', '2', '1'),
+(25, '3', 'FRA341', 'Embeded System Design', '3', '3', 'A', '1', '1'),
+(26, '3', 'FRA341', 'Embeded System Design', '3', '3', 'B', '1', '5'),
+(27, '3', 'FRA361', 'Robotic and Automation Engineering III', '3', '3', 'AB', '0', '5'),
+(28, '4', 'FRA451', 'Manufacturing And Automation', '3', '3', '', '2', '5'),
+(29, '4', 'FRA451', 'Manufacturing And Automation', '3', '3', '', '0', '1');
 
 -- --------------------------------------------------------
 
@@ -223,7 +291,12 @@ INSERT INTO `table_teacher_subject` (`No`, `teacher_name`, `subject_code`) VALUE
 (16, 'Dr.Suriya Natsupakpong', 'FRA241'),
 (17, 'Dr.Pitiwut Teerakittikul', 'FRA261'),
 (18, 'Asst. Prof. Dr.Thavida Maneewarn', 'FRA261'),
-(19, 'Dr.Supachai Vongbunyong', 'FRA261');
+(19, 'Dr.Supachai Vongbunyong', 'FRA261'),
+(20, 'test1', 'FRAt133235'),
+(21, 'test2', 'FRAt13'),
+(22, 'test3', 'FRAt166'),
+(23, '555', '5555'),
+(26, 'sdc', 'sdcas');
 
 --
 -- Indexes for dumped tables
@@ -236,6 +309,12 @@ ALTER TABLE `table_account`
   ADD PRIMARY KEY (`No`);
 
 --
+-- Indexes for table `table_fundamental_subjects`
+--
+ALTER TABLE `table_fundamental_subjects`
+  ADD PRIMARY KEY (`No`);
+
+--
 -- Indexes for table `table_room`
 --
 ALTER TABLE `table_room`
@@ -245,6 +324,12 @@ ALTER TABLE `table_room`
 -- Indexes for table `table_subject_description_input`
 --
 ALTER TABLE `table_subject_description_input`
+  ADD PRIMARY KEY (`No`);
+
+--
+-- Indexes for table `table_subject_description_input_admin`
+--
+ALTER TABLE `table_subject_description_input_admin`
   ADD PRIMARY KEY (`No`);
 
 --
@@ -279,7 +364,7 @@ ALTER TABLE `table_subject_description_input`
 -- AUTO_INCREMENT for table `table_subject_description_output`
 --
 ALTER TABLE `table_subject_description_output`
-  MODIFY `No` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `No` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

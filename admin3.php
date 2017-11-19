@@ -28,14 +28,19 @@
         document.getElementById("navbar3").style.visibility="hidden";
         document.getElementById("navbar4").style.visibility="hidden";
         document.getElementById("navbar5").style.visibility="hidden";
- 
+        document.getElementById("green").style.visibility="hidden";
+        document.getElementById("save_fibo").style.visibility="visible";
+
     }
         function showt(){
         document.getElementById("navbar2").style.visibility="visible";//show dropdown
         document.getElementById("navbar3").style.visibility="visible";
         document.getElementById("navbar4").style.visibility="visible";
         document.getElementById("navbar5").style.visibility="visible";
-        
+        document.getElementById("green").style.visibility="visible";
+        document.getElementById("save_fibo").style.visibility="hidden";
+
+
     }
     function secA(){
         document.getElementById("sec").innerHTML="A";
@@ -44,7 +49,7 @@
         document.getElementById("sec").innerHTML="B";
     }
     function secAB(){
-        document.getElementById("sec").innerHTML="A+B";    
+        document.getElementById("sec").innerHTML="A+B";
     }
     function secA1(){
         document.getElementById("sec1").innerHTML="A";
@@ -54,7 +59,7 @@
     }
     function secAB1(){
         document.getElementById("sec1").innerHTML="A+B";
-        
+
     }
     function secA2(){
         document.getElementById("sec2").innerHTML="A";
@@ -64,7 +69,7 @@
     }
     function secAB2(){
         document.getElementById("sec2").innerHTML="A+B";
-        
+
     }
     function secA3(){
         document.getElementById("sec3").innerHTML="A";
@@ -74,7 +79,7 @@
     }
     function secAB3(){
         document.getElementById("sec3").innerHTML="A+B";
-        
+
     }
     function monday(){
         document.getElementById("day").innerHTML="Monday";
@@ -83,7 +88,7 @@
         document.getElementById("day").innerHTML="Tuesday";
     }
     function wednesday(){
-        document.getElementById("day").innerHTML="Wednesday";    
+        document.getElementById("day").innerHTML="Wednesday";
     }
     function thursday(){
         document.getElementById("day").innerHTML="Thursday";
@@ -93,7 +98,7 @@
     }
     function saturday(){
         document.getElementById("day").innerHTML="Saturday";
-        
+
     }
      function monday1(){
         document.getElementById("day1").innerHTML="Monday";
@@ -102,7 +107,7 @@
         document.getElementById("day1").innerHTML="Tuesday";
     }
     function wednesday1(){
-        document.getElementById("day1").innerHTML="Wednesday";    
+        document.getElementById("day1").innerHTML="Wednesday";
     }
     function thursday1(){
         document.getElementById("day1").innerHTML="Thursday";
@@ -112,7 +117,7 @@
     }
     function saturday1(){
         document.getElementById("day1").innerHTML="Saturday";
-        
+
     }
      function monday2(){
         document.getElementById("day2").innerHTML="Monday";
@@ -121,7 +126,7 @@
         document.getElementById("day2").innerHTML="Tuesday";
     }
     function wednesday2(){
-        document.getElementById("day2").innerHTML="Wednesday";    
+        document.getElementById("day2").innerHTML="Wednesday";
     }
     function thursday2(){
         document.getElementById("day2").innerHTML="Thursday";
@@ -131,7 +136,7 @@
     }
     function saturday2(){
         document.getElementById("day2").innerHTML="Saturday";
-        
+
     }
      function monday3(){
         document.getElementById("day3").innerHTML="Monday";
@@ -140,7 +145,7 @@
         document.getElementById("day3").innerHTML="Tuesday";
     }
     function wednesday3(){
-        document.getElementById("day3").innerHTML="Wednesday";    
+        document.getElementById("day3").innerHTML="Wednesday";
     }
     function thursday3(){
         document.getElementById("day3").innerHTML="Thursday";
@@ -150,13 +155,13 @@
     }
     function saturday3(){
         document.getElementById("day3").innerHTML="Saturday";
-        
+
     }
     function t1(){
         document.getElementById("time").innerHTML="8.30";
     }
     function t2(){
-        document.getElementById("time").innerHTML="9.30";   
+        document.getElementById("time").innerHTML="9.30";
     }
      function t3(){
         document.getElementById("time").innerHTML="10.30";
@@ -165,7 +170,7 @@
         document.getElementById("time").innerHTML="11.30";
     }
     function t5(){
-        document.getElementById("time").innerHTML="12.30";    
+        document.getElementById("time").innerHTML="12.30";
     }
     function t6(){
         document.getElementById("time").innerHTML="13.30";
@@ -180,13 +185,13 @@
         document.getElementById("time").innerHTML="16.30";
     }
     function t10(){
-        document.getElementById("time").innerHTML="17.30";   
+        document.getElementById("time").innerHTML="17.30";
     }
     function t11(){
         document.getElementById("time1").innerHTML="8.30";
     }
     function t21(){
-        document.getElementById("time1").innerHTML="9.30";   
+        document.getElementById("time1").innerHTML="9.30";
     }
      function t31(){
         document.getElementById("time1").innerHTML="10.30";
@@ -195,7 +200,7 @@
         document.getElementById("time1").innerHTML="11.30";
     }
     function t51(){
-        document.getElementById("time1").innerHTML="12.30";    
+        document.getElementById("time1").innerHTML="12.30";
     }
     function t61(){
         document.getElementById("time1").innerHTML="13.30";
@@ -210,13 +215,13 @@
         document.getElementById("time1").innerHTML="16.30";
     }
     function t101(){
-        document.getElementById("time1").innerHTML="17.30";   
+        document.getElementById("time1").innerHTML="17.30";
     }
     function t12(){
         document.getElementById("time2").innerHTML="8.30";
     }
     function t22(){
-        document.getElementById("time2").innerHTML="9.30";   
+        document.getElementById("time2").innerHTML="9.30";
     }
      function t32(){
         document.getElementById("time2").innerHTML="10.30";
@@ -225,7 +230,7 @@
         document.getElementById("time2").innerHTML="11.30";
     }
     function t52(){
-        document.getElementById("time2").innerHTML="12.30";    
+        document.getElementById("time2").innerHTML="12.30";
     }
     function t62(){
         document.getElementById("time2").innerHTML="13.30";
@@ -240,13 +245,13 @@
         document.getElementById("time2").innerHTML="16.30";
     }
     function t102(){
-        document.getElementById("time2").innerHTML="17.30";   
+        document.getElementById("time2").innerHTML="17.30";
     }
     function t13(){
         document.getElementById("time3").innerHTML="8.30";
     }
     function t23(){
-        document.getElementById("time3").innerHTML="9.30";   
+        document.getElementById("time3").innerHTML="9.30";
     }
      function t33(){
         document.getElementById("time3").innerHTML="10.30";
@@ -255,7 +260,7 @@
         document.getElementById("time3").innerHTML="11.30";
     }
     function t53(){
-        document.getElementById("time3").innerHTML="12.30";    
+        document.getElementById("time3").innerHTML="12.30";
     }
     function t63(){
         document.getElementById("time3").innerHTML="13.30";
@@ -270,13 +275,13 @@
         document.getElementById("time3").innerHTML="16.30";
     }
     function t103(){
-        document.getElementById("time3").innerHTML="17.30";   
+        document.getElementById("time3").innerHTML="17.30";
     }
     function ts1(){
         document.getElementById("times").innerHTML="9.20";
     }
     function ts2(){
-        document.getElementById("times").innerHTML="10.20";   
+        document.getElementById("times").innerHTML="10.20";
     }
      function ts3(){
         document.getElementById("times").innerHTML="11.20";
@@ -285,7 +290,7 @@
         document.getElementById("times").innerHTML="12.20";
     }
     function ts5(){
-        document.getElementById("times").innerHTML="13.20";    
+        document.getElementById("times").innerHTML="13.20";
     }
     function ts6(){
         document.getElementById("times").innerHTML="14.20";
@@ -300,13 +305,13 @@
         document.getElementById("times").innerHTML="17.20";
     }
     function ts10(){
-        document.getElementById("times").innerHTML="18.20";   
+        document.getElementById("times").innerHTML="18.20";
     }
     function ts11(){
         document.getElementById("times1").innerHTML="9.20";
     }
     function ts21(){
-        document.getElementById("times1").innerHTML="10.20";   
+        document.getElementById("times1").innerHTML="10.20";
     }
      function ts31(){
         document.getElementById("times1").innerHTML="11.20";
@@ -315,7 +320,7 @@
         document.getElementById("times1").innerHTML="12.20";
     }
     function ts51(){
-        document.getElementById("times1").innerHTML="13.20";    
+        document.getElementById("times1").innerHTML="13.20";
     }
     function ts61(){
         document.getElementById("times1").innerHTML="14.20";
@@ -330,13 +335,13 @@
         document.getElementById("times1").innerHTML="17.20";
     }
     function ts101(){
-        document.getElementById("times1").innerHTML="18.20";   
+        document.getElementById("times1").innerHTML="18.20";
     }
     function ts12(){
         document.getElementById("times2").innerHTML="9.20";
     }
     function ts22(){
-        document.getElementById("times2").innerHTML="10.20";   
+        document.getElementById("times2").innerHTML="10.20";
     }
      function ts32(){
         document.getElementById("times2").innerHTML="11.20";
@@ -345,7 +350,7 @@
         document.getElementById("times2").innerHTML="12.20";
     }
     function ts52(){
-        document.getElementById("times2").innerHTML="13.20";    
+        document.getElementById("times2").innerHTML="13.20";
     }
     function ts62(){
         document.getElementById("times2").innerHTML="14.20";
@@ -360,13 +365,13 @@
         document.getElementById("times2").innerHTML="17.20";
     }
     function ts102(){
-        document.getElementById("times2").innerHTML="18.20";   
+        document.getElementById("times2").innerHTML="18.20";
     }
     function ts13(){
         document.getElementById("times3").innerHTML="9.20";
     }
     function ts23(){
-        document.getElementById("times1").innerHTML="10.20";   
+        document.getElementById("times1").innerHTML="10.20";
     }
      function ts33(){
         document.getElementById("times3").innerHTML="11.20";
@@ -375,7 +380,7 @@
         document.getElementById("times3").innerHTML="12.20";
     }
     function ts53(){
-        document.getElementById("times3").innerHTML="13.20";    
+        document.getElementById("times3").innerHTML="13.20";
     }
     function ts63(){
         document.getElementById("times3").innerHTML="14.20";
@@ -390,8 +395,11 @@
         document.getElementById("times3").innerHTML="17.20";
     }
     function ts103(){
-        document.getElementById("times3").innerHTML="18.20";   
+        document.getElementById("times3").innerHTML="18.20";
     }
+
+
+
     </script>
   </head>
   <style>
@@ -415,7 +423,7 @@
         <b>Classroom Schedule</b>
         </div><br>
         </header>
-        <form action="admin3.php" method="post">
+        <form action="admin3.php" method="post" id="event-notify-form" >
         <div style="margin-top: -30px; margin-left: 500px">
             <a href="admin1.php" class="btn1"><b>Home</b></a>
             <a href="#" class="btn1"><b>User Info</b></a>
@@ -435,19 +443,19 @@
             <a href="admin3-D.php" class="btn2"><b>Doctor's degree</b></a><br><br>
         </div>
         <div style="margin-top: -200px; margin-left: 400px">
-          
+
           <b style="font-family: 'Work Sans', sans-serif; font-size: 24px">Subject Code  </b>
           <br><br><br>
 
           <b style="font-family: 'Work Sans', sans-serif; font-size: 24px">Subject name </b>
           <br><br><br>
-          
+
           <b style="font-family: 'Work Sans', sans-serif; font-size: 24px">Lecturer  </b>
           <br><br><br>
-          
+
           <b style="font-family: 'Work Sans', sans-serif; font-size: 24px">Hours/week  </b>
           <br><br><br><br>
-          
+
           <br><br>
           <div style="margin-top: -340px;margin-left:175px; line-height:1;">
             <input type="text"           class="whitetab" style= "margin-left: 20px; margin-top:22px" name="code" required><br><br><br>
@@ -455,8 +463,8 @@
             <input type="text" name="lecturer"      class="whitetab" style= "margin-left: 20px"><br><br><br>
             <input type="text" name="hours_per_week"class="whitetab" style= "margin-left: 20px" required><br><br><br>
           </div>
-          
-          
+
+
           <button class="fundamental" onclick="showt()">Fundamental Subject</button>
           <br><br><br>
           <div style="margin-top: -250px;margin-left:130px">
@@ -464,7 +472,7 @@
             <a href="#" style=" margin-left: 720px ; margin-top: -230px"class = "button4">
                 <span class = "content"><b>+</b></span>
             </a>
-            <button name="save_data" class = "buttonsave">
+            <button id="save_fibo" name="save_data" class = "buttonsave">
                 <span class = "content"><b>save</b></span>
         </button>
             <a href="#" style="margin-left: 650px ; margin-top: -55px"class = "button5">
@@ -472,23 +480,26 @@
             </a>
         </div>
         </div>
- 
-            </br> </br> </br> 
-        <div style= "margin-top: 60px">      
-            <ul id="navbar2" >
-                <li><a id="sec" href="#"style ="background: url(images/arrow.png); 
-                    background-repeat: no-repeat; 
+
+            </br> </br> </br>
+
+
+        <div style= "margin-top: 60px">
+           <ul id="navbar2" >
+                  <li><a id="sec" href="#"style ="background: url(images/arrow.png);
+                    background-repeat: no-repeat;
                     background-size: 25px;
                     background-position: right center;
-                    background-color:#ffffff">Sec</a>
+                    background-color:#ffffff" value="Null" >Sec</a>
                     <ul class="item" >
                         <li><a onclick="secA()" href="#">A</a></li>
                         <li><a onclick="secB()" href="#">B</a></li>
                         <li><a onclick="secAB()" href="#">A+B</a></li>
                     </ul>
                 </li>
-                <li><a id="day" href="#"style ="background: url(images/arrow.png); 
-                    background-repeat: no-repeat; 
+
+                <li><a id="day" href="#"style ="background: url(images/arrow.png);
+                    background-repeat: no-repeat;
                     background-size: 25px;
                     background-position: right center;
                     background-color:#ffffff">Day</a>
@@ -499,11 +510,11 @@
                         <li><a onclick="thursday()" href="#">Thursday </a></li>
                         <li><a onclick="friday()" href="#">Friday </a></li>
                         <li><a onclick="saturday()" href="#">Saturday </a></li>
-                        
+
                     </ul>
                 </li>
-                <li><a id="time" href="#" style ="background: url(images/arrow.png); 
-                    background-repeat: no-repeat; 
+                <li><a id="time" href="#" style ="background: url(images/arrow.png);
+                    background-repeat: no-repeat;
                     background-size: 25px;
                     background-position: right center;
                     background-color:#ffffff">Start</a>
@@ -518,11 +529,11 @@
                             <li><a onclick="t8()" href="#">15.30</a></li>
                             <li><a onclick="t9()" href="#">16.30</a></li>
                             <li><a onclick="t10()" href="#">17.30</a></li>
-                    
+
                         </ul>
                 </li>
-                <li><a id="times" href="#"style ="background: url(images/arrow.png); 
-                    background-repeat: no-repeat; 
+                <li><a id="times" href="#"style ="background: url(images/arrow.png);
+                    background-repeat: no-repeat;
                     background-size: 25px;
                     background-position: right center;
                     background-color:#ffffff">End</a>
@@ -537,20 +548,21 @@
                         <li><a onclick="ts8()" href="#">16.20 </a></li>
                         <li><a onclick="ts9()" href="#">17.20 </a></li>
                         <li><a onclick="t10()" href="#">18.20 </a></li>
-                        
-                            
+
                         </li>
                     </ul>
                 </li>
-                
+
             </ul>
-        
-            
-        </div> 
-        <div style= "margin-top: 120px" >      
-                <ul  id="navbar3">
-                    <li ><a id="sec1" href="#"style ="background: url(images/arrow.png); 
-                        background-repeat: no-repeat; 
+
+        </div>
+
+
+
+        <div style= "margin-top: 120px" >
+<!--2-->                 <ul  id="navbar3">
+                    <li ><a id="sec1" href="#"style ="background: url(images/arrow.png);
+                        background-repeat: no-repeat;
                         background-size: 25px;
                         background-position: right center;
                         background-color:#ffffff">Sec</a>
@@ -560,23 +572,23 @@
                         	<li><a onclick="secAB1()" href="#">A+B</a></li>
                         </ul>
                     </li>
-                    <li><a id="day1" href="#"style ="background: url(images/arrow.png); 
-                        background-repeat: no-repeat; 
+                    <li><a id="day1" href="#"style ="background: url(images/arrow.png);
+                        background-repeat: no-repeat;
                         background-size: 25px;
                         background-position: right center;
                         background-color:#ffffff">Day</a>
                         <ul class="item">
-                            <li><a onclick="monday1()" href="#">Monday </a></li>
+                          <li><a onclick="monday1()" href="#">Monday </a></li>
                         	<li><a onclick="tuesday1()" href="#">Tuesday </a></li>
                         	<li><a onclick="wednesday1()" href="#">Wednesday </a></li>
                         	<li><a onclick="thursday1()" href="#">Thursday </a></li>
                         	<li><a onclick="friday1()" href="#">Friday </a></li>
                         	<li><a onclick="saturday1()" href="#">Saturday </a></li>
-                            
+
                         </ul>
                     </li>
-                    <li><a id="time1" href="#" style ="background: url(images/arrow.png); 
-                        background-repeat: no-repeat; 
+                    <li><a id="time1" href="#" style ="background: url(images/arrow.png);
+                        background-repeat: no-repeat;
                         background-size: 25px;
                         background-position: right center;
                         background-color:#ffffff">Start</a>
@@ -591,11 +603,11 @@
                             <li><a onclick="t81()" href="#">15.30</a></li>
                             <li><a onclick="t91()" href="#">16.30</a></li>
                             <li><a onclick="t101()" href="#">17.30</a></li>
-                        
+
                             </ul>
                     </li>
-                    <li><a id="times1" href="#"style ="background: url(images/arrow.png); 
-                        background-repeat: no-repeat; 
+                    <li><a id="times1" href="#"style ="background: url(images/arrow.png);
+                        background-repeat: no-repeat;
                         background-size: 25px;
                         background-position: right center;
                         background-color:#ffffff">End</a>
@@ -610,20 +622,20 @@
                         		<li><a onclick="ts81()" href="#">16.20 </a></li>
                         		<li><a onclick="ts91()" href="#">17.20 </a></li>
                         		<li><a onclick="t101()" href="#">18.20 </a></li>
-                            
-                                
+
+
                             </li>
                         </ul>
                     </li>
-                    
+
                 </ul>
-            
-                
-            </div> 
-            <div style= "margin-top: 180px">      
-            <ul  id="navbar4">
-                    <li><a id="sec2" href="#"style ="background: url(images/arrow.png); 
-                    	background-repeat: no-repeat; 
+
+
+            </div>
+            <div style= "margin-top: 180px">
+           <ul  id="navbar4">
+                    <li><a id="sec2" href="#"style ="background: url(images/arrow.png);
+                    	background-repeat: no-repeat;
                     	background-size: 25px;
                     	background-position: right center;
                     	background-color:#ffffff">Sec</a>
@@ -633,8 +645,8 @@
                         <li><a onclick="secAB2()" href="#">A+B</a></li>
                     </ul>
                     </li>
-                    <li><a id="day2" href="#"style ="background: url(images/arrow.png); 
-                        background-repeat: no-repeat; 
+                    <li><a id="day2" href="#"style ="background: url(images/arrow.png);
+                        background-repeat: no-repeat;
                         background-size: 25px;
                         background-position: right center;
                         background-color:#ffffff">Day</a>
@@ -645,11 +657,11 @@
                         	<li><a onclick="thursday2()" href="#">Thursday </a></li>
                         	<li><a onclick="friday2()" href="#">Friday </a></li>
                         	<li><a onclick="saturday2()" href="#">Saturday </a></li>
-                            
+
                         </ul>
                     </li>
-                    <li><a id="time2" href="#" style ="background: url(images/arrow.png); 
-                        background-repeat: no-repeat; 
+                    <li><a id="time2" href="#" style ="background: url(images/arrow.png);
+                        background-repeat: no-repeat;
                         background-size: 25px;
                         background-position: right center;
                         background-color:#ffffff">Start</a>
@@ -666,8 +678,8 @@
                             <li><a onclick="t102()" href="#">17.30</a></li>
                             </ul>
                     </li>
-                    <li><a id="times2" href="#"style ="background: url(images/arrow.png); 
-                        background-repeat: no-repeat; 
+                    <li><a id="times2" href="#"style ="background: url(images/arrow.png);
+                        background-repeat: no-repeat;
                         background-size: 25px;
                         background-position: right center;
                         background-color:#ffffff">End</a>
@@ -682,20 +694,20 @@
                         		<li><a onclick="ts82()" href="#">16.20 </a></li>
                         		<li><a onclick="ts92()" href="#">17.20 </a></li>
                         		<li><a onclick="t102()" href="#">18.20 </a></li>
-                            
-                                
+
+
                             </li>
                         </ul>
                     </li>
-                    
+
                 </ul>
-            
-                
+
+
             </div>
-            <div style= "margin-top: 240px">      
-                <ul id="navbar5">
-                    <li><a id="sec3" href="#"style ="background: url(images/arrow.png); 
-                    	background-repeat: no-repeat; 
+            <div style= "margin-top: 240px">
+              <ul id="navbar5">
+                    <li><a id="sec3" href="#"style ="background: url(images/arrow.png);
+                    	background-repeat: no-repeat;
                     	background-size: 25px;
                     	background-position: right center;
                     	background-color:#ffffff">Sec</a>
@@ -705,8 +717,8 @@
                         <li><a onclick="secAB3()" href="#">A+B</a></li>
                     </ul>
                     </li>
-                    <li><a id="day3" href="#"style ="background: url(images/arrow.png); 
-                        background-repeat: no-repeat; 
+                    <li><a id="day3" href="#"style ="background: url(images/arrow.png);
+                        background-repeat: no-repeat;
                         background-size: 25px;
                         background-position: right center;
                         background-color:#ffffff">Day</a>
@@ -717,11 +729,11 @@
                         	<li><a onclick="thursday3()" href="#">Thursday </a></li>
                         	<li><a onclick="friday3()" href="#">Friday </a></li>
                         	<li><a onclick="saturday3()" href="#">Saturday </a></li>
-                            
+
                         </ul>
                     </li>
-                    <li><a id="time3" href="#" style ="background: url(images/arrow.png); 
-                        background-repeat: no-repeat; 
+                    <li><a id="time3" href="#" style ="background: url(images/arrow.png);
+                        background-repeat: no-repeat;
                         background-size: 25px;
                         background-position: right center;
                         background-color:#ffffff">Start</a>
@@ -736,11 +748,11 @@
                             <li><a onclick="t83()" href="#">15.30</a></li>
                             <li><a onclick="t93()" href="#">16.30</a></li>
                             <li><a onclick="t103()" href="#">17.30</a></li>
-                        
+
                             </ul>
                     </li>
-                    <li><a id="times3" href="#"style ="background: url(images/arrow.png); 
-                        background-repeat: no-repeat; 
+                    <li><a id="times3" href="#"style ="background: url(images/arrow.png);
+                        background-repeat: no-repeat;
                         background-size: 25px;
                         background-position: right center;
                         background-color:#ffffff">End</a>
@@ -755,32 +767,195 @@
                         		<li><a onclick="ts83()" href="#">16.20 </a></li>
                         		<li><a onclick="ts93()" href="#">17.20 </a></li>
                         		<li><a onclick="t103()" href="#">18.20 </a></li>
-                            
-                                
+
+
                             </li>
                         </ul>
                     </li>
-                    
+                    <br> <br>  <br>
+<!--/////////////////////DROPDOWN part1/////////////////////////////////////////-->
+                    <select name="subject_sec1">
+                      <option value="SEC">Sec</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="AB">A+B</option>
+                    </select>
+                    <select name="seven_day1">
+                      <li><option>Day</option></li>
+                      <li><option >Monday </option></li>
+                      <li><option >Tuesday </option></li>
+                      <li><option >Wednesday </option></li>
+                      <li><option >Thursday </option></li>
+                      <li><option >Friday </option></li>
+                      <li><option >Saturday </option></li>
+                    </select>
+                    <select name="start_time1" >
+                     <li><option>start</option></li>
+                     <li><option >8.30</option></li>
+                     <li><option >9.30</option></li>
+                     <li><option >10.30</option></li>
+                     <li><option >11.30</option></li>
+                     <li><option >12.30</option></li>
+                     <li><option >13.30</option></li>
+                     <li><option >14.30</option></li>
+                     <li><option >15.30</option></li>
+                     <li><option >16.30</option></li>
+                     <li><option >17.30</option></li>
+                    </select>
+                    <select name="end_time1">
+                      <li><option>End</option></li>
+                      <li><option >9.20  </option></li>
+                      <li><option >10.20 </option></li>
+                      <li><option >11.20 </option></li>
+                      <li><option >12.20 </option></li>
+                      <li><option >13.20 </option></li>
+                      <li><option >14.20 </option></li>
+                      <li><option >15.20 </option></li>
+                      <li><option >16.20 </option></li>
+                      <li><option >17.20 </option></li>
+                      <li><option >18.20 </option></li>
+                    </select>
+                    <br> <!-- part2-->
+                    <select name="subject_sec2">
+                      <option value="SEC">Sec</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="AB">A+B</option>
+                    </select>
+                    <select name="seven_day2">
+                      <li><option>Day</option></li>
+                      <li><option >Monday </option></li>
+                      <li><option >Tuesday </option></li>
+                      <li><option >Wednesday </option></li>
+                      <li><option >Thursday </option></li>
+                      <li><option >Friday </option></li>
+                      <li><option >Saturday </option></li>
+                    </select>
+                    <select name="start_time2" >
+                     <li><option>start</option></li>
+                     <li><option >8.30</option></li>
+                     <li><option >9.30</option></li>
+                     <li><option >10.30</option></li>
+                     <li><option >11.30</option></li>
+                     <li><option >12.30</option></li>
+                     <li><option >13.30</option></li>
+                     <li><option >14.30</option></li>
+                     <li><option >15.30</option></li>
+                     <li><option >16.30</option></li>
+                     <li><option >17.30</option></li>
+                    </select>
+                    <select name="end_time2">
+                      <li><option>End</option></li>
+                      <li><option >9.20  </option></li>
+                      <li><option >10.20 </option></li>
+                      <li><option >11.20 </option></li>
+                      <li><option >12.20 </option></li>
+                      <li><option >13.20 </option></li>
+                      <li><option >14.20 </option></li>
+                      <li><option >15.20 </option></li>
+                      <li><option >16.20 </option></li>
+                      <li><option >17.20 </option></li>
+                      <li><option >18.20 </option></li>
+                    </select>
+                    <br> <!-- part3-->
+                    <select name="subject_sec3">
+                      <option value="SEC">Sec</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="AB">A+B</option>
+                    </select>
+                    <select name="seven_day3">
+                      <li><option>Day</option></li>
+                      <li><option >Monday </option></li>
+                      <li><option >Tuesday </option></li>
+                      <li><option >Wednesday </option></li>
+                      <li><option >Thursday </option></li>
+                      <li><option >Friday </option></li>
+                      <li><option >Saturday </option></li>
+                    </select>
+                    <select name="start_time3" >
+                     <li><option>start</option></li>
+                     <li><option >8.30</option></li>
+                     <li><option >9.30</option></li>
+                     <li><option >10.30</option></li>
+                     <li><option >11.30</option></li>
+                     <li><option >12.30</option></li>
+                     <li><option >13.30</option></li>
+                     <li><option >14.30</option></li>
+                     <li><option >15.30</option></li>
+                     <li><option >16.30</option></li>
+                     <li><option >17.30</option></li>
+                    </select>
+                    <select name="end_time3">
+                      <li><option>End</option></li>
+                      <li><option >9.20  </option></li>
+                      <li><option >10.20 </option></li>
+                      <li><option >11.20 </option></li>
+                      <li><option >12.20 </option></li>
+                      <li><option >13.20 </option></li>
+                      <li><option >14.20 </option></li>
+                      <li><option >15.20 </option></li>
+                      <li><option >16.20 </option></li>
+                      <li><option >17.20 </option></li>
+                      <li><option >18.20 </option></li>
+                    </select>
+                    <br> <!-- part4-->
+                    <select name="subject_sec4">
+                      <option value="SEC">Sec</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="AB">A+B</option>
+                    </select>
+                    <select name="seven_day4">
+                      <li><option>Day</option></li>
+                      <li><option >Monday </option></li>
+                      <li><option >Tuesday </option></li>
+                      <li><option >Wednesday </option></li>
+                      <li><option >Thursday </option></li>
+                      <li><option >Friday </option></li>
+                      <li><option >Saturday </option></li>
+                    </select>
+                    <select name="start_time4" >
+                     <li><option>start</option></li>
+                     <li><option >8.30</option></li>
+                     <li><option >9.30</option></li>
+                     <li><option >10.30</option></li>
+                     <li><option >11.30</option></li>
+                     <li><option >12.30</option></li>
+                     <li><option >13.30</option></li>
+                     <li><option >14.30</option></li>
+                     <li><option >15.30</option></li>
+                     <li><option >16.30</option></li>
+                     <li><option >17.30</option></li>
+                    </select>
+                    <select name="end_time4">
+                      <li><option>End</option></li>
+                      <li><option >9.20  </option></li>
+                      <li><option >10.20 </option></li>
+                      <li><option >11.20 </option></li>
+                      <li><option >12.20 </option></li>
+                      <li><option >13.20 </option></li>
+                      <li><option >14.20 </option></li>
+                      <li><option >15.20 </option></li>
+                      <li><option >16.20 </option></li>
+                      <li><option >17.20 </option></li>
+                      <li><option >18.20 </option></li>
+                    </select>
+                    <br>
                 </ul>
-            
-                
             </div>
+            <button id="green" name="Fun_save" class = "buttonsave">
+                <span class = "content"><b>Fundamental_save</b></span>
+        </button>
+
+
     </form>
   </body>
 </html>
 <?php
-  /*  font-end หน้านี้
-    Bachelor's degree, Subject Code, Subject name,Hours/week เก็บไว้ที่ตาราง table_subject_description_input
-    Lecturer, Subject Code    เก็บไว้ที่ตาราง table_teacher_subject
-
-    *** ของ Bachelor's degree ปี1 2 3 4 ยังไม่แยก ปัจจุบันส่ง 1***
-    ***Centre Subject  เก็บอีกตารางแยก drop down ยังไม่ได้ทำ***
-    ***การ Refresh หน้า จะส่งข้อมูลเดิมซ้ำ ต้องเปลี่ยนหน้า ถึงจะ clear ข้อมูล***
-    **subject_sec_teacher_want ใน	table_subject_description_input ต้องรอรับจาก user*** */
-
+//////////////////////////FIBO SUBJECT/////////////////////////////////////////////
         if(isset($_POST['save_data'])){
-              /*    เก็บ ข้อมูลวิชาโดยแอดมิน                    */
-              $sql ="SELECT * FROM table_subject_description_input";
+              $sql ="SELECT * FROM table_subject_description_input_admin";
               $smyData = mysqli_query($con,$sql);
           while($row = $smyData->fetch_assoc()) {
               $count = $row['No'] + 1 ;
@@ -789,11 +964,10 @@
               $subject_code  = $_POST['code'];
               $subject_name  = $_POST['subject_name'];
               $subject_hour_per_week = $_POST['hours_per_week'];
-              $query = "INSERT INTO table_subject_description_input(No,subject_level,subject_code,subject_name,subject_hour_per_week)
+              $query = "INSERT INTO table_subject_description_input_admin(No,subject_level,subject_code,subject_name,subject_hour_per_week)
                                     VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week')";
               $query_run = mysqli_query($con,$query);
 
-              /*    เก็บ การเชื่อมอาจารย์กับวิชาอีกตาราง         */
               $sql ="SELECT * FROM table_teacher_subject";
               $smyData = mysqli_query($con,$sql);
           while($row = $smyData->fetch_assoc()) {
@@ -801,11 +975,102 @@
             }
               $teacher_name  = $_POST['lecturer'];
               $subject_code  = $_POST['code'];
-            //  $subject_name  = $_POST['subject_name'];
               $query = "INSERT INTO table_teacher_subject(No,teacher_name,subject_code)
                                       VALUES ('$count','$teacher_name','$subject_code')";
               $query_run = mysqli_query($con,$query);
       echo '<script type="text/javascript"> alert("Input data successful!") </script>';
-
       }
+ /////////////////////////// fundamental Subject //////////////////////////////
+      if(isset($_POST['Fun_save'])){
+
+//////////////////////////// dropdown 1 /////////////////////////////////////
+        $sql ="SELECT * FROM table_fundamental_subjects";
+        $smyData = mysqli_query($con,$sql);
+        while($row = $smyData->fetch_assoc()) {
+        $count = $row['No'] + 1 ;
+        }
+        $subject_level = 'B1';
+        $subject_code  = $_POST['code'];
+        $subject_name  = $_POST['subject_name'];
+        $subject_hour_per_week = $_POST['hours_per_week'];
+        $subject_sec1=$_POST['subject_sec1'];
+        $day1 =$_POST['seven_day1'];
+        $start_time1 =$_POST['start_time1'];
+        $end_time1 =$_POST['end_time1'];
+
+        $query = "INSERT INTO table_fundamental_subjects(No,subject_level,subject_code,subject_name,subject_hour_per_week,
+                                                          subject_sec,day,start_time,end_time)
+                              VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week',
+                                      '$subject_sec1','$day1','$start_time1','$end_time1')";
+        $query_run = mysqli_query($con,$query);
+
+
+//////////////////////////// dropdown 2 /////////////////////////////////////
+        $sql ="SELECT * FROM table_fundamental_subjects";
+        $smyData = mysqli_query($con,$sql);
+        while($row = $smyData->fetch_assoc()) {
+        $count = $row['No'] + 1 ;
+        }
+        $subject_level = 'B1';
+        $subject_code  = $_POST['code'];
+        $subject_name  = $_POST['subject_name'];
+        $subject_hour_per_week = $_POST['hours_per_week'];
+        $subject_sec1=$_POST['subject_sec2'];
+        $day2 =$_POST['seven_day2'];
+        $start_time2 =$_POST['start_time2'];
+        $end_time2 =$_POST['end_time2'];
+
+        $query = "INSERT INTO table_fundamental_subjects(No,subject_level,subject_code,subject_name,subject_hour_per_week,
+                                                          subject_sec,day,start_time,end_time)
+                              VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week',
+                                      '$subject_sec1','$day2','$start_time2','$end_time2')";
+        $query_run = mysqli_query($con,$query);
+
+//////////////////////////// dropdown 3 /////////////////////////////////////
+                $sql ="SELECT * FROM table_fundamental_subjects";
+                $smyData = mysqli_query($con,$sql);
+                while($row = $smyData->fetch_assoc()) {
+                $count = $row['No'] + 1 ;
+                }
+                $subject_level = 'B1';
+                $subject_code  = $_POST['code'];
+                $subject_name  = $_POST['subject_name'];
+                $subject_hour_per_week = $_POST['hours_per_week'];
+                $subject_sec3=$_POST['subject_sec3'];
+                $day3 =$_POST['seven_day3'];
+                $start_time3 =$_POST['start_time3'];
+                $end_time3 =$_POST['end_time3'];
+
+                $query = "INSERT INTO table_fundamental_subjects(No,subject_level,subject_code,subject_name,subject_hour_per_week,
+                                                                  subject_sec,day,start_time,end_time)
+                                      VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week',
+                                              '$subject_sec3','$day3','$start_time3','$end_time3')";
+
+//////////////////////////// dropdown 4 /////////////////////////////////////
+                $query_run = mysqli_query($con,$query);
+                $sql ="SELECT * FROM table_fundamental_subjects";
+                $smyData = mysqli_query($con,$sql);
+                while($row = $smyData->fetch_assoc()) {
+                $count = $row['No'] + 1 ;
+                }
+                $subject_level = 'B1';
+                $subject_code  = $_POST['code'];
+                $subject_name  = $_POST['subject_name'];
+                $subject_hour_per_week = $_POST['hours_per_week'];
+                $subject_sec4=$_POST['subject_sec4'];
+                $day4 =$_POST['seven_day4'];
+                $start_time4 =$_POST['start_time4'];
+                $end_time4 =$_POST['end_time4'];
+
+                $query = "INSERT INTO table_fundamental_subjects(No,subject_level,subject_code,subject_name,subject_hour_per_week,
+                                                                  subject_sec,day,start_time,end_time)
+                                      VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week',
+                                              '$subject_sec4','$day4','$start_time4','$end_time4')";
+                $query_run = mysqli_query($con,$query);
+        echo '<script type="text/javascript"> alert("Input data successful!") </script>';
+      }
+
+
+
+
 ?>

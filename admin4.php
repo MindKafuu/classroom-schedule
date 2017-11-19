@@ -32,7 +32,7 @@
 
     </script>
     </head>
-  
+
   <style>
     body {
     background-color: #ececec;
@@ -74,22 +74,22 @@
             <a href="admin4-1.php" class="btn2"><b>Classroom</b></a><br><br>    <!--แก้ link-->
         </div>
         <div style="margin-top: -150px; margin-left: 400px">
-          
+
           <b>Computer  </b>
             <br><br><br><br>
           <b>Capacity </b>
-          
+
         </div>
-        
+
         <div style="margin-top:-95px; margin-left:500px">
         <input class="inputroom" name="room_code" type="text" id="username"
           class="tao51" style ="width:350px; height:23px; margin-left:25px" >
         </div>
-        
+
         <div style="margin-top:85px; margin-left:450px">
         <ul id="navbar" >
-            <li><a id="green"  href="#"style ="background: url(images/arrow.png); 
-                background-repeat: no-repeat; 
+            <li><a id="green"  href="#"style ="background: url(images/arrow.png);
+                background-repeat: no-repeat;
                 background-size: 25px;
                 background-position: right center;
                 background-color:#ffffff">Menu</a>
@@ -100,33 +100,32 @@
                 </ul>
             </li>
         </div>
+
         <button name="save_data" class = "buttonsave">
         <span class = "content"><b>save</b></span>
         </button>
+        <select name="size">
+          <option value="MENU">Sec</option>
+          <option value="40">40</option>
+          <option value="80">80</option>
+        </select>
+
     </form>
   </body>
 </html>
 <?php
-  /*  font-end หน้านี้
-     room code, size room ของห้องคอม เก็บไว้ที่ตาราง table_room
-
-    ***room_size  เก็บ drop down ยังไม่ได้ทำ***
-    ***การ Refresh หน้า จะส่งข้อมูลเดิมซ้ำ ต้องเปลี่ยนหน้า ถึงจะ clear ข้อมูล*** */
-
+//////////////////////////////ROOM///////////////////////////////////////
     if(isset($_POST['save_data'])){
-        /*    เก็บ ห้องรหัสห้องคอม กับความจุ    */
         $sql = "SELECT * FROM table_room";
         $smyData = mysqli_query($con, $sql);
         while($row = mysqli_fetch_array($smyData)) {
             $count = $row['No'] + 1 ;
             $room_code = $_POST['room_code'];
             $room_type  = 'classroom';
-            $room_size  = '40';
+            $room_size  = $_POST['size'];
             $query = "INSERT INTO table_room(No,room_code,room_type,room_size) VALUES ('$count','$room_code','$room_type','$room_size')";
             $query_run = mysqli_query($con,$query);
-
             if($query_run){
-
                 header('location:admin4.php');
                 exit;
                 break;
