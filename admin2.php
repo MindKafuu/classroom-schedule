@@ -27,15 +27,17 @@
 
     <title>Classroom Schedule</title>
   </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
-		  function hideadd(){
-                document.getElementById("green").style.visibility="hidden";
-                document.getElementById("green1").style.visibility="hidden";
-    }
-    	function showadd(){
-                document.getElementById("green").style.visibility="visible";
-                document.getElementById("green1").style.visibility="visible";
-    }
+	$(document).ready(function(){
+    $("q").hide();
+    $("#hide").click(function(){
+        $("q").hide();
+    });
+    $("#show").click(function(){
+        $("q").show();
+    });
+    });
     </script>
   <style>
     body {
@@ -51,7 +53,7 @@
        padding: 0 5px;
        text-align: left;}
   </style>
-  <body onload="hideadd()">
+  <body>
     <header>
         <img src="images/FIBO_logo.jpg" width="55" height="62" style="margin-top: 10px; margin-left: 10px">
         <div style="font-size: 1.8em; margin-top: -50px; margin-left: 80px">
@@ -74,12 +76,12 @@
             <br><b class="topics">User Info</b><br><br>
         </div>
 <!-- ปุ่มsave-->
-        <button onclick="hideadd()" id="green1" style=" margin-left: 1200px ; margin-top: 0px " class = "buttonsave">
+        <q><button id ="hide"  style=" margin-left: 1200px ; margin-top: 0px " class = "buttonsave">
                 <span class = "content"><b>save</b></span>
         </button>
 <!-- link data base -->
         <center>
-        <div id="green" style='margin-top:0px; margin-left:100px;border-radius: 6px; background-color:white; height: 135px ; width: 550px'>
+        <div  style='margin-top:0px; margin-left:100px;border-radius: 6px; background-color:white; height: 135px ; width: 550px'>
                 
                 <b style =" margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Name</b>
                 <input style ="width:350px; height:23px; margin-top:5px; margin-left:55px" name="name" type="text" placeholder="Name"><!-- link data base -->
@@ -97,6 +99,7 @@
         </div>
         </center>
         <br>
+        </q>
         
         <?php
                 $sql = "SELECT * FROM table_account";
@@ -143,7 +146,7 @@
         
         </div>
         <div >
-                <a href="#" style=" margin-left: 1200px ; margin-top: -50px " class = "button4" onclick="showadd()" >
+                <a href="#" id="show"  style=" margin-left: 1200px ; margin-top: -50px " class = "button4"  >
                 <span class = "content"><b>+</b></span></a>
 
                 
