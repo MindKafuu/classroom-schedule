@@ -21,15 +21,15 @@
     <script>
             function myFunction(){
                 var x = document.getElementById("mySelect").value;
-                    if(x==1){
+                    if(x==11){
                         document.getElementById("roomA").style.visibility="visible";
                         document.getElementById("roomB").style.visibility="hidden";
                 }
-                    if(x==2){
+                    if(x==22){
                         document.getElementById("roomA").style.visibility="hidden";
                         document.getElementById("roomB").style.visibility="visible";
                 }
-                    if(x==3){
+                    if(x==33){
                         document.getElementById("roomA").style.visibility="visible";
                         document.getElementById("roomB").style.visibility="visible";
                 }
@@ -86,9 +86,9 @@
         <div style="margin-top:-33px; margin-left:25px"> 
 
         <select name="SEC" id="mySelect">
-            <option value="1">A</option>
-            <option value="2">B</option>
-            <option value="3">A+B</option>
+            <option value="11">A</option>
+            <option value="22">B</option>
+            <option value="33">A+B</option>
           </select>
 
 
