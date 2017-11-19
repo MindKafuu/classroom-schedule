@@ -9,10 +9,10 @@
     <!--meta-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    
+
     <!--shortcut-->
     <link rel="shortcut icon" href="images/icon.png" title="Favicon"/>
-    
+
     <!--style-->
     <link rel="stylesheet" type="text/css" href="css/admin7-1.css">
     <link rel="stylesheet" type="text/css" href="css/admin7-2.css">
@@ -31,7 +31,7 @@
         </header>
         <div style="margin-top: -30px; margin-left: 500px">
             <a href="admin1.php" class="btn1"><b>Home</b></a>
-            <a href="#" class="btn1"><b>User Info</b></a>
+            <a href="admin2.php" class="btn1"><b>User Info</b></a>
             <a href="admin3.php" class="btn1"><b>Class Info</b></a>
             <a href="admin4.php" class="btn1"><b>Class Management</b></a>
             <a href="#" class="btn1"><b>Summary</b></a>
@@ -46,15 +46,15 @@
         <ul id="navbar">
                 <li><a href="admin7.php"style ="
                     background-color:#ff6d00;">ALL Schedule</a>
-                    
-                <li><a href="admin7-1.php" style ="background: url(images/arrow.png); 
-                    background-repeat: no-repeat; 
+
+                <li><a href="admin7-1.php" style ="background: url(images/arrow.png);
+                    background-repeat: no-repeat;
                     background-size: 25px;
                     background-position: right center;
                     background-color:#ff6d00">Years Schedule</a>
                     <ul class="item">
-                            <li><a href="#" style ="background: url(images/rightarrow.png); 
-                                background-repeat: no-repeat; 
+                            <li><a href="#" style ="background: url(images/rightarrow.png);
+                                background-repeat: no-repeat;
                                 background-size: 15px;
                                 background-position: right center;
                                 background-color:#ff6d00">Bachelor </a>
@@ -65,19 +65,19 @@
                                     <li><a href="admin7-b4.php">4</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#" style ="background: url(images/rightarrow.png); 
-                                background-repeat: no-repeat; 
+                            <li><a href="#" style ="background: url(images/rightarrow.png);
+                                background-repeat: no-repeat;
                                 background-size: 15px;
                                 background-position: right center;
                                 background-color:#ff6d00">Master</a>
                                 <ul class="sub-item" style="margin-left:1px;margin-top:1px">
                                     <li><a href="#">1</a></li>
                                     <li><a href="#">2</a></li>
-                                    
+
                                 </ul>
                             </li>
-                            <li><a href="#" style ="background: url(images/rightarrow.png); 
-                                background-repeat: no-repeat; 
+                            <li><a href="#" style ="background: url(images/rightarrow.png);
+                                background-repeat: no-repeat;
                                 background-size: 15px;
                                 background-position: right center;
                                 background-color:#ff6d00">phD</a>
@@ -90,12 +90,12 @@
                         </ul>
                 </li>
                 <li><a href="admin7-2.php"style ="
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
                     background-size: 25px;
                     background-position: right center;
                     background-color:#ff6d00;
                     margin-top : -0.5px">Name list</a>
-                    
+
                 </li>
             </ul>
 </div></br></br>
@@ -112,7 +112,7 @@
                 </th>
 
             </tr>
-            
+
             <?php
                 $x = 0;
                 $teacher = "teacher$x";

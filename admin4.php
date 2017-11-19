@@ -29,7 +29,6 @@
     function myFunction2() {
             document.getElementById("green").innerHTML ="80";
         }
-
     </script>
     </head>
 
@@ -57,7 +56,7 @@
         </header>
         <div style="margin-top: -30px; margin-left: 500px">
             <a href="admin1.php" class="btn1"><b>Home</b></a>
-            <a href="#" class="btn1"><b>User Info</b></a>
+            <a href="admin2.php" class="btn1"><b>User Info</b></a>
             <a href="admin3.php" class="btn1"><b>Class Info</b></a>
             <a href="admin4.php" class="btn1" style=" color: #79a2ff"><b>Class Management</b></a>
             <a href="#" class="btn1"><b>Summary</b></a>
@@ -75,41 +74,30 @@
         </div>
         <div style="margin-top: -150px; margin-left: 400px">
 
-          <b>Computer  </b>
-            <br><br><br><br>
-          <b>Capacity </b>
+          <b style="font-family: 'Work Sans', sans-serif; font-size: 24px">Computer  </b>
+            <br><br><br>
+          <b style="font-family: 'Work Sans', sans-serif; font-size: 24px">Capacity </b>
 
         </div>
 
-        <div style="margin-top:-95px; margin-left:500px">
-        <input class="inputroom" name="room_code" type="text" id="username"
-          class="tao51" style ="width:350px; height:23px; margin-left:25px" >
+        <div style="margin-top:-95px; margin-left:530px">
+        <input class="whitetab" name="room_code" type="text" id="username"
+
         </div>
 
-        <div style="margin-top:85px; margin-left:450px">
-        <ul id="navbar" >
-            <li><a id="green"  href="#"style ="background: url(images/arrow.png);
-                background-repeat: no-repeat;
-                background-size: 25px;
-                background-position: right center;
-                background-color:#ffffff">Menu</a>
-                <ul class="item">
-                    <li id="demo1" onclick="myFunction1()"><a href="#">40</a></li>
-                    <li id="demo2" onclick="myFunction2()"><a href="#">80 </a></li>
-                    </li>
-                </ul>
-            </li>
-        </div>
-
-        <button name="save_data" class = "buttonsave">
-        <span class = "content"><b>save</b></span>
-        </button>
+        <div style="margin-top:25px; margin-left:-40px">
         <select name="size">
-          <option value="MENU">Sec</option>
+          <option value="MENU">Menu</option>
           <option value="40">40</option>
           <option value="80">80</option>
         </select>
 
+        </div>
+        <div style="margin-top:100px; margin-left:-600px">
+        <button name="save_data" class = "buttonsave">
+        <span class = "content"><b>save</b></span>
+        </button>
+        </div>
     </form>
   </body>
 </html>
@@ -125,6 +113,7 @@
             $room_size  = $_POST['size'];
             $query = "INSERT INTO table_room(No,room_code,room_type,room_size) VALUES ('$count','$room_code','$room_type','$room_size')";
             $query_run = mysqli_query($con,$query);
+
             if($query_run){
                 header('location:admin4.php');
                 exit;

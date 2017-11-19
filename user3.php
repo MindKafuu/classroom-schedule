@@ -17,79 +17,29 @@
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Work+Sans" rel="stylesheet">
 
     <title>Classroom Schedule</title>
+
     <script>
-            function hidet(){
-                document.getElementById("A").innerHTML="A";
-                document.getElementById("A").style.visibility="visible";
-                document.getElementById("A1").style.visibility="visible";
-                document.getElementById("B").style.visibility="hidden";
-                document.getElementById("B1").style.visibility="hidden";
+            function myFunction(){
+                var x = document.getElementById("mySelect").value;
+                    if(x==1){
+                        document.getElementById("roomA").style.visibility="visible";
+                        document.getElementById("roomB").style.visibility="hidden";
+                }
+                    if(x==2){
+                        document.getElementById("roomA").style.visibility="hidden";
+                        document.getElementById("roomB").style.visibility="visible";
+                }
+                    if(x==3){
+                        document.getElementById("roomA").style.visibility="visible";
+                        document.getElementById("roomB").style.visibility="visible";
+                }
+            }
+            function hideA(){
+                document.getElementById("roomA").style.visibility="visible";
+                document.getElementById("roomB").style.visibility="hidden";
     }
-            function showt(){
-                document.getElementById("A").innerHTML="A";
-                document.getElementById("A").style.visibility="visible";
-                document.getElementById("B").style.visibility="visible";
-                document.getElementById("B1").style.visibility="visible";
-    }
-            function hideta(){
-                document.getElementById("A").style.visibility="hidden";
-                document.getElementById("A1").style.visibility="hidden";
-                document.getElementById("B").style.visibility="visible";
-                document.getElementById("B1").style.visibility="visible";
-    }
-            function sametime(){
-                document.getElementById("A").innerHTML="A+B";
-                document.getElementById("A").style.visibility="visible";
-                document.getElementById("A1").style.visibility="visible";
-                document.getElementById("B").style.visibility="hidden";
-                document.getElementById("B1").style.visibility="hidden";
-    }
-            function dif(){
-                document.getElementById("A").innerHTML="A";
-                document.getElementById("B").style.visibility="visible";
-                document.getElementById("B1").style.visibility="visible";
-                document.getElementById("A").style.visibility="visible";
-                document.getElementById("A1").style.visibility="visible";
+           
 
-    }
-    		function num1(){
-                    document.getElementById("num1").innerHTML="1";
-    }
-    		function num2(){
-                    document.getElementById("num1").innerHTML="2";
-    }
-    		function num3(){
-                    document.getElementById("num1").innerHTML="3";
-    }
-    		function num11(){
-                    document.getElementById("num11").innerHTML="1";
-    }
-    		function num21(){
-                    document.getElementById("num11").innerHTML="2";
-    }
-    		function num31(){
-                    document.getElementById("num11").innerHTML="3";
-    }
-
-            function headtextA1(){
-                    document.getElementById("A").innerHTML="computer";
-    }
-            function headtextA2(){
-                    document.getElementById("A").innerHTML="classroom";
-    }
-            function headtextA3(){
-                    document.getElementById("A").innerHTML="studio";
-    }
-            function headtextB1(){
-                    document.getElementById("B").innerHTML="computer";
-    }
-            function headtextB2(){
-                    document.getElementById("B").innerHTML="classroom";
-    }
-            function headtextB3(){
-                    document.getElementById("B").innerHTML="studio";
-    }
-        
     </script>
   </head>
   <style>
@@ -106,7 +56,7 @@
        padding: 0 5px;
        text-align: left;}
   </style>
-  <body onload="hidet()">
+  <body onload="hidetA()">
     <header>
         <img src="images/FIBO_logo.jpg" width="55" height="62" style="margin-top: 10px; margin-left: 10px">
         <div style="font-size: 1.8em; margin-top: -50px; margin-left: 80px">
@@ -126,98 +76,59 @@
             <br><b class="topics">Classroom</b><br><br>
             
         </div>
-        <div style="margin-top: 20px; margin-left: 400px">
-        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px;"><b> Subject code  </b> </p> </br>
-        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"><b>  Subject namespace   </b>    </p></br>
-        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Lecturer   </b>    </p></br>
-        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Hour/week   </b>   </p></br>
-        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Split period   </b>   </p></br></br>
-        <div style = "margin-top: -255px; margin-left: 300px; line-height:1;">
-                <input class = "whitetab"></br></br>
-                <input class = "whitetab"></br></br>
-                <input class = "whitetab"></br></br>
-                <input class = "whitetab"></br></br>
-        </div>
-        <ul id="navbar" style="margin-left: 221px;">
-        <li><a id="num1" href="#" style ="background: url(images/arrow.png)
-            background-repeat: no-repeat; 
-            background-size: 25px;
-            background-position: right center;
-            background-color:#ffffff">none</a>
-            <ul  class="item">
-                    <li><a onclick="num1()" href="#">1 </a></li>
-                    <li><a onclick="num2()" href="#">2</a></li>
-                    <li><a onclick="num3()" href="#">3</a>
-                        
-                    </li>
-                </ul>
-        </li>
-        <li><a id="num11" href="#" style ="background: url(images/arrow.png)
-            background-repeat: no-repeat; 
-            background-size: 25px;
-            background-position: right center;
-            background-color:#ffffff">none</a>
-            <ul  class="item">
-                    <li><a onclick="num11()" href="#">1 </a></li>
-                    <li><a onclick="num21()" href="#">2</a></li>
-                    <li><a onclick="num31()" href="#">3</a>
-                        
-                    </li>
-                </ul>
-        </li>
-        </ul>
+        <div style="margin-top:0px; margin-left: 400px">
+        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px;"><b> Subject code&#160  </b><input class = "whitetab"> </p> </br>
+        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"><b>  Subject name  </b><input class = "whitetab"></p></br>
+        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Lecturer&#160&#160&#160&#160&#160&#160&#160 </b><input class = "whitetab"></p></br>
+        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Hour/week &#160&#160&#160&#160     </b><input class = "whitetab"></p></br><br><br>
+        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Sec:  </b> </p>
         
-        </p></br>
-        </br></br>
-          <b>
-            <ul id="navbar">
-                <li style="margin-left:3px;"><a href="#"style ="background: url(images/arrow.png); 
-                    background-repeat: no-repeat; 
-                    background-size: 25px;
-                    background-position: right center;
-                    background-color:#ffffff">Sec</a>
-                    <ul class="item">
-                        <li><a onclick="hidet()" href="#">A </a></li>
-                        <li><a onclick="hideta()" href="#">B </a></li>
-                        <li><a href="#" class="forAB">A+B </a>
-                            <ul class="sub-item">
-                                <li><a  onclick="sametime()" href="#">same time</a></li>
-                                <li><a onclick="showt()" href="#">different time</a></li>
-                                
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li style="margin-left: 149px;">
-                    <a id="A" href="#" style ="background: url(images/arrow.png); 
-                    background-repeat: no-repeat; 
-                    background-size: 25px;
-                    background-position: right center;
-                    background-color:#ffffff">A</a>
-                    <ul id="A1" class="item">
-                            <li><a onclick="headtextA1()" href="#">computer </a></li>
-                            <li><a onclick="headtextA2()" href="#">classroom</a></li>
-                            <li><a onclick="headtextA3()" href="#">studio</a>
-                                
-                            </li>
-                        </ul>
-                </li>
-                <li><a id="B" href="#"style ="background: url(images/arrow.png); 
-                    background-repeat: no-repeat; 
-                    background-size: 25px;
-                    background-position: right center;
-                    background-color:#ffffff">B</a>
-                    <ul id="B1" class="item">
-                        <li><a onclick="headtextB1()" href="#">computer</a></li>
-                        <li><a onclick="headtextB2()" href="#">classroom</a></li>
-                        <li><a onclick="headtextB3()" href="#">studio </a></li>
-                        
-                            
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            
+        <div style="margin-top:-33px; margin-left:25px"> 
+
+        <select name="SEC" id="mySelect">
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">A+B</option>
+          </select>
+
+
+
+
+
+<button onclick="myFunction()">SUBMIT</button>   <!--ปุ่มซับมิท-->
+
+
+
+
+
+        </div>
+        <div style="margin-top:-45px; margin-left:230px">
+        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Split period:   </b>   </p>
+        
+        <select name="periodA" >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+
+          <select name="periodB">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            </select>
+                
+        <c><select id="roomA" name="roomA" >
+            <option value="comA">computer</option>
+            <option value="classroomA">classroom</option>
+            <option value="studioA">studio</option>
+          </select></c>
+             
+        <g><select id="roomB" name="roomB" >
+            <option value="comB">computer</option>
+            <option value="classroomB">classroom</option>
+            <option value="studioB">studio</option>
+        </select> </g>
+    </div>
           </b>
           <div style =" margin-left:700px; margin-top: 100px; font-size: 24px; font-family: 'Work Sans', sans-serif">
           <a href="#" class = "buttonsave">
