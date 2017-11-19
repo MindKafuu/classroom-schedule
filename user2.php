@@ -19,6 +19,9 @@
     <!--font-->
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Work+Sans" rel="stylesheet">
 
+    <!--javascript-->
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
     <title>Classroom Schedule</title>
   </head>
   <style>
@@ -62,44 +65,44 @@
                 <th><a href="#" class = "button1">
                     <span class = "content"> Date/Time </span>
                 </a></th>
-                <th><button name="time1" class = "button">
+                <th><button type="button" name="time1" class = "b-tn">
                     <span class = "content"> 8.30 - 9.20 </span>
                 </button></th>
-                <th><button name="time2" class = "button">
+                <th><button type="button" name="time2" class = "b-tn">
                     <span class = "content"> 9.30 - 10.20 </span>
                 </button></th>
-                <th><button name="time3" class = "button name="time1"">
+                <th><button type="button" name="time3" class = "b-tn">
                     <span class = "content"> 10.30 - 11.20 </span>
                 </button></th>
-                <th><button name="time4" class = "button">
+                <th><button type="button" name="time4" class = "b-tn">
                     <span class = "content"> 11.30 - 12.20 </span>
                 </button></th>
-                <th><button name="time5" class = "button">
+                <th><button type="button" name="time5" class = "b-tn">
                     <span class = "content"> 12.30 - 13.20 </span>
                 </button></th>
-                <th><button name="time6" class = "button">
+                <th><button type="button" name="time6" class = "b-tn">
                     <span class = "content"> 13.30 - 14.20 </span>
                 </button></th>
-                <th><button name="time7" class = "button">
+                <th><button type="button" name="time7" class = "b-tn">
                     <span class = "content"> 14.30 - 15.20 </span>
                 </button></th>
-                <th><button name="time8" class = "button">
+                <th><button type="button" name="time8" class = "b-tn">
                     <span class = "content"> 15.30 - 16.20 </span>
                 </button></th>
-                <th><button name="time9" class = "button">
+                <th><button type="button" name="time9" class = "b-tn">
                     <span class = "content"> 16.30 - 17.20 </span>
                 </button></th>
-                <th><button name="time10" class = "button">
+                <th><button type="button" name="time10" class = "b-tn">
                     <span class = "content"> 17.30 - 18.20 </span>
                 </button></th>
             </tr>
             <tr>
             <?php
-                echo "<td><button name='day1' class = 'button'>
+                echo "<td><button type='button' name='day1' class = 'b-tn'>
                 <span class = 'content'> Monday </span>
                 </button></td>";
                 for ($x = 0; $x <= 9; $x++) {
-                    echo " <td><button name='day1_$x' class = 'button2'>
+                    echo " <td><button type='button' name='day1_$x' class='b-tn2'>
                     <span class = 'content'> </span>
                     </button></td>";
                 }
@@ -107,11 +110,11 @@
             </tr>
             <tr>
             <?php
-                echo "<td><button name='day2' class = 'button'>
+                echo "<td><button type='button' name='day2' class = 'b-tn'>
                 <span class = 'content'> Tuesday </span>
                 </button></td>";
                 for ($x = 0; $x <= 9; $x++) {
-                    echo " <td><button name='day2_$x' class = 'button2'>
+                    echo " <td><button type='button' name='day2_$x' class='b-tn2'>
                     <span class = 'content'> </span>
                     </button></td>";
                 }
@@ -119,11 +122,11 @@
             </tr>
             <tr>
             <?php
-            echo "<td><button name='day3' class = 'button'>
+            echo "<td><button type='button' name='day3' class = 'b-tn'>
             <span class = 'content'> Wednesday </span>
             </button></td>";
             for ($x = 0; $x <= 9; $x++) {
-                echo " <td><button name='day3_$x' class = 'button2'>
+                echo " <td><button type='button' name='day3_$x' class='b-tn2'>
                 <span class = 'content'> </span>
                 </button></td>";
             }
@@ -131,11 +134,11 @@
             </tr>
             <tr>
             <?php
-            echo "<td><button name='day4' class = 'button'>
+            echo "<td><button type='button' name='day4' class = 'b-tn'>
             <span class = 'content'> Thursday </span>
             </button></td>";
             for ($x = 0; $x <= 9; $x++) {
-                echo " <td><button name='day4_$x' class = 'button2'>
+                echo " <td><button type='button' name='day4_$x' class='b-tn2'>
                 <span class = 'content'> </span>
                 </button></td>";
             }
@@ -143,11 +146,11 @@
             </tr>
             <tr>
             <?php
-            echo "<td><button name='day5' class = 'button'>
+            echo "<td><button type='button' name='day5' class = 'b-tn'>
             <span class = 'content'> Friday </span>
             </button></td>";
             for ($x = 0; $x <= 9; $x++) {
-                echo " <td><button name='day5_$x' class = 'button2'>
+                echo " <td><button type='button' name='day5_$x' class='b-tn2'>
                 <span class = 'content'> </span>
                 </button></td>";
             }
@@ -155,11 +158,11 @@
             </tr>
             <tr>
                 <?php
-                    echo "<td><button name='day6' class = 'button'>
+                    echo "<td><button type='button' name='day6' class = 'b-tn'>
                     <span class = 'content'> Saturday </span>
                     </button></td>";
                     for ($x = 0; $x <= 9; $x++) {
-                        echo " <td><button name='day6_$x' class = 'button2'>
+                        echo " <td><button type='button' name='day6_$x' class='b-tn2'>
                         <span class = 'content'> </span>
                         </button></td>";
                     }
@@ -174,65 +177,13 @@
             </a>
     </div>
     </form>
-        <?php
-            $total = 0;
-
-            if(sizeof($_POST) >0)
-            {
-                for($x = 1; $x <= 10; $x++) {     
-                    ${'time'.$x} = 0;
-                    ${'day'.$x.'_'.$x} = 0;
-                    if(isset($_POST['time'.$x])) {
-                        ${'time'.$x} = 5; 
-                        $_SESSION['time'.$x] = ${'time'.$x};
-                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['time'.$x];
-                    }
-                    if(isset($_POST['day1_'.$x])) {
-                        ${'day1_'.$x} = 1; 
-                        $_SESSION['day1_'.$x] = ${'day1_'.$x};
-                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day1_'.$x];
-                    }
-                    if(isset($_POST['day2_'.$x])) {
-                        ${'day2_'.$x} = 1; 
-                        $_SESSION['day2_'.$x] = ${'day2_'.$x};
-                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day2_'.$x];
-                    }
-                    if(isset($_POST['day3_'.$x])) {
-                        ${'day3_'.$x} = 1; 
-                        $_SESSION['day3_'.$x] = ${'day3_'.$x};
-                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day3_'.$x];
-                    }
-                    if(isset($_POST['day4_'.$x])) {
-                        ${'day4_'.$x} = 1; 
-                        $_SESSION['day4_'.$x] = ${'day4_'.$x};
-                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day4_'.$x];
-                    }
-                    if(isset($_POST['day5_'.$x])) {
-                        ${'day5_'.$x} = 1; 
-                        $_SESSION['day5_'.$x] = ${'day5_'.$x};
-                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day5_'.$x];
-                    }
-                    if(isset($_POST['day6_'.$x])) {
-                        ${'day6_'.$x} = 1; 
-                        $_SESSION['day6_'.$x] = ${'day6_'.$x};
-                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day6_'.$x];
-                    }
-                    if($x<=6) {
-                        ${'day'.$x} = 0;
-                        if(isset($_POST['day'.$x])) {
-                            ${'day'.$x} = 10; 
-                            $_SESSION['day'.$x] = ${'day'.$x};
-                            $_SESSION['total'] = $_SESSION['total'] + $_SESSION['day'.$x];
-                        }
-                    }
-                }
-                echo "<p style = 'margin-left: 600px; margin-top: -50px; font-size: 30px'>total : ".$_SESSION['total']."</br></br></br></p>";
-            }
-            else {
-                session_destroy();
-            }
-            
-        ?>
-        
+    <script> 
+        $('.b-tn').click(function() {
+            $(this).addClass("b-tn-click");
+        });
+        $('.b-tn2').click(function() {
+            $(this).addClass("b-tn2-click");
+        });
+    </script>    
   </body>
 </html>

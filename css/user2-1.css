@@ -1,4 +1,4 @@
-.button{
+.b-tn{
     display: block;
     width: 80px;
     height: 40px;
@@ -8,7 +8,7 @@
     margin-left: 10px;
     border-radius: 8px;
 }
-.button .content{
+.b-tn .content{
     display: block;
     position: absolute;
     bottom: 6px;
@@ -23,9 +23,95 @@
     border-radius: 5px;
     font-size: 12px;
 }
-.button .content:hover {
-    background-color: #5b5b5b;
+.b-tn .content:hover {
+    background-color: rebeccapurple;
 }
-.button .content:visited {
-    background-color: wheat;
+.b-tn .content:active {
+    background-color: green;
+    bottom: 0;
+    box-shadow: 0 0px 0#06c;
+}
+.b-tn-click{
+    display: block;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    border: 2px solid wheat;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+.b-tn-click .content{
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    background-color: rebeccapurple;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 6px 0 violet;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.b-tn2{
+    display: block;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    border: 2px solid #000000;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+.b-tn2 .content{
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    background-color: #FF8C00;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 6px 0 #CD6600;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.b-tn2 .content:hover {
+    background-color: rebeccapurple;
+}
+.b-tn2 .content:active {
+    background-color: green;
+    bottom: 0;
+    box-shadow: 0 0px 0#06c;
+}
+.b-tn2-click{
+    display: block;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    border: 2px solid wheat;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+.b-tn2-click .content{
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    background-color: rebeccapurple;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 6px 0 violet;
+    border-radius: 5px;
+    font-size: 12px;
 }
