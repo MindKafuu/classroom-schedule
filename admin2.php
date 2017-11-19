@@ -79,10 +79,10 @@
         </button>
 <!-- link data base -->
         <center>
-        <div id="green" style='margin-top:0px; margin-left:100px;border-radius: 6px; background-color:white; height: 130px ; width: 550px'>
+        <div id="green" style='margin-top:0px; margin-left:100px;border-radius: 6px; background-color:white; height: 135px ; width: 550px'>
                 
                 <b style =" margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Name</b>
-                <input style ="width:350px; height:23px; margin-left:55px" name="name" type="text" placeholder="Name"><!-- link data base -->
+                <input style ="width:350px; height:23px; margin-top:5px; margin-left:55px" name="name" type="text" placeholder="Name"><!-- link data base -->
                 <br>
 
                 <img src='images/user.png' ALIGN = "MIDDLE" width="60" height="70" >
@@ -96,7 +96,7 @@
 
         </div>
         </center>
-        <br><br>
+        <br>
         
         <?php
                 $sql = "SELECT * FROM table_account";
