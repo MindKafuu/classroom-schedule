@@ -184,7 +184,7 @@
                     if(isset($_POST['time'.$x])) {
                         ${'time'.$x} = 5; 
                         $_SESSION['time'.$x] = ${'time'.$x};
-                        $_SESSION['$total'] = $_SESSION['$total'] + $_SESSION['time'.$x];
+                        $_SESSION['total'] = $_SESSION['total'] + $_SESSION['time'.$x];
                     }
                     if(isset($_POST['day1_'.$x])) {
                         ${'day1_'.$x} = 1; 
@@ -218,7 +218,7 @@
                         }
                     }
                 }
-                echo "<p style = 'margin-left: 600px; margin-top: -50px; font-size: 30px'>total : ".$_SESSION['$total']."</br></br></br></p>";
+                echo "<p style = 'margin-left: 600px; margin-top: -50px; font-size: 30px'>total : ".$_SESSION['total']."</br></br></br></p>";
             }
             else {
                 session_destroy();

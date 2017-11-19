@@ -1,5 +1,7 @@
 <?php
       require 'dbconfig/config.php';         //page9-2.php
+      ob_start();
+      session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,7 +101,8 @@
 </div></br></br>
         <div  style="margin-top: -300px; margin-left: 320px" class="show">
         <h1>TEACHER</h1>
-        <table>
+        <form action='admin7-2.php' method='post'>
+        <table >
             <tr class="head-data">
                 <th>
                     Number
@@ -111,12 +114,11 @@
             </tr>
             
             <?php
-            $x = 0;
+                $x = 0;
+                $teacher = "teacher$x";
                 $sql = "SELECT * FROM table_account";
                 $smyData = mysqli_query($con, $sql);
                 while($row = mysqli_fetch_array($smyData)) {
-                    $x++;
-                    $teacher = "teacher$x";
                     echo "<tr class='data'>";
                     echo "<td>";
                     echo $x;
@@ -125,15 +127,15 @@
                     echo "<button name='$teacher' class='data-button'>".$row['teacher_name']."</button>";
                     echo "</td>";
                     echo "</tr>";
-                }
 
-                if(isset($_POST['teacher1'])) {
-                    echo "mind";
-                    header('location:admin7-3.php');
+                    if(isset($_POST[$teacher])) {
+                        $_SESSION['x'] = $x;
+                        header('location:admin7-3.php');
+                    }
                 }
             ?>
             </table>
+            </form>
         </div>
-
   </body>
 </html>
