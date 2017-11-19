@@ -13,13 +13,28 @@
     
     <!--style-->
     <link rel="stylesheet" type="text/css" href="css/admin1.css">
-  
+    <link rel="stylesheet" type="text/css" href="css/admin3-1.css">
+    <link rel="stylesheet" type="text/css" href="css/admin3-2.css">
+    <link rel="stylesheet" type="text/css" href="css/admin3-3.css">
+    <link rel="stylesheet" type="text/css" href="css/admin3-4.css">
+  	<link rel="stylesheet" type="text/css" href="page3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="ddstyle.css">
+    <link rel="stylesheet" type="text/css" href="theme.css">
 
     <!--font-->
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Work+Sans" rel="stylesheet">
 
     <title>Classroom Schedule</title>
   </head>
+  <script>
+		  function hideadd(){
+                document.getElementById("green").style.visibility="hidden";
+    }
+    	function showadd(){
+                document.getElementById("green").style.visibility="visible";
+    }
+    </script>
   <style>
     body {
     background-color: #ececec;
@@ -34,7 +49,7 @@
        padding: 0 5px;
        text-align: left;}
   </style>
-  <body>
+  <body onload="hideadd()">
     <header>
         <img src="images/FIBO_logo.jpg" width="55" height="62" style="margin-top: 10px; margin-left: 10px">
         <div style="font-size: 1.8em; margin-top: -50px; margin-left: 80px">
@@ -56,6 +71,7 @@
         <div style="margin-top: 50px;">
             <br><b class="topics">User Info</b><br><br>
         </div>
+        
         <?php
                 $sql = "SELECT * FROM table_account";
                 $smyData = mysqli_query($con, $sql);
@@ -95,7 +111,33 @@
                 //     echo "<br>";
                 //     echo "<br>";
                 // }
-            ?>            
+            ?>
+            <div id="green" style= "margin-top:0px; margin-left:450px ; background-color: #4CAF50 ;height: 140px; width: 650px " >
+        		
+        		<b style ="margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Name</b>
+        		<input style ="width:350px; height:23px; margin-left:55px" name="name" type="text" placeholder="Name">
+        		<br>
+
+        		<img src='images/user.png' ALIGN = "MIDDLE" width="60" height="70" >
+
+        		<b style ="font-family: 'Work Sans', sans-serif; font-size: 16px" >Username</b>
+        		<input style ="width:350px; height:23px; margin-left:25px" name="username" type="text" placeholder="E-mail">
+        		<br>
+        		<b style ="margin-left:70px; font-family: 'Work Sans', sans-serif; font-size: 16px ">Password</b>
+        		<input style ="width:350px; height:23px; margin-left:25px" name="password" type="text" placeholder="Password">
+        </div>
+
+        <div style="margin-left: -180px;margin-top: 28px">
+        		<a href="#" style=" margin-left: 1300px ; margin-top: -100px " class = "button4" onclick="showadd()" >
+                <span class = "content"><b>+</b></span></a>
+<!-- ปุ่มsave-->
+                <button onclick="hideadd()" style=" margin-left: 1300px ; margin-top: 10px " class = "buttonsave">
+                <span class = "content"><b>save</b></span>
+        		</button>
+        </div>
+        <div style="margin-left:30px;margin-top:350px">
+                <button class="howto">?</button>     
+        </div>            
         <div style="margin-top:-575px;margin-left:890px">
             <i class="fa fa-close" style="font-size:48px;color:red"></i>
             <br><br><br><br><br><br><br><br><br><br>
@@ -103,8 +145,6 @@
             <br><br><br><br><br><br><br><br><br><br>
             <i class="fa fa-check-square" style="font-size:48px;color:green"></i>
         </div>
-        <div style="margin-left:30px;margin-top:350px">
-                <button class="howto">?</button>     
-        </div>
+        
   </body>
 </html>
