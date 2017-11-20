@@ -81,11 +81,11 @@
                 </div>
 
                 <div style="margin-top:-95px; margin-left:530px">
-                <input class="whitetab" name="room_code" type="text" id="username"
+                <input class="whitetab" name="room_code" type="text" id="username">
 
                 </div>
 
-                <div style="margin-top:25px; margin-left:-40px">
+                <div style="margin-top:25px; margin-left:490px">
                 <select name="size">
                   <option value="MENU">Menu</option>
                   <option value="40">40</option>

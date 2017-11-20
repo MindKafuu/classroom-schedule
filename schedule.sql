@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2017 at 09:18 PM
+-- Generation Time: Nov 20, 2017 at 09:20 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -58,8 +58,7 @@ INSERT INTO `table_account` (`No`, `teacher_name`, `teacher_email`, `teacher_pas
 (15, 'Mr.Narongsak', 'Narongsak@fibo.kmutt.ac.th', '1234', 'T'),
 (16, 'Mr.Thanacha Choopojcharoen', 'Thanacha@fibo.kmutt.ac.th', '1234', 'T'),
 (17, 'Mr.Worawit Panpanytep', 'Worawit@fibo.kmutt.ac.th', '1234', 'T'),
-(18, 'Ms.Mirawee Kumpakure', 'Mirawee@fibo.kmutt.ac.th', '1234', 'A'),
-(20, 'ไนท์ไงจะใครลั', 'เสือกก', '5555555555555', 'T');
+(18, 'Ms.Mirawee Kumpakure', 'Mirawee@fibo.kmutt.ac.th', '1234', 'A');
 
 -- --------------------------------------------------------
 
@@ -84,7 +83,20 @@ CREATE TABLE `table_fundamental_subjects` (
 --
 
 INSERT INTO `table_fundamental_subjects` (`No`, `subject_level`, `subject_code`, `subject_name`, `subject_hour_per_week`, `subject_sec`, `day`, `start_time`, `end_time`) VALUES
-(0, 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test');
+(1, '1', 'GEN101', 'พละ', '1', 'AB', '2', '7', '8'),
+(2, '1', 'LNG101', 'English', '3', 'AB', '4', '1', '3'),
+(3, '1', 'MTH101', 'Math', '3', 'AB', '2', '2', '3'),
+(4, '1', 'MTH101', 'Math', '3', 'AB', '4', '5', '6'),
+(5, '1', 'PHY103', 'Physics', '3', 'AA', '1', '0', '1'),
+(6, '1', 'PHY103', 'Physics', '3', 'AA', '4', '7', '8'),
+(7, '1', 'PHY103', 'Physics', '3', 'BB', '0', '0', '1'),
+(8, '1', 'PHY103', 'Physics', '3', 'BB', '4', '7', '8'),
+(9, '1', 'PHY191', 'fckingPhylab', '1', 'AB', '0', '2', '3'),
+(10, '1', 'LNG1-2', 'Eng2', '3', 'AB', '4', '1', '3'),
+(11, '2', 'LNG2-3', 'Eng2', '3', 'AB', '3', '0', '2'),
+(12, '2', 'MTH201', 'cal3', '3', 'AB', '2', '5', '6'),
+(13, '2', 'MTH201', 'cal3', '3', 'AB', '4', '7', '8'),
+(14, '3', 'LNG103', 'Eng3', '3', 'AB', '3', '1', '3');
 
 -- --------------------------------------------------------
 
@@ -110,8 +122,7 @@ INSERT INTO `table_room` (`No`, `room_code`, `room_type`, `room_size`) VALUES
 (4, 'FB306', 'computer', '40'),
 (5, 'FB401', 'classroom', '40'),
 (6, 'FB402', 'classroom', '40'),
-(7, 'FB403', 'studioroom', '80'),
-(8, 'FB308', 'classroom', '40');
+(7, 'FB403-4', 'studioroom', '80');
 
 -- --------------------------------------------------------
 
@@ -165,10 +176,7 @@ CREATE TABLE `table_subject_description_input_admin` (
 --
 
 INSERT INTO `table_subject_description_input_admin` (`No`, `subject_level`, `subject_code`, `subject_name`, `subject_hour_per_week`, `subject_sec_teacher_want`) VALUES
-(1, 'B1', 'FRAt133235', 'test1', '3', NULL),
-(2, 'B1', 'FRAt13', 'test2', 'test2', NULL),
-(3, 'B1', 'FRAt166', 'test3', 'test3', NULL),
-(4, 'B1', '5555', '5555', '5555', NULL);
+(1, 'B1', 'FRAt133235', 'test1', '3', NULL);
 
 -- --------------------------------------------------------
 
@@ -217,7 +225,7 @@ INSERT INTO `table_subject_description_output` (`No`, `subject_level`, `subject_
 (25, '3', 'FRA341', 'Embeded System Design', '3', '3', 'A', '1', '1'),
 (26, '3', 'FRA341', 'Embeded System Design', '3', '3', 'B', '1', '5'),
 (27, '3', 'FRA361', 'Robotic and Automation Engineering III', '3', '3', 'AB', '0', '5'),
-(28, '4', 'FRA451', 'Manufacturing And Automation', '3', '3', '', '2', '5'),
+(28, '4', 'FRA451', 'Manufacturing And Automation', '3', '3', 'AB', '2', '5'),
 (29, '4', 'FRA451', 'Manufacturing And Automation', '3', '3', '', '0', '1');
 
 -- --------------------------------------------------------
@@ -240,19 +248,73 @@ CREATE TABLE `table_teacher` (
 INSERT INTO `table_teacher` (`No`, `teacher_name`, `teacher_unavailable_day`, `teacher_unavailable_time`) VALUES
 (1, 'Assoc. Prof. Dr.Siam Charoenseang', '0', '0'),
 (2, 'Assoc. Prof. Dr.Siam Charoenseang', '0', '1'),
-(3, 'Assoc. Prof. Dr.Siam Charoenseang', '1', '0'),
-(4, 'Assoc. Prof. Dr.Siam Charoenseang', '1', '1'),
-(5, 'Assoc. Prof. Dr.Siam Charoenseang', '1', '2'),
-(6, 'Mr.Bawornsak Sakulkueakulsuk', '0', '0'),
-(7, 'Mr.Bawornsak Sakulkueakulsuk', '1', '0'),
-(8, 'Mr.Bawornsak Sakulkueakulsuk', '2', '0'),
-(9, 'Mr.Bawornsak Sakulkueakulsuk', '3', '0'),
-(10, 'Mr.Bawornsak Sakulkueakulsuk', '4', '0'),
-(11, 'Asst.Prof.Dr.Eakkachai Pengwang', '1', '5'),
-(12, 'Asst.Prof.Dr.Eakkachai Pengwang', '1', '6'),
-(13, 'Asst.Prof.Dr.Eakkachai Pengwang', '1', '7'),
-(14, 'Asst.Prof.Dr.Eakkachai Pengwang', '2', '6'),
-(15, 'Asst.Prof.Dr.Eakkachai Pengwang', '2', '7');
+(3, 'Assoc. Prof. Dr.Siam Charoenseang', '0', '2'),
+(4, 'Asst. Prof. Dr.Thavida Maneewarn', '0', '0'),
+(5, 'Asst. Prof. Dr.Thavida Maneewarn', '3', '4'),
+(6, 'Asst. Prof. Dr.Thavida Maneewarn', '3', '5'),
+(7, 'Asst. Prof. Dr.Thavida Maneewarn', '3', '6'),
+(8, 'Mr.Bawornsak Sakulkueakulsuk', '4', '1'),
+(9, 'Mr.Bawornsak Sakulkueakulsuk', '4', '2'),
+(10, 'Mr.Bawornsak Sakulkueakulsuk', '4', '3'),
+(11, 'Mr.Bawornsak Sakulkueakulsuk', '4', '4'),
+(12, 'Mr.Bawornsak Sakulkueakulsuk', '4', '5'),
+(13, 'Dr.Pitiwut Teerakittikul', '4', '0'),
+(14, 'Dr.Pitiwut Teerakittikul', '4', '1'),
+(15, 'Dr.Pitiwut Teerakittikul', '4', '2'),
+(16, 'Dr.Pitiwut Teerakittikul', '4', '3'),
+(17, 'Dr.Pitiwut Teerakittikul', '4', '4'),
+(18, 'Mr.Thanacha Choopojcharoen', '4', '1'),
+(19, 'Mr.Thanacha Choopojcharoen', '4', '2'),
+(20, 'Mr.Thanacha Choopojcharoen', '4', '3'),
+(21, 'Mr.Thanacha Choopojcharoen', '4', '4'),
+(22, 'Asst.Prof.Dr.Eakkachai Pengwang', '0', '1'),
+(23, 'Asst.Prof.Dr.Eakkachai Pengwang', '0', '2'),
+(24, 'Asst.Prof.Dr.Eakkachai Pengwang', '0', '3'),
+(25, 'Dr.Arbtip Dheeravongkit', '4', '5'),
+(26, 'Dr.Arbtip Dheeravongkit', '4', '6'),
+(27, 'Dr.Arbtip Dheeravongkit', '4', '7'),
+(28, 'Dr.Arbtip Dheeravongkit', '4', '8'),
+(29, 'Dr.Supachai Vongbunyong', '2', '0'),
+(30, 'Dr.Supachai Vongbunyong', '2', '1'),
+(31, 'Dr.Supachai Vongbunyong', '2', '2'),
+(32, 'Dr.Supachai Vongbunyong', '2', '3'),
+(33, 'Dr.Prakarnkiat Youngkong', '1', '0'),
+(34, 'Dr.Prakarnkiat Youngkong', '1', '1'),
+(35, 'Dr.Prakarnkiat Youngkong', '1', '2'),
+(36, 'Mr.Worawit Panpanytep', '3', '0'),
+(37, 'Mr.Worawit Panpanytep', '3', '1'),
+(38, 'Mr.Worawit Panpanytep', '3', '2'),
+(39, 'Mr.Worawit Panpanytep', '3', '3'),
+(40, 'Dr.Warasinee Chaisangmongkon', '0', '0'),
+(41, 'Dr.Warasinee Chaisangmongkon', '0', '1'),
+(42, 'Dr.Warasinee Chaisangmongkon', '0', '2'),
+(43, 'Dr.Warasinee Chaisangmongkon', '0', '3'),
+(44, 'Dr.Warasinee Chaisangmongkon', '0', '4'),
+(45, 'Dr.Orapadee Joochim', '2', '1'),
+(46, 'Dr.Orapadee Joochim', '3', '4'),
+(47, 'Dr.Orapadee Joochim', '3', '5'),
+(48, 'Dr.Orapadee Joochim', '3', '6'),
+(49, 'Dr.Suriya Natsupakpong', '4', '7'),
+(50, 'Dr.Suriya Natsupakpong', '4', '8'),
+(51, 'Dr.Suriya Natsupakpong', '4', '9'),
+(52, 'Dr.Boontariga Kasemsontitum', '3', '7'),
+(53, 'Dr.Boontariga Kasemsontitum', '3', '8'),
+(54, 'Dr.Boontariga Kasemsontitum', '3', '9'),
+(55, 'Dr.Boontariga Kasemsontitum', '4', '0'),
+(56, 'Dr.Boontariga Kasemsontitum', '4', '1'),
+(57, 'Dr.Boontariga Kasemsontitum', '4', '2'),
+(58, 'Mr.Narongsak', '1', '0'),
+(59, 'Mr.Narongsak', '1', '1'),
+(60, 'Mr.Narongsak', '1', '2'),
+(61, 'Mr.Narongsak', '1', '3'),
+(62, 'Dr.Pornpoj', '0', '5'),
+(63, 'Dr.Pornpoj', '0', '6'),
+(64, 'Dr.Pornpoj', '0', '7'),
+(65, 'Dr.Pornpoj', '0', '8'),
+(66, 'Ms.Mirawee Kumpakure', '0', '5'),
+(67, 'Ms.Mirawee Kumpakure', '0', '6'),
+(68, 'Ms.Mirawee Kumpakure', '0', '7'),
+(69, 'Ms.Mirawee Kumpakure', '0', '8');
 
 -- --------------------------------------------------------
 
@@ -289,17 +351,7 @@ INSERT INTO `table_teacher_subject` (`No`, `teacher_name`, `subject_code`) VALUE
 (16, 'Dr.Suriya Natsupakpong', 'FRA241'),
 (17, 'Dr.Pitiwut Teerakittikul', 'FRA261'),
 (18, 'Asst. Prof. Dr.Thavida Maneewarn', 'FRA261'),
-(19, 'Dr.Supachai Vongbunyong', 'FRA261'),
-(20, 'test1', 'FRAt133235'),
-(21, 'test2', 'FRAt13'),
-(22, 'test3', 'FRAt166'),
-(23, '555', '5555'),
-(28, 'dvas', 'e3r'),
-(29, 'fvre', 'f'),
-(30, '4', 'e'),
-(31, 't', 'dd'),
-(32, 'f', 'y'),
-(33, '00', '00');
+(19, 'Dr.Supachai Vongbunyong', 'FRA261');
 
 --
 -- Indexes for dumped tables

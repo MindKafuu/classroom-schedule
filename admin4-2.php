@@ -83,11 +83,11 @@
                 </div>
 
                 <div style="margin-top:-95px; margin-left:530px">
-                <input class="whitetab" name="room_code" type="text" id="username"
+                <input class="whitetab" name="room_code" type="text" id="username">
 
                 </div>
 
-                <div style="margin-top:25px; margin-left:-40px">
+                <div style="margin-top:25px; margin-left:490px">
                 <select name="size">
                   <option value="MENU">Menu</option>
                   <option value="40">40</option>
@@ -111,7 +111,7 @@
         while($row = mysqli_fetch_array($smyData)) {
             $count = $row['No'] + 1 ;
             $room_code = $_POST['room_code'];
-            $room_type  = 'classroom';
+            $room_type  = 'studioroom';
             $room_size  = $_POST['size'];
             $query = "INSERT INTO table_room(No,room_code,room_type,room_size) VALUES ('$count','$room_code','$room_type','$room_size')";
             $query_run = mysqli_query($con,$query);
