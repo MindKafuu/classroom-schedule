@@ -107,15 +107,27 @@
 
             </tr>
             
-            <tr>
-                <td style="background-color: yellow">
-                    1
-                </td>
-                <td style="background-color: green">
-                    <a href="user4-3.php"><b>ดร.ชวิศร สัมฤทธิ์</b></a>
-                </td>
-                <?php
-                   ?>
+            <?php
+            $x = 0;
+            $teacher = "teacher$x";
+            $sql = "SELECT * FROM table_account";
+            $smyData = mysqli_query($con, $sql);
+            while($row = mysqli_fetch_array($smyData)) {
+                echo "<tr class='data'>";
+                echo "<td>";
+                echo $x;
+                echo "</td>";
+                echo "<td>";
+                echo "<button name='$teacher' class='data-button'>".$row['teacher_name']."</button>";
+                echo "</td>";
+                echo "</tr>";
+
+                if(isset($_POST[$teacher])) {
+                    $_SESSION['x'] = $x;
+                    header('location:admin7-3.php');
+                }
+            }
+        ?>
             </table>
         </div>
 

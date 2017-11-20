@@ -94,213 +94,212 @@
                 </li>
             </ul>
 </div></br></br>
-        <div  style="margin-top: -300px; margin-left: 320px" class="show">
-        <h1>First Year Sec A</h1>
-        <table>
-            <tr class="head">
-                <th rowspan="2">
-                    Day
-                </th>
-                <th colspan="10">
-                    Time
-                </th>
+<div  style="margin-top: -300px; margin-left: 320px" class="show">
+<h1>First Year Sec A</h1>
+<table>
+    <tr class="head">
+        <th rowspan="2">
+            Day
+        </th>
+        <th colspan="10">
+            Time
+        </th>
 
-            </tr>
-            <tr  class="head-time">
-                <th>
-                    08.30-09.30
-                </th>
-                <th>
-                    09.30-10.30
-                </th>
-                <th>
-                    10.30-11.30
-                </th>
-                <th>
-                    11.30-12.30
-                </th>
-                <th>
-                    12.30-13.30
-                </th>
-                <th>
-                    13.30-14.30
-                </th>
-                <th>
-                    14.30-15.30
-                </th>
-                <th>
-                    15.30-16.30
-                </th>
-                <th>
-                    16.30-17.30
-                </th>
-                <th>
-                    17.30-18.30
-                </th>
-            </tr>
-            
-            <tr  ><td rowspan='1'; style='background-color: yellow'>Monday</td>
-                    <?php
-                        $sql = "SELECT * FROM table_subject_description_output";
-                        $smyData = mysqli_query($con, $sql);
-                        while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_day'];
-                            $time = (int)$row['start_time'];
-                            
-                            if($row['Day'] == "0"){                          
-                                if($time > 0 && $time < 99) {
-                                        echo "<td style='background-color: wheat;' colspan='$time'></td>";
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 0) {
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 99) {
-                                        echo "<td style='background-color: wheat;' colspan='10'></td>";
-                                    }
-                                }
-                            }
-                                ?>
-                </tr>
-                <tr>
-                    <td rowspan='1'; style='background-color: pink' >Tuesday</td>
-                    <?php
-                        $sql = "SELECT * FROM table_subject_description_output";
-                        $smyData = mysqli_query($con, $sql);
-                        while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_day'];
-                            $time = (int)$row['start_time'];
-                            
-                            if($row['Day'] == "ๅ"){                          
-                                if($time > 0 && $time < 99) {
-                                        echo "<td style='background-color: wheat;' colspan='$time'></td>";
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 0) {
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 99) {
-                                        echo "<td style='background-color: wheat;' colspan='10'></td>";
-                                    }
-                                }
-                                }
-                                
-                                ?>
-                </tr>
-                <tr>
-                    <td rowspan='1'; style='background-color: green' >Wedenday</td>
-                    <?php
-                        $sql = "SELECT * FROM table_subject_description_output";
-                        $smyData = mysqli_query($con, $sql);
-                        while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_day'];
-                            $time = (int)$row['start_time'];
-                            
-                            if($row['Day'] == "2"){                          
-                                if($time > 0 && $time < 99) {
-                                        echo "<td style='background-color: wheat;' colspan='$time'></td>";
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 0) {
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 99) {
-                                        echo "<td style='background-color: wheat;' colspan='10'></td>";
-                                    }
-                                }
-                                }
-                                ?>
-                </tr>
-                <tr>
-                                
-                    <td rowspan='1'; style='background-color: orange' >Thursday</td>
-                    <?php
-                        $sql = "SELECT * FROM table_subject_description_output";
-                        $smyData = mysqli_query($con, $sql);
-                        while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_day'];
-                            $time = (int)$row['start_time'];
-                            
-                            if($row['Day'] == "3"){                          
-                                if($time > 0 && $time < 99) {
-                                        echo "<td style='background-color: wheat;' colspan='$time'></td>";
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 0) {
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 99) {
-                                        echo "<td style='background-color: wheat;' colspan='10'></td>";
-                                    }
-                                }
-                            }
-                                ?>
-            </tr>
-            <tr>
-                                
-                <td rowspan='1'; style='background-color: blue' > Friday</td>
-                <?php
-                        $sql = "SELECT * FROM table_subject_description_output";
-                        $smyData = mysqli_query($con, $sql);
-                        while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_day'];
-                            $time = (int)$row['start_time'];
-                            
-                            if($row['Day'] == "4"){                          
-                                if($time > 0 && $time < 99) {
-                                        echo "<td style='background-color: wheat;' colspan='$time'></td>";
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 0) {
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 99) {
-                                        echo "<td style='background-color: wheat;' colspan='10'></td>";
-                                    }
-                                }
-                            }
-                                ?>
-            </tr>
-            <tr>
-                <td rowspan='1'; style='background-color: blue' >Satruday</td>
-                <?php
-                        $sql = "SELECT * FROM table_subject_description_output";
-                        $smyData = mysqli_query($con, $sql);
-                        while($row = mysqli_fetch_array($smyData)) {
-                            $hour = (int)$row['subject_hour_per_day'];
-                            $time = (int)$row['start_time'];
-                            
-                            if($row['Day'] == "5"){                          
-                                if($time > 0 && $time < 99) {
-                                        echo "<td style='background-color: wheat;' colspan='$time'></td>";
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 0) {
-                                        echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
-                                        echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
-                                    }
-                                    else if($time == 99) {
-                                        echo "<td style='background-color: wheat;' colspan='10'></td>";
-                                    }
-                                }
-                            }
-                                ?>
-                </tr>
+    </tr>
+    <tr  class="head-time">
+        <th>
+            08.30-09.30
+        </th>
+        <th>
+            09.30-10.30
+        </th>
+        <th>
+            10.30-11.30
+        </th>
+        <th>
+            11.30-12.30
+        </th>
+        <th>
+            12.30-13.30
+        </th>
+        <th>
+            13.30-14.30
+        </th>
+        <th>
+            14.30-15.30
+        </th>
+        <th>
+            15.30-16.30
+        </th>
+        <th>
+            16.30-17.30
+        </th>
+        <th>
+            17.30-18.30
+        </th>
+    </tr>
 
-    
-              
+    <tr  ><td rowspan='1'; style='background-color: yellow'>Monday</td>
+            <?php
+                $sql = "SELECT * FROM table_subject_description_output";
+                $smyData = mysqli_query($con, $sql);
+                while($row = mysqli_fetch_array($smyData)) {
+                    $hour = (int)$row['subject_hour_per_day'];
+                    $time = (int)$row['start_time'];
 
-           </tr>
-           </table>
-           </body>
+                    if($row['Day'] == "0"){
+                        if($time > 0 && $time < 99) {
+                                echo "<td style='background-color: wheat;' colspan='$time'></td>";
+                                echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                                echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                            }
+                            else if($time == 0) {
+                                echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                                echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                            }
+                            else if($time == 99) {
+                                echo "<td style='background-color: wheat;' colspan='10'></td>";
+                            }
+                        }
+                    }
+                        ?>
+        </tr>
+        <tr>
+            <td rowspan='1'; style='background-color: pink' >Tuesday</td>
+            <?php
+                $sql = "SELECT * FROM table_subject_description_output";
+                $smyData = mysqli_query($con, $sql);
+                while($row = mysqli_fetch_array($smyData)) {
+                    $hour = (int)$row['subject_hour_per_day'];
+                    $time = (int)$row['start_time'];
+
+                    if($row['Day'] == "ๅ"){
+                        if($time > 0 && $time < 99) {
+                                echo "<td style='background-color: wheat;' colspan='$time'></td>";
+                                echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                                echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                            }
+                            else if($time == 0) {
+                                echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                                echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                            }
+                            else if($time == 99) {
+                                echo "<td style='background-color: wheat;' colspan='10'></td>";
+                            }
+                        }
+                        }
+
+                        ?>
+        </tr>
+        <tr>
+            <td rowspan='1'; style='background-color: green' >Wedenday</td>
+            <?php
+                $sql = "SELECT * FROM table_subject_description_output";
+                $smyData = mysqli_query($con, $sql);
+                while($row = mysqli_fetch_array($smyData)) {
+                    $hour = (int)$row['subject_hour_per_day'];
+                    $time = (int)$row['start_time'];
+
+                    if($row['Day'] == "2"){
+                        if($time > 0 && $time < 99) {
+                                echo "<td style='background-color: wheat;' colspan='$time'></td>";
+                                echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                                echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                            }
+                            else if($time == 0) {
+                                echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                                echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                            }
+                            else if($time == 99) {
+                                echo "<td style='background-color: wheat;' colspan='10'></td>";
+                            }
+                        }
+                        }
+                        ?>
+        </tr>
+        <tr>
+
+            <td rowspan='1'; style='background-color: orange' >Thursday</td>
+            <?php
+                $sql = "SELECT * FROM table_subject_description_output";
+                $smyData = mysqli_query($con, $sql);
+                while($row = mysqli_fetch_array($smyData)) {
+                    $hour = (int)$row['subject_hour_per_day'];
+                    $time = (int)$row['start_time'];
+
+                    if($row['Day'] == "3"){
+                        if($time > 0 && $time < 99) {
+                                echo "<td style='background-color: wheat;' colspan='$time'></td>";
+                                echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                                echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                            }
+                            else if($time == 0) {
+                                echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                                echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                            }
+                            else if($time == 99) {
+                                echo "<td style='background-color: wheat;' colspan='10'></td>";
+                            }
+                        }
+                    }
+                        ?>
+    </tr>
+    <tr>
+
+    <td rowspan='1'; style='background-color: blue' > Friday</td>
+    <?php
+            $sql = "SELECT * FROM table_subject_description_output";
+            $smyData = mysqli_query($con, $sql);
+            while($row = mysqli_fetch_array($smyData)) {
+                $hour = (int)$row['subject_hour_per_day'];
+                $time = (int)$row['start_time'];
+
+                if($row['Day'] == "4"){
+                    if($time > 0 && $time < 99) {
+                            echo "<td style='background-color: wheat;' colspan='$time'></td>";
+                            echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                            echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                        }
+                        else if($time == 0) {
+                            echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                            echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                        }
+                        else if($time == 99) {
+                            echo "<td style='background-color: wheat;' colspan='10'></td>";
+                        }
+                    }
+                }
+                    ?>
+</tr>
+<tr>
+    <td rowspan='1'; style='background-color: blue' >Satruday</td>
+    <?php
+            $sql = "SELECT * FROM table_subject_description_output";
+            $smyData = mysqli_query($con, $sql);
+            while($row = mysqli_fetch_array($smyData)) {
+                $hour = (int)$row['subject_hour_per_day'];
+                $time = (int)$row['start_time'];
+
+                if($row['Day'] == "5"){
+                    if($time > 0 && $time < 99) {
+                            echo "<td style='background-color: wheat;' colspan='$time'></td>";
+                            echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                            echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                        }
+                        else if($time == 0) {
+                            echo "<td style='background-color: #00FA9A' colspan='$hour'>" . $row['subject_name'] .$row['subject_level'].$row['subject_sec']. "</td>";
+                            echo "<td style='background-color: wheat;' colspan='10-$time'></td>";
+                        }
+                        else if($time == 99) {
+                            echo "<td style='background-color: wheat;' colspan='10'></td>";
+                        }
+                    }
+                }
+            ?>
+    </tr>
+</tr>
+</table>
+</body>
+<?php
+echo $_SESSION['x'];
+?>

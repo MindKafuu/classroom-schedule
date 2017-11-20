@@ -3384,6 +3384,6 @@
                     echo "<td style='background-color: wheat;' colspan='10-$total'></td>";
                 }
             ?>
-
+        </div>
   </body>
 </html>
