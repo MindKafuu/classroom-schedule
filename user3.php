@@ -21,15 +21,15 @@
     <script>
             function myFunction(){
                 var x = document.getElementById("mySelect").value;
-                    if(x==11){
+                    if(x==1){
                         document.getElementById("roomA").style.visibility="visible";
                         document.getElementById("roomB").style.visibility="hidden";
                 }
-                    if(x==22){
+                    if(x==2){
                         document.getElementById("roomA").style.visibility="hidden";
                         document.getElementById("roomB").style.visibility="visible";
                 }
-                    if(x==33){
+                    if(x==3){
                         document.getElementById("roomA").style.visibility="visible";
                         document.getElementById("roomB").style.visibility="visible";
                 }
@@ -80,29 +80,23 @@
         <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px;"><b> Subject code&#160  </b><input class = "whitetab"> </p> </br>
         <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"><b>  Subject name  </b><input class = "whitetab"></p></br>
         <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Lecturer&#160&#160&#160&#160&#160&#160&#160 </b><input class = "whitetab"></p></br>
-        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Hour/week &#160&#160&#160&#160     </b><input class = "whitetab"></p></br><br><br>
+        <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Hour/week &#160&#160&#160</b><input class = "whitetab"></p></br><br><br>
         <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Sec:  </b> </p>
         
         <div style="margin-top:-33px; margin-left:25px"> 
 
         <select name="SEC" id="mySelect">
-            <option value="11">A</option>
-            <option value="22">B</option>
-            <option value="33">A+B</option>
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">A+B</option>
           </select>
-
-
-
-
-
-<button onclick="myFunction()">SUBMIT</button>   <!--ปุ่มซับมิท-->
-
-
-
-
+        <div style =" margin-left:700px; margin-top: 10px; font-size: 24px; font-family: 'Work Sans', sans-serif"
+        <button onclick="myFunction()"  class = "buttonsave">
+            <span class = "content">SAVE</span>   <!--ปุ่มซับมิท-->
+        </div>
 
         </div>
-        <div style="margin-top:-45px; margin-left:230px">
+        <div style="margin-top:-108px; margin-left:230px">
         <p style =" font-family: 'Work Sans', sans-serif; font-size: 24px"> <b> Split period:   </b>   </p>
         
         <select name="periodA" >
@@ -130,9 +124,9 @@
         </select> </g>
     </div>
           </b>
-          <div style =" margin-left:700px; margin-top: 100px; font-size: 24px; font-family: 'Work Sans', sans-serif">
-          <a href="#" class = "buttonsave">
-            <span class = "content">SAVE</span> 
+          <div onclick="myFunction()" style =" margin-left:700px; margin-top: 100px; font-size: 24px; font-family: 'Work Sans', sans-serif">
+          <a href="#" class = "buttoncomplete">
+            <span class = "content">Complete</span> 
         </a></div>
   </body>
 </html>
