@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2017 at 09:20 PM
+-- Generation Time: Nov 21, 2017 at 12:10 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -58,7 +58,9 @@ INSERT INTO `table_account` (`No`, `teacher_name`, `teacher_email`, `teacher_pas
 (15, 'Mr.Narongsak', 'Narongsak@fibo.kmutt.ac.th', '1234', 'T'),
 (16, 'Mr.Thanacha Choopojcharoen', 'Thanacha@fibo.kmutt.ac.th', '1234', 'T'),
 (17, 'Mr.Worawit Panpanytep', 'Worawit@fibo.kmutt.ac.th', '1234', 'T'),
-(18, 'Ms.Mirawee Kumpakure', 'Mirawee@fibo.kmutt.ac.th', '1234', 'A');
+(18, 'Ms.Mirawee Kumpakure', 'Mirawee@fibo.kmutt.ac.th', '1234', 'A'),
+(19, 'ไทน์เทพ', '66', '123456', 'T'),
+(20, 'ไทน์เทพ', '66', '123456', 'T');
 
 -- --------------------------------------------------------
 
@@ -136,25 +138,39 @@ CREATE TABLE `table_subject_description_input` (
   `subject_code` varchar(100) NOT NULL DEFAULT 'FRA',
   `subject_name` varchar(100) NOT NULL,
   `subject_hour_per_week` varchar(100) NOT NULL DEFAULT '3',
-  `subject_sec_teacher_want` varchar(100) DEFAULT NULL
+  `subject_spirt` varchar(100) NOT NULL,
+  `subject_sec_teacher_want` varchar(100) DEFAULT NULL,
+  `subject_room` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `table_subject_description_input`
 --
 
-INSERT INTO `table_subject_description_input` (`No`, `subject_level`, `subject_code`, `subject_name`, `subject_hour_per_week`, `subject_sec_teacher_want`) VALUES
-(1, '1', 'FRA141', 'Computer Programming ', '4', 'AA'),
-(2, '1', 'FRA141', 'Computer Programming ', '4', 'BB'),
-(3, '1', 'FRA161', 'Robotic exploration', '3', 'AB'),
-(4, '2', 'FRA221', 'Digital Electronics', '3', 'AA'),
-(5, '2', 'FRA221', 'Digital Electronics', '3', 'BB'),
-(6, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', 'AA'),
-(7, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', 'BB'),
-(9, '2', 'FRA231', 'Static and dynamics', '3', 'AB'),
-(10, '2', 'FRA241', 'Software development', '3', 'AB'),
-(11, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', 'AA'),
-(12, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', 'BB');
+INSERT INTO `table_subject_description_input` (`No`, `subject_level`, `subject_code`, `subject_name`, `subject_hour_per_week`, `subject_spirt`, `subject_sec_teacher_want`, `subject_room`) VALUES
+(1, '1', 'FRA141', 'Computer Programming ', '4', '2/1', 'AA', 'FB306'),
+(2, '1', 'FRA141', 'Computer Programming ', '4', '2/2', 'BB', 'FB306'),
+(3, '1', 'FRA161', 'Robotic exploration', '3', '3/1', 'AA', 'FB403-4'),
+(4, '1', 'FRA161', 'Robotic exploration', '3', '3/1', 'BB', 'FB301'),
+(6, '2', 'FRA221', 'Digital Electronics', '3', '3', 'AA', 'FB306'),
+(7, '2', 'FRA221', 'Digital Electronics', '3', '3', 'BB', 'FB306'),
+(8, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'AA', 'FB301'),
+(9, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'BB', 'FB301'),
+(10, '2', 'FRA231', 'Static and dynamics', '3', '3', 'AB', 'FB403-4'),
+(11, '2', 'FRA241', 'Software development', '3', '3', 'AB', 'FB401'),
+(12, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'AA', 'FB306'),
+(13, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'BB', 'FB306'),
+(14, '3', 'FRA321', 'Image Processing', '3', '3', 'AA', 'FB304'),
+(15, '3', 'FRA321', 'Image Processing', '3', '3', 'BB', 'FB304'),
+(16, '3', 'FRA331', 'Contorl', '3', '3', 'AA', 'FB304'),
+(17, '3', 'FRA331', 'Contorl', '3', '3', 'BB', 'FB305'),
+(18, '3', 'FRA332', 'Dr.Arbtip Dheeravongkit', '3', '3', 'AA', 'FB305'),
+(19, '3', 'FRA332', 'Asst.Prof.Dr.Eakkachai Pengwang', '3', '3', 'BB', 'FB305'),
+(20, '3', 'FRA341', 'Dr.Pornpoj', '3', '3', 'AA', 'FB301'),
+(21, '3', 'FRA341', 'Dr.Pornpoj', '3', '3', 'BB', 'FB301'),
+(22, '3', 'FRA361', 'Mr.Narongsak', '3', '3', 'AB', 'FB401'),
+(23, '4', 'FRA451', 'Dr.Boontariga Kasemsontitum', '3', '3', 'AB', 'FB306'),
+(24, '4', 'FRA452', 'Dr.Supachai Vongbunyong', '3', '3', 'AB', 'FB305');
 
 -- --------------------------------------------------------
 
@@ -413,7 +429,7 @@ ALTER TABLE `table_teacher_subject`
 -- AUTO_INCREMENT for table `table_subject_description_input`
 --
 ALTER TABLE `table_subject_description_input`
-  MODIFY `No` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `No` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `table_subject_description_output`
