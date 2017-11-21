@@ -30,7 +30,7 @@
         document.getElementById("green").style.visibility="visible";//show dropdown
 
     }
-
+    
     </script>
 
 
@@ -54,22 +54,23 @@
         <img src="images/FIBO_logo.jpg" width="55" height="62" style="margin-top: 10px; margin-left: 10px">
         <div style="font-size: 1.8em; margin-top: -50px; margin-left: 80px">
         <b>Classroom Schedule</b>
-        </div><br>
+        </div><br><br>
         </header>
         <form action="admin3.php" method="post">
-        <div style="margin-top: -30px; margin-left: 500px">
-            <a href="admin1.php" class="btn1"><b>Home</b></a>
-            <a href="admin2.php" class="btn1"><b>User Info</b></a>
-            <a href="admin3.php" class="btn1" style=" color: #79a2ff"><b>Class Info</b></a>
-            <a href="admin4.php" class="btn1"><b>Class Management</b></a>
-            <a href="admin5.php" class="btn1"><b>Summary</b></a>
-            <a href="admin6.php" class="btn1"><b>User status</b></a>
-            <a href="admin7.php" class="btn1"><b>Complete</b></a>
-        </div>
-        <div style="margin-top: -84px; margin-left: 1200px">
-            <a href="index.php" class="btn"><b>Log out</b></a>
-        </div>
-        <div style="margin-top: 50px;">
+        <div style="margin-top: -94px; margin-left:87.7%">
+        <a href="index.php" class="btn"><b>?</b></a>
+        <a href="index.php" class="btn"><b>Log out</b></a>
+    </div>
+    <div style="margin-top: 20px; margin-left:33.3%">
+        <a href="admin1.php" class="btn1"><b>Home</b></a>
+        <a href="admin2.php" class="btn1"><b>User Info</b></a>
+        <a href="admin3.php" class="btn1"style=" color: #79a2ff"><b>Class Info</b></a>
+        <a href="admin4.php" class="btn1"><b>Class Management</b></a>
+        <a href="admin5.php" class="btn1"><b>Summary</b></a>
+        <a href="admin6.php" class="btn1"><b>User status</b></a>
+        <a href="admin7.php" class="btn1"><b>Complete</b></a>
+    </div>
+        <div style="margin-top:25px;">
             <br><b class="topics">Class Information</b><br><br><br>
             <a href="admin3.php" class="btn2"style="background-color:#79a2ff"><b>Bachelor's degree</b></a><br><br>
             <a href="admin3-M.php" class="btn2"><b>Master's degree</b></a><br><br>
@@ -114,7 +115,7 @@
         </div>
 
             </br> </br> </br>
-            <div style= "margin-top:90px" id="green">
+            <div style= "margin-top:90px" id="green">      
             <select name="subject_sec1">
             <option value="SEC">Sec</option>
             <option value="A">A</option>
@@ -284,138 +285,63 @@
           </select>
             </div><br><br><br><br><br><br>
             <div style="margin-top:20px;margin-right:100px;margin-bottom:40px;">
-            <button id="green" name="Fun_save" class = "buttonsave">
+            <button id="green" name="Fundametal_save" class = "buttonsave">
                 <span class = "content"><b>FundamentalSave</b></span>
             </button>
     </form>
   </body>
 </html>
-
 <?php
-//////////////////////////FIBO SUBJECT/////////////////////////////////////////////
-
+  /*  font-end หน้านี้
+    Bachelor's degree, Subject Code, Subject name,Hours/week เก็บไว้ที่ตาราง table_subject_description_input
+    Lecturer, Subject Code    เก็บไว้ที่ตาราง table_teacher_subject
+    *** ของ Bachelor's degree ปี1 2 3 4 ยังไม่แยก ปัจจุบันส่ง 1***
+    ***Centre Subject  เก็บอีกตารางแยก drop down ยังไม่ได้ทำ***
+    ***การ Refresh หน้า จะส่งข้อมูลเดิมซ้ำ ต้องเปลี่ยนหน้า ถึงจะ clear ข้อมูล***
+    **subject_sec_teacher_want ใน	table_subject_description_input ต้องรอรับจาก user*** */
         if(isset($_POST['save_data'])){
+              /*    เก็บ ข้อมูลวิชาโดยแอดมิน                    */
               $sql ="SELECT * FROM table_subject_description_input_admin";
               $smyData = mysqli_query($con,$sql);
           while($row = $smyData->fetch_assoc()) {
               $count = $row['No'] + 1 ;
-              }
-                $subject_level = 'B1';
-                $subject_code  = $_POST['code'];
-                $subject_name  = $_POST['subject_name'];
-                $subject_hour_per_week = $_POST['hours_per_week'];
-
-                $query = "INSERT INTO table_subject_description_input_admin
-                                (No,subject_level,subject_code,subject_name,subject_hour_per_week)
-       VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week')";
-                $query_run = mysqli_query($con,$query);
-
-//////////////////////////FIBO Teacher + SUBJECT/////////////////////////////////////////////
-
+            }
+              $subject_level = 'B1';
+              $subject_code  = $_POST['code'];
+              $subject_name  = $_POST['subject_name'];
+              $subject_hour_per_week = $_POST['hours_per_week'];
+              $query = "INSERT INTO table_subject_description_input_admin(No,subject_level,subject_code,subject_name,subject_hour_per_week)
+                                    VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week')";
+              $query_run = mysqli_query($con,$query);
+              /*    เก็บ การเชื่อมอาจารย์กับวิชาอีกตาราง         */
               $sql ="SELECT * FROM table_teacher_subject";
               $smyData = mysqli_query($con,$sql);
           while($row = $smyData->fetch_assoc()) {
-                $count = $row['No'] + 1 ;
-              }
-                $teacher_name  = $_POST['lecturer'];
-                $subject_code  = $_POST['code'];
-
+              $count = $row['No'] + 1 ;
+            }
+              $teacher_name  = $_POST['lecturer'];
+              $subject_code  = $_POST['code'];
+            //  $subject_name  = $_POST['subject_name'];
               $query = "INSERT INTO table_teacher_subject(No,teacher_name,subject_code)
                                       VALUES ('$count','$teacher_name','$subject_code')";
               $query_run = mysqli_query($con,$query);
-
       echo '<script type="text/javascript"> alert("Input data successful!") </script>';
       }
-
-/////////////////////////// Fundamental Subject //////////////////////////////
-
-if(isset($_POST['Fun_save'])){
-
-//////////////////////////// Dropdown 1 /////////////////////////////////////
-            $sql ="SELECT * FROM table_fundamental_subjects";
-            $smyData = mysqli_query($con,$sql);
-        while($row = $smyData->fetch_assoc()) {
-            $count = $row['No'] + 1 ;
-            }
-              $subject_level = 'B1';
-              $subject_code  = $_POST['code'];
-              $subject_name  = $_POST['subject_name'];
-              $subject_hour_per_week = $_POST['hours_per_week'];
-              $subject_sec1=$_POST['subject_sec1'];
-              $day1 =$_POST['seven_day1'];
-              $start_time1 =$_POST['start_time1'];
-              $end_time1 =$_POST['end_time1'];
-
-            $query = "INSERT INTO table_fundamental_subjects(No,subject_level,
-              subject_code,subject_name,subject_hour_per_week,subject_sec,day,start_time,end_time)
-       VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week',
-               '$subject_sec1','$day1','$start_time1','$end_time1')";
-            $query_run = mysqli_query($con,$query);
-
-
-//////////////////////////// Dropdown 2 /////////////////////////////////////
-            $sql ="SELECT * FROM table_fundamental_subjects";
-            $smyData = mysqli_query($con,$sql);
-        while($row = $smyData->fetch_assoc()) {
-            $count = $row['No'] + 1 ;
-            }
-              $subject_level = 'B1';
-              $subject_code  = $_POST['code'];
-              $subject_name  = $_POST['subject_name'];
-              $subject_hour_per_week = $_POST['hours_per_week'];
-              $subject_sec2=$_POST['subject_sec2'];
-              $day2 =$_POST['seven_day2'];
-              $start_time2 =$_POST['start_time2'];
-              $end_time2 =$_POST['end_time2'];
-
-              $query = "INSERT INTO table_fundamental_subjects(No,subject_level,
-                subject_code,subject_name,subject_hour_per_week,subject_sec,day,start_time,end_time)
-         VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week',
-                 '$subject_sec2','$day2','$start_time2','$end_time2')";
-              $query_run = mysqli_query($con,$query);
-
-//////////////////////////// Dropdown 3 /////////////////////////////////////
-            $sql ="SELECT * FROM table_fundamental_subjects";
-            $smyData = mysqli_query($con,$sql);
-        while($row = $smyData->fetch_assoc()) {
-            $count = $row['No'] + 1 ;
-            }
-              $subject_level = 'B1';
-              $subject_code  = $_POST['code'];
-              $subject_name  = $_POST['subject_name'];
-              $subject_hour_per_week = $_POST['hours_per_week'];
-              $subject_sec3=$_POST['subject_sec3'];
-              $day3 =$_POST['seven_day3'];
-              $start_time3 =$_POST['start_time3'];
-              $end_time3 =$_POST['end_time3'];
-
-              $query = "INSERT INTO table_fundamental_subjects(No,subject_level,
-                subject_code,subject_name,subject_hour_per_week,subject_sec,day,start_time,end_time)
-         VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week',
-                 '$subject_sec3','$day3','$start_time3','$end_time3')";
-              $query_run = mysqli_query($con,$query);
-
-//////////////////////////// dropdown 4 /////////////////////////////////////
-            $sql ="SELECT * FROM table_fundamental_subjects";
-            $smyData = mysqli_query($con,$sql);
-        while($row = $smyData->fetch_assoc()) {
-            $count = $row['No'] + 1 ;
-            }
-              $subject_level = 'B1';
-              $subject_code  = $_POST['code'];
-              $subject_name  = $_POST['subject_name'];
-              $subject_hour_per_week = $_POST['hours_per_week'];
-              $subject_sec4=$_POST['subject_sec4'];
-              $day4 =$_POST['seven_day4'];
-              $start_time4 =$_POST['start_time4'];
-              $end_time4 =$_POST['end_time4'];
-
-              $query = "INSERT INTO table_fundamental_subjects(No,subject_level,
-                subject_code,subject_name,subject_hour_per_week,subject_sec,day,start_time,end_time)
-         VALUES ('$count','$subject_level','$subject_code','$subject_name','$subject_hour_per_week',
-                 '$subject_sec4','$day4','$start_time4','$end_time4')";
-              $query_run = mysqli_query($con,$query);
-
-echo '<script type="text/javascript"> alert("Input data successful!") </script>';
- }
+      if(isset($_POST['Fundametal_save'])){
+        $sql ="SELECT * FROM table_fundamental_subjects";
+        $smyData = mysqli_query($con,$sql);
+    while($row = $smyData->fetch_assoc()) {
+        $count = $row['No'] + 1 ;
+      }
+        $____ = $_POST[''];
+        echo '<script type="text/javascript"> alert("Input data successful!") </script>';
+      }
+      //$('#notification-event li').click(function () {
+          //var eid = $(this).attr("data-id");
+          //var $frm = $('#event-notify-form');
+          //set the value of the hidden element
+          //$frm.find('input[name="myId"]').val(eid);
+          //submit the form
+          ///$frm.submit();
+      //});
 ?>
