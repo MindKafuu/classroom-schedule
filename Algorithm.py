@@ -1,3 +1,348 @@
+import pymysql
+
+def call_data():
+
+	#------------------------------------------------------------------------------#
+
+	teacher_name = []
+	try:
+		conn = pymysql.connect(host='localhost', user='root', db='schedule')
+		cur = conn.cursor()
+
+		try:
+			sql ='SELECT * FROM `table_account`'
+			num = cur.execute(sql)
+			#print ("num: ",num)
+			data = cur.fetchall()
+			#print (data)
+			conn.close()
+
+		except:
+			print ('Error')
+
+	except pymysql.Error:
+		print ('Connection Failed!!')
+
+	for i in range(num):
+		teacher_name.append(data[i][1])
+	#for i in teacher_name:
+	#	print (i)
+
+	#------------------------------------------------------------------------------#
+
+	teacher_busy = [[]for i in range(len(teacher_name))]
+	try:
+		conn = pymysql.connect(host='localhost', user='root', db='schedule')
+		cur = conn.cursor()
+
+		try:
+			sql ='SELECT * FROM `table_teacher`'
+			num = cur.execute(sql)
+			#print ("num: ",num)
+			data = cur.fetchall()
+			#print (data)
+			conn.close()
+
+		except:
+			print ('Error')
+
+	except pymysql.Error:
+		print ('Connection Failed!!')
+
+	for i in range(len(teacher_name)):
+		for o in range(num):
+			if teacher_name[i] == data[o][1]:
+				teacher_busy[i].append(data[o][2]+data[o][3])
+	#for i in teacher_busy:
+	#	print (i)
+
+	#------------------------------------------------------------------------------#
+
+	subject_description = []
+	try:
+		conn = pymysql.connect(host='localhost', user='root', db='schedule')
+		cur = conn.cursor()
+
+		try:
+			sql ='SELECT * FROM `table_subject_description_input`'
+			num = cur.execute(sql)
+			#print ("num: ",num)
+			data = cur.fetchall()
+			#print (data)
+
+			sql ='SELECT * FROM `table_teacher_subject`'
+			num1 = cur.execute(sql)
+			#print ("num: ",num1)
+			data1 = cur.fetchall()
+			#print (data1)
+			conn.close()
+
+		except:
+			print ('Error')
+
+	except pymysql.Error:
+		print ('Connection Failed!!')
+
+	for i in data:
+		sub = []
+		check = 0
+		teacher = "teacher"
+		for o in data1:
+			if i[2] == o[2]:
+				check += 1
+				teacher = o[1]
+		if check > 1: 
+			teacher = "many teacher"
+		sub.append(i[2])
+		sub.append(i[1])
+		sub.append(teacher)
+		sub.append(i[5])
+		sub.append(i[6])
+		sub.append(i[7])
+		subject_description.append(sub)
+	#for i in subject_description:
+	#	print (i)
+
+	#------------------------------------------------------------------------------#
+
+	center_subject = []
+	try:
+		conn = pymysql.connect(host='localhost', user='root', db='schedule')
+		cur = conn.cursor()
+
+		try:
+			sql ='SELECT * FROM `table_fundamental_subjects`'
+			num = cur.execute(sql)
+			#print ("num: ",num)
+			data = cur.fetchall()
+			#print (data)
+			conn.close()
+
+		except:
+			print ('Error')
+
+	except pymysql.Error:
+		print ('Connection Failed!!')
+
+	for i in data:
+		time = []
+		t1 = i[6]+i[7]
+		t2 = i[6]+i[8]
+		if t1 == t2:
+			time.append(t1)
+		elif int(i[7])+1 == int(i[8]):
+			time.append(t1)
+			time.append(t2)
+		elif int(i[7])+2 == int(i[8]):
+			t = int(i[7])+1
+			time.append(t1)
+			time.append(i[6]+str(t))
+			time.append(t2)
+		split_center = []
+		split_center.append(i[2])
+		split_center.append(i[1])
+		split_center.append(i[5])
+		split_center.append(time)
+		center_subject.append(split_center)
+	#for i in center_subject:
+	#	print (i)
+
+	#------------------------------------------------------------------------------#
+
+	room_code = []
+	try:
+		conn = pymysql.connect(host='localhost', user='root', db='schedule')
+		cur = conn.cursor()
+
+		try:
+			sql ='SELECT * FROM `table_room`'
+			num = cur.execute(sql)
+			#print ("num: ",num)
+			data = cur.fetchall()
+			#print (data)
+			conn.close()
+
+		except:
+			print ('Error')
+
+	except pymysql.Error:
+		print ('Connection Failed!!')
+
+	for i in range(num):
+		room_code.append(data[i][1])
+	#for i in room_code:
+	#	print (i)
+
+	#------------------------------------------------------------------------------#
+
+	lst_data = [teacher_name,teacher_busy,subject_description,center_subject,room_code]
+
+	return (lst_data)
+
+def save_output(output):
+	set_data = []
+	count = 0
+	for i in output[0]:
+		day0 = 0
+		day1 = 0
+		day2 = 0
+		day3 = 0
+		day4 = 0
+		check_day0 = 0
+		check_day1 = 0
+		check_day2 = 0
+		check_day3 = 0
+		check_day4 = 0
+		start_time = []
+		day = []
+		for o in range(len(i[6])):
+			if i[6][o][0] == "0":
+				day0 += 1
+				if check_day0 == 0:
+					check_day0 = 1
+					start_time.append(i[6][o])
+			elif i[6][o][0] == "1":
+				day1 += 1
+				if check_day1 == 0:
+					check_day1 = 1
+					start_time.append(i[6][o])
+			elif i[6][o][0] == "2":
+				day2 += 1
+				if check_day2 == 0:
+					check_day2 = 1
+					start_time.append(i[6][o])
+			elif i[6][o][0] == "3":
+				day3 += 1
+				if check_day3 == 0:
+					check_day3 = 1
+					start_time.append(i[6][o])
+			elif i[6][o][0] == "4":
+				day4 += 1
+				if check_day4 == 0:
+					check_day4 = 1
+					start_time.append(i[6][o])
+
+		sum_day = [day0,day1,day2,day3,day4]
+		for a in sum_day:
+			if a != 0:
+				day.append(a)
+
+		for o in range(len(day)):
+			count += 1
+			split_data = []
+			split_data.append(count)
+			split_data.append(i[1])
+			split_data.append(i[0])
+			split_data.append(i[5])
+			split_data.append(i[3])
+			split_data.append(day[o])
+			if i[4][0] == i[4][1]:
+				split_data.append(i[4][0])
+			else :
+				split_data.append(i[4])
+			split_data.append(start_time[o][0])
+			split_data.append(start_time[o][1])
+			set_data.append(split_data)
+			#print (split_data)
+
+	for i in output[1]:
+		day0 = 0
+		day1 = 0
+		day2 = 0
+		day3 = 0
+		day4 = 0
+		check_day0 = 0
+		check_day1 = 0
+		check_day2 = 0
+		check_day3 = 0
+		check_day4 = 0
+		start_time = []
+		day = []
+		for o in range(len(i[3])):
+			if i[3][o][0] == "0":
+				day0 += 1
+				if check_day0 == 0:
+					check_day0 = 1
+					start_time.append(i[3][o])
+			elif i[3][o][0] == "1":
+				day1 += 1
+				if check_day1 == 0:
+					check_day1 = 1
+					start_time.append(i[3][o])
+			elif i[3][o][0] == "2":
+				day2 += 1
+				if check_day2 == 0:
+					check_day2 = 1
+					start_time.append(i[3][o])
+			elif i[3][o][0] == "3":
+				day3 += 1
+				if check_day3 == 0:
+					check_day3 = 1
+					start_time.append(i[3][o])
+			elif i[3][o][0] == "4":
+				day4 += 1
+				if check_day4 == 0:
+					check_day4 = 1
+					start_time.append(i[3][o])
+
+		sum_day = [day0,day1,day2,day3,day4]
+		for a in sum_day:
+			if a != 0:
+				day.append(a)
+
+		for o in range(len(day)):
+			count += 1
+			split_data = []
+			split_data.append(count)
+			split_data.append(i[1])
+			split_data.append(i[0])
+			split_data.append("-")
+			split_data.append("-")
+			split_data.append(day[o])
+			if i[2][0] == i[2][1]:
+				split_data.append(i[2][0])
+			else :
+				split_data.append(i[2])
+			split_data.append(start_time[o][0])
+			split_data.append(start_time[o][1])
+			set_data.append(split_data)
+			#print (split_data)
+
+	conn = pymysql.connect(host='localhost', user='root', db='schedule')
+	cur = conn.cursor()
+	
+	sql = "DROP TABLE IF EXISTS `table_subject_description_output`"
+	cur.execute(sql)
+	
+	sql = """CREATE TABLE IF NOT EXISTS `table_subject_description_output` (
+	  `No` int(100) NOT NULL,
+	  `subject_level` varchar(100) NOT NULL,
+	  `subject_code` varchar(100) NOT NULL,
+	  `subject_room` varchar(100) NOT NULL,
+	  `subject_hour_per_week` varchar(100) NOT NULL,
+	  `subject_hour_per_day` varchar(100) NOT NULL,
+	  `subject_sec` varchar(100) NOT NULL,
+	  `Day` varchar(100) NOT NULL,
+	  `start_time` varchar(100) NOT NULL
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;"""
+	cur.execute(sql)
+
+	for i in set_data:
+		No = i[0]
+		subject_level = i[1]
+		subject_code = i[2]
+		subject_room = i[3]
+		subject_hour_per_week = i[4]
+		subject_hour_per_day = i[5]
+		subject_sec = i[6]
+		Day = i[7]
+		start_time = i[8]
+		sql = """INSERT INTO `table_subject_description_output` (`No`, `subject_level`, `subject_code`, `subject_room`, `subject_hour_per_week`, `subject_hour_per_day`, `subject_sec`, `Day`, `start_time`)
+				VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s')""" %(No,subject_level,subject_code,subject_room,subject_hour_per_week,subject_hour_per_day,subject_sec,Day,start_time)
+		cur.execute(sql)
+	conn.commit()
+	conn.close()
+
 def print_timetable(table,name):
 	s = "   |   "
 	d = 0
@@ -124,7 +469,7 @@ def manage_schedule(i,subject_description,teacher_name,timetable_teacher,room_co
 			subject_do_not_use_this_time = sub_do_not_use_this_time(i,subject_description,teacher_name,timetable_teacher,room_code,
 																	timetable_room,MIX_SCHEDULE,timetable,subject_do_not_use_this_time)
 			FREE_TIME = [[],[],[],[],[]]
-			print (str(t)+"_"+subject[0])
+			#print (str(t)+"_"+subject[0])
 			#print (subject_do_not_use_this_time)
 			for o in range(len(FREE_TIME)):
 				for u in range(10):
@@ -242,7 +587,7 @@ def manage_schedule(i,subject_description,teacher_name,timetable_teacher,room_co
 					finish = 5
 			else:
 				if finish == 0:
-					print ("case 1")
+					#print ("case 1")
 					case1 = []
 					for a in range(len(teacher_name)):
 						if subject[2] == teacher_name[a]:
@@ -253,14 +598,14 @@ def manage_schedule(i,subject_description,teacher_name,timetable_teacher,room_co
 										case1.append(timetable[o][u])
 				
 				elif finish == 1 :
-					print ("case 2")
+					#print ("case 2")
 					hr_1.append(["0"])
 					hr_2.append(["8","9"])
 					hr_3.append(["0","1","2"])
 					hr_3.append(["7","8","9"])
 				
 				elif finish == 2:
-					print ("case 3")
+					#print ("case 3")
 					for a in range(len(teacher_name)):
 						if subject[2] == teacher_name[a]:
 							for e in case1:
@@ -494,15 +839,15 @@ def schedule(data):
 		timetable_room = manage[3]
 
 	#show schedule
-	print_timetable(MIX_SCHEDULE,MIX_SCHEDULE_KEY)
+	#print_timetable(MIX_SCHEDULE,MIX_SCHEDULE_KEY)
 	#print_timetable(timetable_teacher,teacher_name)
 	#print_timetable(timetable_room,room_code)
-	for i in subject_description:
-		print (i)
+	#for i in subject_description:
+	#	print (i)
 
+	return([subject_description,center_subject])
 
-schedule(
-		[#teacher_name = data[0]
+"""data = [#teacher_name = data[0]
 		["Assoc. Prof. Dr.Siam Charoenseang",
 		"Asst. Prof. Dr.Thavida Maneewarn",
 		"Mr.Bawornsak Sakulkueakulsuk",
@@ -525,7 +870,7 @@ schedule(
 		
 		#teacher_busy = data[1]
 		[
-		["""00","01","02"""],
+		["00","01","02"],
 		["00","34","35","36"],
 		["41","42","43","44","45"],
 		["40","41","42","43","44"],
@@ -597,5 +942,9 @@ schedule(
 		"FB402",
 		"FB403-4"
 		]
-		]
-		)
+		]"""
+data = call_data()
+output = schedule(data)
+save_output(output)
+print ("Finish :D")
+

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2017 at 12:10 PM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Generation Time: Nov 21, 2017 at 02:50 PM
+-- Server version: 10.1.25-MariaDB
+-- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -58,9 +58,7 @@ INSERT INTO `table_account` (`No`, `teacher_name`, `teacher_email`, `teacher_pas
 (15, 'Mr.Narongsak', 'Narongsak@fibo.kmutt.ac.th', '1234', 'T'),
 (16, 'Mr.Thanacha Choopojcharoen', 'Thanacha@fibo.kmutt.ac.th', '1234', 'T'),
 (17, 'Mr.Worawit Panpanytep', 'Worawit@fibo.kmutt.ac.th', '1234', 'T'),
-(18, 'Ms.Mirawee Kumpakure', 'Mirawee@fibo.kmutt.ac.th', '1234', 'A'),
-(19, 'ไทน์เทพ', '66', '123456', 'T'),
-(20, 'ไทน์เทพ', '66', '123456', 'T');
+(18, 'Ms.Mirawee Kumpakure', 'Mirawee@fibo.kmutt.ac.th', '1234', 'A');
 
 -- --------------------------------------------------------
 
@@ -90,14 +88,14 @@ INSERT INTO `table_fundamental_subjects` (`No`, `subject_level`, `subject_code`,
 (3, '1', 'MTH101', 'Math', '3', 'AB', '2', '2', '3'),
 (4, '1', 'MTH101', 'Math', '3', 'AB', '4', '5', '6'),
 (5, '1', 'PHY103', 'Physics', '3', 'AA', '1', '0', '1'),
-(6, '1', 'PHY103', 'Physics', '3', 'AA', '4', '7', '8'),
+(6, '1', 'PHY103', 'Physics', '3', 'AA', '4', '7', '7'),
 (7, '1', 'PHY103', 'Physics', '3', 'BB', '0', '0', '1'),
-(8, '1', 'PHY103', 'Physics', '3', 'BB', '4', '7', '8'),
+(8, '1', 'PHY103', 'Physics', '3', 'BB', '4', '8', '8'),
 (9, '1', 'PHY191', 'fckingPhylab', '1', 'AB', '0', '2', '3'),
 (10, '1', 'LNG1-2', 'Eng2', '3', 'AB', '4', '1', '3'),
 (11, '2', 'LNG2-3', 'Eng2', '3', 'AB', '3', '0', '2'),
-(12, '2', 'MTH201', 'cal3', '3', 'AB', '2', '5', '6'),
-(13, '2', 'MTH201', 'cal3', '3', 'AB', '4', '7', '8'),
+(12, '2', 'MTH201', 'cal3', '4', 'AB', '2', '5', '7'),
+(13, '2', 'MTH201', 'cal3', '4', 'AB', '4', '7', '7'),
 (14, '3', 'LNG103', 'Eng3', '3', 'AB', '3', '1', '3');
 
 -- --------------------------------------------------------
@@ -204,7 +202,7 @@ CREATE TABLE `table_subject_description_output` (
   `No` int(100) NOT NULL,
   `subject_level` varchar(100) NOT NULL,
   `subject_code` varchar(100) NOT NULL,
-  `subject_name` varchar(100) NOT NULL,
+  `subject_room` varchar(100) NOT NULL,
   `subject_hour_per_week` varchar(100) NOT NULL,
   `subject_hour_per_day` varchar(100) NOT NULL,
   `subject_sec` varchar(100) NOT NULL,
@@ -216,33 +214,48 @@ CREATE TABLE `table_subject_description_output` (
 -- Dumping data for table `table_subject_description_output`
 --
 
-INSERT INTO `table_subject_description_output` (`No`, `subject_level`, `subject_code`, `subject_name`, `subject_hour_per_week`, `subject_hour_per_day`, `subject_sec`, `Day`, `start_time`) VALUES
-(1, '1', 'FRA141', 'Computer Programming', '4', '2', 'A', '1', '2'),
-(2, '1', 'FRA141', 'Computer Programming', '4', '2', 'A', '3', '0'),
-(3, '1', 'FRA141', 'Computer Programming ', '4', '2', 'B', '1', '0'),
-(4, '1', 'FRA141', 'Computer Programming ', '4', '2', 'B', '3', '2'),
-(5, '1', 'FRA161', 'Robotic exploration', '4', '1', 'A', '2', '5'),
-(6, '1', 'FRA161', 'Robotic exploration', '4', '1', 'B', '2', '5'),
-(7, '2', 'FRA221', 'Digital Electronics', '3', '3', 'A', '4', '4'),
-(8, '2', 'FRA221', 'Digital Electronics', '3', '3', 'B', '4', '0'),
-(9, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'A', '4', '0'),
-(10, '2', 'FRA222', 'Industrial Sensor and Actuators', '3', '3', 'B', '4', '4'),
-(11, '2', 'FRA231', 'Static and dynamics', '3', '3', 'AB', '3', '5'),
-(13, '2', 'FRA241', 'Software development', '3', '3', 'AB', '1', '5'),
-(15, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'A', '2', '1'),
-(16, '2', 'FRA261', 'Robotics and Automation Engineer Lab II', '3', '3', 'B', '0', '1'),
-(17, '1', 'FRA161', 'Robotic exploration', '4', '3', 'AB', '1', '5'),
-(19, '3', 'FRA321', 'Image Processing And Analysis', '3', '3', 'A', '4', '1'),
-(20, '3', 'FRA321', 'Image Processing And Analysis', '3', '3', 'B', '4', '5'),
-(21, '3', 'FRA331', 'Basic Control Theory', '3', '3', 'A', '3', '5'),
-(22, '3', 'FRA331', 'Basic Control Theory', '3', '3', 'B', '4', '1'),
-(23, '3', 'FRA332', 'Robot Structure Design ', '3', '3', 'A', '1', '5'),
-(24, '3', 'FRA332', 'Robot Structure Design ', '3', '3', 'B', '2', '1'),
-(25, '3', 'FRA341', 'Embeded System Design', '3', '3', 'A', '1', '1'),
-(26, '3', 'FRA341', 'Embeded System Design', '3', '3', 'B', '1', '5'),
-(27, '3', 'FRA361', 'Robotic and Automation Engineering III', '3', '3', 'AB', '0', '5'),
-(28, '4', 'FRA451', 'Manufacturing And Automation', '3', '3', 'AB', '2', '5'),
-(29, '4', 'FRA451', 'Manufacturing And Automation', '3', '3', '', '0', '1');
+INSERT INTO `table_subject_description_output` (`No`, `subject_level`, `subject_code`, `subject_room`, `subject_hour_per_week`, `subject_hour_per_day`, `subject_sec`, `Day`, `start_time`) VALUES
+(1, '1', 'FRA141', 'FB306', '2/1', '2', 'A', '0', '0'),
+(2, '1', 'FRA141', 'FB306', '2/1', '1', 'A', '4', '8'),
+(3, '1', 'FRA141', 'FB306', '2/2', '2', 'B', '1', '0'),
+(4, '1', 'FRA141', 'FB306', '2/2', '2', 'B', '3', '0'),
+(5, '1', 'FRA161', 'FB403-4', '3/1', '3', 'A', '1', '5'),
+(6, '1', 'FRA161', 'FB403-4', '3/1', '1', 'A', '3', '1'),
+(7, '1', 'FRA161', 'FB301', '3/1', '3', 'B', '1', '5'),
+(8, '1', 'FRA161', 'FB301', '3/1', '1', 'B', '4', '7'),
+(9, '2', 'FRA221', 'FB306', '3', '3', 'A', '1', '5'),
+(10, '2', 'FRA221', 'FB306', '3', '3', 'B', '2', '1'),
+(11, '2', 'FRA222', 'FB301', '3', '3', 'A', '2', '1'),
+(12, '2', 'FRA222', 'FB301', '3', '3', 'B', '3', '5'),
+(13, '2', 'FRA231', 'FB403-4', '3', '3', 'AB', '1', '1'),
+(14, '2', 'FRA241', 'FB401', '3', '3', 'AB', '0', '1'),
+(15, '2', 'FRA261', 'FB306', '3', '3', 'A', '3', '5'),
+(16, '2', 'FRA261', 'FB306', '3', '3', 'B', '4', '1'),
+(17, '3', 'FRA321', 'FB304', '3', '3', 'A', '0', '1'),
+(18, '3', 'FRA321', 'FB304', '3', '3', 'B', '1', '5'),
+(19, '3', 'FRA331', 'FB304', '3', '3', 'A', '2', '1'),
+(20, '3', 'FRA331', 'FB305', '3', '3', 'B', '0', '1'),
+(21, '3', 'FRA332', 'FB305', '3', '3', 'A', '1', '5'),
+(22, '3', 'FRA332', 'FB305', '3', '3', 'B', '2', '1'),
+(23, '3', 'FRA341', 'FB301', '3', '3', 'A', '2', '5'),
+(24, '3', 'FRA341', 'FB301', '3', '3', 'B', '4', '1'),
+(25, '3', 'FRA361', 'FB401', '3', '3', 'AB', '1', '1'),
+(26, '4', 'FRA451', 'FB306', '3', '3', 'AB', '2', '5'),
+(27, '4', 'FRA452', 'FB305', '3', '3', 'AB', '1', '1'),
+(28, '1', 'GEN101', '-', '-', '2', 'AB', '2', '7'),
+(29, '1', 'LNG101', '-', '-', '3', 'AB', '4', '1'),
+(30, '1', 'MTH101', '-', '-', '2', 'AB', '2', '2'),
+(31, '1', 'MTH101', '-', '-', '2', 'AB', '4', '5'),
+(32, '1', 'PHY103', '-', '-', '2', 'A', '1', '0'),
+(33, '1', 'PHY103', '-', '-', '1', 'A', '4', '7'),
+(34, '1', 'PHY103', '-', '-', '2', 'B', '0', '0'),
+(35, '1', 'PHY103', '-', '-', '1', 'B', '4', '8'),
+(36, '1', 'PHY191', '-', '-', '2', 'AB', '0', '2'),
+(37, '1', 'LNG1-2', '-', '-', '3', 'AB', '4', '1'),
+(38, '2', 'LNG2-3', '-', '-', '3', 'AB', '3', '0'),
+(39, '2', 'MTH201', '-', '-', '3', 'AB', '2', '5'),
+(40, '2', 'MTH201', '-', '-', '1', 'AB', '4', '7'),
+(41, '3', 'LNG103', '-', '-', '3', 'AB', '3', '1');
 
 -- --------------------------------------------------------
 
@@ -404,12 +417,6 @@ ALTER TABLE `table_subject_description_input_admin`
   ADD PRIMARY KEY (`No`);
 
 --
--- Indexes for table `table_subject_description_output`
---
-ALTER TABLE `table_subject_description_output`
-  ADD PRIMARY KEY (`No`);
-
---
 -- Indexes for table `table_teacher`
 --
 ALTER TABLE `table_teacher`
@@ -429,14 +436,7 @@ ALTER TABLE `table_teacher_subject`
 -- AUTO_INCREMENT for table `table_subject_description_input`
 --
 ALTER TABLE `table_subject_description_input`
-  MODIFY `No` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT for table `table_subject_description_output`
---
-ALTER TABLE `table_subject_description_output`
-  MODIFY `No` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-COMMIT;
+  MODIFY `No` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
