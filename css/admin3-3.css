@@ -4,14 +4,14 @@
 }
 .btn{
 	display: inline-block;
-	border: 0px solid #ff6c00;
-	padding: 10px 20px;
+	border:1.5px solid white;
+	padding: 10px 17px;
 	background-color: #ff6c00;
 	text-decoration: none;
 	font-family: 'Work Sans', sans-serif;
 	font-size: 1em;
 	color: #ffffff ;
-	border-radius: 7px;
+	border-radius:7px;
 	transition: 0.1s;
 }
 .btn:hover{
@@ -28,7 +28,7 @@
 	background-color: #ececec;
 	text-decoration: none;
 	font-family: 'Work Sans', sans-serif;
-	font-size: 1em;
+	font-size: 1.2em;
 	color: #ff6c00 ;
 	border-radius: 7px;
 	transition: 0.1s;
@@ -96,7 +96,6 @@
 	text-align: left;
     border-radius:6px;
     line-height: 42px;
-
 	font-family: 'Work Sans', sans-serif; 
 	box-sizing: border-box 0px;
 }
@@ -108,7 +107,7 @@
 	font-family: 'Work Sans', sans-serif;
 	font-size: 1em;
 	color: #ffffff ;
-	border-radius:50%;
+	border-radius:30px;
 	transition: 0.1s;
 }
 .howto:hover{
