@@ -88,12 +88,22 @@
         }
             echo "<br>";
     ?>
+        <form action="admin6.php" method="post">
         <div style="margin-top:-30px;margin-left:1100px">
-            <a href="admin7.php" class="btn"><b>Draft</b></a>
+            <button name="mind" class="btn"><b>Draft</b></button>
         </div>
         <div style="margin-top:-30px;margin-left:30px">
             <button class="howto">?</button>
         </div>
+        </form>
+
+
+        <?php
+          if(isset($_POST['mind'])) {
+           $mystring = system("py Algorithm.py myargs",$retval);
+           echo '<script type="text/javascript"> alert("Input data successful!") </script>';
+          }
+        ?>
 
       </body>
     </html>

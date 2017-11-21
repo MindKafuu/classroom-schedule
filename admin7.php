@@ -418,8 +418,8 @@
                     $check2 = 0;
                     $check3 = 0;
                     $total = 0;
-                    $sql = "SELECT * FROM table_subject_description_output";
-                    $smyData = mysqli_query($con, $sql);
+                    $run = "SELECT * FROM `table_subject_description_output` ORDER BY `table_subject_description_output`.`start_time` ASC";
+                    $smyData = mysqli_query($con, $run);
                     while($row = mysqli_fetch_array($smyData)) {
                         $hour = (int)$row['subject_hour_per_day'];
                         $time = (int)$row['start_time'];
@@ -427,6 +427,7 @@
                         if($row['subject_level'] == "1" ) {
                             if($row['subject_sec'] == "A") {
                                 if($row['Day'] == "1"){
+                                  echo $row['subject_code'];
                                     if($time == 99) {
                                         echo "<td style='background-color: wheat;' colspan='10'></td>";
                                     }
@@ -6723,8 +6724,8 @@
                 $check2 = 0;
                 $check3 = 0;
                 $total = 0;
-                $sql = "SELECT * FROM table_subject_description_output";
-                $smyData = mysqli_query($con, $sql);
+                $run = "SELECT * FROM `table_subject_description_output` ORDER BY `table_subject_description_output`.`start_time` ASC";
+                $smyData = mysqli_query($con, $run);
                 while($row = mysqli_fetch_array($smyData)) {
                     $hour = (int)$row['subject_hour_per_day'];
                     $time = (int)$row['start_time'];
@@ -6990,14 +6991,14 @@
                 $check2 = 0;
                 $check3 = 0;
                 $total = 0;
-                $sql = "SELECT * FROM table_subject_description_output";
-                $smyData = mysqli_query($con, $sql);
+                $run = "SELECT * FROM `table_subject_description_output` ORDER BY `table_subject_description_output`.`start_time` ASC";
+                $smyData = mysqli_query($con, $run);
                 while($row = mysqli_fetch_array($smyData)) {
                     $hour = (int)$row['subject_hour_per_day'];
                     $time = (int)$row['start_time'];
 
                     if($row['subject_level'] == "3" ) {
-                        if($row['subject_sec'] == "A") {
+                        if($row['subject_sec'] == "A" || $row['subject_sec'] == "AB") {
                             if($row['Day'] == "1"){
                                 if($time == 99) {
                                     echo "<td style='background-color: wheat;' colspan='10'></td>";
