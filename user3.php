@@ -128,7 +128,7 @@ var y;
       <input class = "whitetab"><br><br>
       <input class = "whitetab"><br><br>
       <input class = "whitetab"><br><br>
-      <input class = "whitetab"><br><br>
+      <input  id="labelfn" class = "whitetab"><br><br>
       </div><br><br>
 
 <!--แต่งCSS-->        <input type="button" value="click" onclick="labelfng();"/>
